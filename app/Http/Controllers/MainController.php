@@ -97,6 +97,16 @@ class MainController extends Controller
     }
 
     /**
+     * Display a view with identity of company.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getAboutUs()
+    { 
+       return View::make('main.company');
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id

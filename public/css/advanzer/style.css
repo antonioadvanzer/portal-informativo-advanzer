@@ -971,6 +971,13 @@ footer {
 
 /* new elements added */
 
+/* Main Menu*/
+
+.menu-header{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
 /* card contact*/
 
 .card {

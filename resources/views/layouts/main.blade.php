@@ -7,6 +7,8 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="{{ URL::to('img/logos/favicon.ico') }}">
 
     <!-- CSS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
@@ -88,7 +90,7 @@
 			</div>
 			
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="top-navbar-1">
+			<div class="collapse navbar-collapse menu-header" id="top-navbar-1">
 				<ul class="nav navbar-nav navbar-right">
 					<!--<li class="dropdown active">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
@@ -102,14 +104,17 @@
                     <li id="home">
 						<a href="{{ URL::to('') }}"><i class="fa fa-home"></i><br>Principal</a>
 					</li>
-					<li id="company" >
+					<li id="organization" >
 						<a href="#"><i class="fa fa-sitemap"></i><br>Estructura Organizacional</a>
 					</li>
 					<li id="politics">
 						<a href="{{ URL::to('politicas') }}"><i class="fa fa-th-list"></i><br>Políticas</a>
 					</li>
-					<li id="birthday">
+					<!--<li id="birthday">
 						<a href="#"><i class="fa fa-birthday-cake"></i><br>Cumpleaños del mes</a>
+					</li>-->
+                    <li id="graphics">
+						<a href="#"><i class="fa fa-picture-o"></i><br>Material Gr&aacute;fico</a>
 					</li>
 					<li id="news">
 						<a href="#"><i class="fa fa-newspaper-o"></i><br>Noticias</a>
@@ -120,8 +125,17 @@
                     <li id="sgmm">
 						<a href="{{ URL::to('sgmm') }}"><i class="fa fa-info"></i><br>SGMM</a>
 					</li>
-                    <li id="contact">
+                    <!--<li id="contact">
                         <a href="{{ URL::to('contacto') }}"><i class="glyphicon glyphicon-phone-alt"></i><br>Contacto</a>
+                    </li>-->
+                    <li id="company" class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
+							<i class="fa fa-users"></i><br>Nosotros <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-left" role="menu">
+							<li id="contact" ><a href="{{ URL::to('contacto') }}"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp;&nbsp;Contacto</a></li>
+							<li id="about" ><a href="{{ URL::to('identidad') }}"><i class="fa fa-building"></i>&nbsp;&nbsp;Identidad</a></li>
+						</ul>
                     </li>
 				</ul>
 			</div>
