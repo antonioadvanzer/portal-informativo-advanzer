@@ -23,3 +23,4 @@ Route::get('politicas/atraccion_de_talento', ['as' => 'politics', 'uses' => 'Mai
 Route::get('sgmm', ['as' => 'sgmm', 'uses' => 'MainController@pia_getSGMM']);
 
 Route::get('contacto', ['as' => 'contact', 'uses' => 'MainController@pia_getContact']);
+Route::get('identidad', ['as' => 'company', 'uses' => 'MainController@pia_getAboutUs']);

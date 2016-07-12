@@ -187,6 +187,7 @@
 
 @section('script')
         <script>
-            $("#contact").addClass("active")
+            $("#company").addClass("active");
+            $("#contact").addClass("active");
         </script>
-@ennsection
+@endsection
