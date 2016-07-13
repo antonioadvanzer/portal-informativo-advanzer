@@ -159,15 +159,69 @@
 	                    <p>
 	                    	Esta política aplica para todo el personal de Advanzer y Entuizer, que, de acuerdo a su posición, puedan realizar una solicitud de recursos.
 	                	</p>
-	                </div>
-	            </div>
-
-	            <div class="row">
-	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
-	                    <h3>2. Alcance</h3>
-	                    <p>
-	                    	Esta política aplica para todo el personal de Advanzer y Entuizer, que, de acuerdo a su posición, puedan realizar una solicitud de recursos.
-	                	</p>
+                        
+                        <p>
+                            <img href="#">
+                        </p>
+                        
+                        <p>
+                        
+                            <b>Director de Área:</b> es el Director que aprobará la requisición
+                            <br>
+                            <b>Autorizador:</b> es el Director General / Socio que deberá autorizar la requisición
+                            <br>
+                            <b>Fecha de solicitud:</b> fecha de elaboración de requisición
+                            <br>
+                            <b>Fecha estimada de ingreso:</b> fecha estimada de arranque del proyecto o de inicio de actividades del candidato
+                            <br>
+                            <b>Área:</b> área a la que pertenece la posición requerida
+                            <br>
+                            <b>Track:</b> ruta de carrera donde crecerá el candidato: SAP, Consultoría de Negocios, Comercial, etc.
+                            <br>
+                            <b>Posición:</b> nivel de expertise que se requiere de la posición
+                            <br>
+                            <b>Empresa:</b> definir si es para Advanzer o Entuizer
+                            <br>
+                            <b>Tipo:</b> si es nueva creación o sustituye a algún recurso que haya sido baja. En caso de ser sustitución, mencionar a quien sustituye.
+                            <br>
+                            <b>Proyecto:</b> a qué proyecto se asignará el nuevo recurso
+                            <br>
+                            <b>Clave:</b> mencionar la clave del proyecto
+                            <br>
+                            <b>Costo Máximo:</b> es el costo máximo presupuestado para la posición/recurso. Puede ser de acuerdo al tabulador de la empresa o bien si se tiene el monto definido, debe mencionarse de forma mensual como dato informativo para AT. De este costo mensual, Atracción de Talento y Capital Humano definen el sueldo mensual máximo que se le puede ofrecer al candidato.
+                            <br>
+                            <b>Residencia:</b> Ciudad donde se llevará a cabo el proyecto o la asignación del recurso.
+                            <br>
+                            <b>Lugar de Trabajo:</b> es donde se encontrará físicamente el recurso: oficinas Advanzer/Entuizer, Oficinas Cliente o ambos
+                            <br>
+                            <b>Domicilio del cliente:</b> se debe especificar cuando el lugar de trabajo es con el cliente.
+                            <br>
+                            <b>Contratación:</b> tiempo determinado, indeterminado, duración del proyecto
+                            <br>
+                            <b>Evaluador Técnico:</b> es la persona que realizará la entrevista técnica
+                            <br>
+                            <b>Disponibilidad para Viajar:</b> se requiere o no viajar en el proyecto
+                            <br>
+                            <b>Edad:</b> rango de edad de los candidatos
+                            <br>
+                            <b>Sexo:</b> masculino, femenino, indistinto
+                            <br>
+                            <b>Nivel de Estudios:</b> mínimo nivel de estudios que se requiere para la posición
+                            <br>
+                            <b>Carrera:</b> estudios universitarios requeridos para la posición
+                            <br>
+                            <b>Inglés:</b> nivel de inglés hablado, leído y escrito
+                            <br>
+                            <b>Experiencia/Conocimientos en:</b> se debe especificar claramente que áreas debe dominar el candidato, que competencias y qué conocimientos específicos debe tener, así como el tiempo mínimo de experiencia
+                            <br>
+                            <b>Características/Habilidades deseadas:</b> se debe especificar que habilidades o competencias se esperan del candidato sin que sean un requisito indispensable.
+                            <br>
+                            <b>Funciones a desempeñar:</b> se deben especificar las funciones principales de la posición
+                            <br>
+                            <b>Observaciones:</b> cualquier comentario que pudiera ser relevante o que ayude a la búsqueda del candidato.
+                        
+                        </p>
+                                            
 	                </div>
 	            </div>
 

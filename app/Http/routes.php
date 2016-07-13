@@ -20,6 +20,8 @@ Route::get('/', ['as' => 'index', 'uses' => 'MainController@index']);
 Route::get('politicas', ['as' => 'politics', 'uses' => 'MainController@pia_getPolitics']);
 Route::get('politicas/atraccion_de_talento', ['as' => 'politics', 'uses' => 'MainController@pia_getAttractingTalent']);
 
+Route::get('material_grafico', ['as' => 'graphical', 'uses' => 'MainController@pia_getGraphicalMaterial']);
+
 Route::get('sgmm', ['as' => 'sgmm', 'uses' => 'MainController@pia_getSGMM']);
 
 Route::get('contacto', ['as' => 'contact', 'uses' => 'MainController@pia_getContact']);
