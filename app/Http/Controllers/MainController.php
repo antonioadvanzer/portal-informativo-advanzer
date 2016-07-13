@@ -1,8 +1,9 @@
 <?php
 /*
-Company: Advanzer S.A de C.V.
-Author: Antonio Baez
+    Company: Advanzer S.A de C.V.
+    Author: Antonio Báez
 */
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -74,6 +75,16 @@ class MainController extends Controller
     public function pia_getAttractingTalent()
     { 
        return View::make('politics.attracting_talent');
+    }
+
+    /**
+     * Display a view Graphical Material.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getGraphicalMaterial()
+    {
+        return View::make('main.graphical_material');
     }
 
     /**
