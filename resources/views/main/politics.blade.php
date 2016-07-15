@@ -39,7 +39,7 @@
 		                	<div class="portfolio-box-container">
 			                	<img src="{{ URL::to('img/politicas/grafico-signo-dolar-tantoporciento.jpg') }}" alt="" data-at2x="{{ URL::to('img/politicas/grafico-signo-dolar-tantoporciento.jpg') }}">
 			                	<div class="portfolio-box-text">
-			                		<h3>Bono Anual Consultor&iacute;a</h3>
+			                		<h3><a href="{{ URL::to('politicas/bono_anual_consultoria') }}">Bono Anual Consultor&iacute;a</a></h3>
 			                		<p></p>
 			                	</div>
 			                </div>
@@ -49,7 +49,7 @@
 		                	<div class="portfolio-box-container">
 			                	<img src="{{ URL::to('img/politicas/Carpeta.gif') }}" alt="" data-at2x="{{ URL::to('img/politicas/Carpeta.gif') }}">
 			                	<div class="portfolio-box-text">
-			                		<h3>Cartas y Constancias Laborales</h3>
+                                    <h3><a href="{{ URL::to('politicas/cartas_y_constancias_laborales') }}">Cartas y Constancias Laborales</a></h3>
 			                		<p></p>
 			                	</div>
 			                </div>
@@ -59,7 +59,7 @@
 		                	<div class="portfolio-box-container">
 			                	<img src="{{ URL::to('img/politicas/certificaciones1.jpg') }}" alt="" data-at2x="{{ URL::to('img/politicas/certificaciones1.jpg') }}">
 			                	<div class="portfolio-box-text">
-			                		<h3>Certificaciones y Cursos</h3>
+                                    <h3><a href="{{ URL::to('politicas/certificaciones_y_cursos') }}">Certificaciones y Cursos</a></h3>
 			                		<p></p>
 			                	</div>
 			                </div>
@@ -69,7 +69,7 @@
 		                	<div class="portfolio-box-container">
 			                	<img src="{{ URL::to('img/politicas/Reglas-para-lucir-un-traje-perfecto.png') }}" alt="" data-at2x="{{ URL::to('img/politicas/Reglas-para-lucir-un-traje-perfecto.png') }}">
 			                	<div class="portfolio-box-text">
-			                		<h3>C&oacute;digo de vestimenta</h3>
+                                    <h3><a href="{{ URL::to('politicas/codigo_de_vestimenta') }}">C&oacute;digo de vestimenta</a></h3>
 			                		<p></p>
 			                	</div>
 			                </div>
@@ -79,7 +79,7 @@
 		                	<div class="portfolio-box-container">
 			                	<img src="{{ URL::to('img/politicas/clima_laboral.jpg') }}" alt="" data-at2x="{{ URL::to('img/politicas/clima_laboral.jpg') }}">
 			                	<div class="portfolio-box-text">
-			                		<h3>Comunicaci&oacute;n Interna</h3>
+                                    <h3><a href="{{ URL::to('politicas/comunicacion_interna') }}">Comunicaci&oacute;n Interna</a></h3>
 			                		<p></p>
 			                	</div>
 			                </div>
