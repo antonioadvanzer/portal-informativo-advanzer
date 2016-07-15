@@ -68,13 +68,63 @@ class MainController extends Controller
     }
 
     /**
-     * Display a view with Attracting Talent.
+     * Display a view Attracting Talent.
      *
      * @return \Illuminate\Http\Response
      */
     public function pia_getAttractingTalent()
     { 
        return View::make('politics.attracting_talent');
+    }
+
+    /**
+     * Display a view Annual Bonus.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getAnnualBonus()
+    { 
+       return View::make('politics.annual_bonus');
+    }
+
+    /**
+     * Display a view Letters And Constancies.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getLettersAndConstancies()
+    {
+        return View::make('politics.letters_and_constancies');
+    }
+
+    /**
+     * Display a view Certifications And Courses.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getCertificationsAndCourses()
+    {
+        return View::make('politics.certifications_and_courses');
+    }
+
+    /**
+     * Display a view Dress Code.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getDressCode()
+    {
+        return View::make('politics.dress_code');
+    }
+
+    /**
+     * Display a view Internal Comunication.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getInternalComunication()
+    {
+        return View::make('politics.internal_comunication');
     }
 
     /**
