@@ -26,6 +26,11 @@ Route::get('politicas/cartas_y_constancias_laborales', ['as' => 'letters', 'uses
 Route::get('politicas/certificaciones_y_cursos', ['as' => 'certifications', 'uses' => 'MainController@pia_getCertificationsAndCourses']);
 Route::get('politicas/codigo_de_vestimenta', ['as' => 'dress', 'uses' => 'MainController@pia_getDressCode']);
 Route::get('politicas/comunicacion_interna', ['as' => 'dress', 'uses' => 'MainController@pia_getInternalComunication']);
+Route::get('politicas/dias_festivos', ['as' => 'days', 'uses' => 'MainController@pia_getFreeDays']);
+Route::get('politicas/horarios', ['as' => 'schedules', 'uses' => 'MainController@pia_getSchedules']);
+Route::get('politicas/ausencias_y_permisos', ['as' => 'absences', 'uses' => 'MainController@pia_getAbsences']);
+Route::get('politicas/vacaciones', ['as' => 'holidays', 'uses' => 'MainController@pia_getHolidays']);
+Route::get('politicas/viaticos_y_gastos_de_viaje', ['as' => 'travel', 'uses' => 'MainController@pia_getTravelExpenses']);
 
 Route::get('material_grafico', ['as' => 'graphical', 'uses' => 'MainController@pia_getGraphicalMaterial']);
 

@@ -55,7 +55,8 @@
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
 	                    <h3>3. Descripci&oacute;n</h3>
                         
-                        <ul>
+                        <ul style="list-style-type:none">
+                            
                             <li>
                                 <h4>a) Premisas Básicas</h4>
                                 
@@ -65,7 +66,7 @@
                                 El apoyo estará sujeto a la disponibilidad del curso de acuerdo al proveedor seleccionado por Capital Humano y a las siguientes condiciones de acuerdo a la antigüedad del empleado solicitante:
                                 </p>
                                 
-                                <table class="responstable">
+                                <table class="responstable" style="width:50%">
                                     <tr>
                                         <th>Antigüedad</th>
                                         <th>Porcentaje a cargo de Empleado</th>
@@ -131,18 +132,18 @@
 	                    	Para todo el personal de Advanzer que preste sus servicios dentro del área de Consultoría y que cuente con antigüedad mayor a 1 año.
 	                	</p>
                         
-                        <ul>
+                        <ul style="list-style-type:none">
                             <li>
-                            a) El empleado al estar interesado en tomar alguna Academia de SAP deberá solicitar validación de parte de su Jefe Directo que la misma Academia de interés esté relacionada con sus funciones actuales y/o futuras a través de un correo electrónico.
+                            <b>a)</b> El empleado al estar interesado en tomar alguna Academia de SAP deberá solicitar validación de parte de su Jefe Directo que la misma Academia de interés esté relacionada con sus funciones actuales y/o futuras a través de un correo electrónico.
                             </li>
                             <li>
-                            b)         El mismo correo se reenviará a Capital Humano, en donde se validarán las fechas y modalidades disponibles para la Academia deseada y que el empleado cumpla los requisitos.
+                            <b>b)</b> El mismo correo se reenviará a Capital Humano, en donde se validarán las fechas y modalidades disponibles para la Academia deseada y que el empleado cumpla los requisitos.
                             </li>
                             <li>
-                            c)         Capital Humano informará a través del Formato de Autorización de Academia SAP (Anexo) los términos dentro de los cuales cursará la Academia y del apoyo que Advanzer proporcionaría.
+                            <b>c)</b> Capital Humano informará a través del Formato de Autorización de Academia SAP (Anexo) los términos dentro de los cuales cursará la Academia y del apoyo que Advanzer proporcionaría.
                             </li>
                             <li>
-                            d)         Al obtener la validación del empleado, Capital Humano comenzará la gestión de los trámites administrativos correspondientes incluyendo la firma de pagaré por la cantidad total del costo de la Academia.
+                            <b>d)</b> Al obtener la validación del empleado, Capital Humano comenzará la gestión de los trámites administrativos correspondientes incluyendo la firma de pagaré por la cantidad total del costo de la Academia.
                             </li>
                         </ul>
                         

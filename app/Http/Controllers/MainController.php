@@ -128,6 +128,56 @@ class MainController extends Controller
     }
 
     /**
+     * Display a view Free Days.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getFreeDays()
+    {
+        return View::make('politics.free_days');
+    }
+
+    /**
+     * Display a view Schedules.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getSchedules()
+    {
+        return View::make('politics.schedules');
+    }
+
+    /**
+     * Display a view Absences.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getAbsences()
+    {
+        return View::make('politics.absences');
+    }
+
+    /**
+     * Display a view Holidays.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getHolidays()
+    {
+        return View::make('politics.holidays');
+    }
+
+    /**
+     * Display a view Travel Expenses.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getTravelExpenses()
+    {
+        return View::make('politics.travel_expenses');
+    }
+
+    /**
      * Display a view Graphical Material.
      *
      * @return \Illuminate\Http\Response
