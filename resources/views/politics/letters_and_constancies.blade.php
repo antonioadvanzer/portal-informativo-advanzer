@@ -47,7 +47,7 @@
 	                    	Dentro de tu Portal Personal podras acceder a un <span class="violet">módulo</span> con un formulario requerido.
 	                    </p>
 	                    <div class="call-to-action-button">
-	                        <a target="_blanck" class="big-link-3" href="http://intranet.advanzer.com:3000/solicitar_carta">Ir Ahora</a>
+	                        <a target="_blank" class="big-link-3" href="http://intranet.advanzer.com:3000/solicitar_carta">Ir Ahora</a>
 	                    </div>
 	                </div>
 	            </div>

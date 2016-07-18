@@ -55,7 +55,7 @@
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
 	                    <h3>4. Lineamientos</h3>
 	                    
-	                    	<ul>
+	                    	<ul style="list-style-type:none">
 		                    	<li><b>a)</b>    Cualquier área que, por arranque o modificación de proyecto, carga de trabajo o colocación de recursos a clientes externos, deberán realizar su petición a través de una requisición de personal</li>
 
 								<li><b>b)</b>    Las posiciones autorizadas para realizar una requisición de personal son: Gerente, Gerente Sr y Director. Cuando un Consultor Sr depende directamente de una Dirección también podrá elaborar requisiciones de personal previa solicitud a CH.</li>
@@ -131,7 +131,7 @@
 
 							<h4>Para ambos procesos:</h4>
 							
-							<ul>
+							<ul style="list-style-type:none">
 							
 							<li><b>a.</b>Todos los autorizadores cuentan con un plazo de 30 días para dar Aceptar/Autorizar la requisición de personal recibida. Si en este periodo la requisición no es aceptada por el Director de Área o Autorizada por el Director General/Socio, ésta es cancelada y en caso de requerirse la posición, deberá el solicitante reactivarla de nuevo en el Portal. Este proceso se puede llevar a cabo solo 1 vez por cada posición cancelada.</li>
 

@@ -20,7 +20,7 @@
             	
         		<div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>Comunicaci&oacute;n Iterna</p>
+	            		<p>Comunicaci&oacute;n Interna</p>
 	            	</div>
 	            </div>
 
@@ -127,7 +127,7 @@
                         <p>Si algún área diferente a las mencionadas requiere comunicar información a toda la organización, deberá hacerlo a través de Capital Humano vía su Gerente o Director.</p>
                         
                         <ul>
-                            <li>Llenar correctamente toda la información solicitada en el formato “Petición de Comunicado Organizacional” (da clic aquí).</li>
+                            <li>Llenar correctamente toda la información solicitada en el formato <a href="#formato">“Petición de Comunicado Organizacional”</a>.</li>
 
                             <li>Solicitar la publicación al menos 3 días hábiles antes de la fecha de emisión, considerando que el comunicado está correcto y no hay cambios en el mismo.</li>
                         </ul>
@@ -219,9 +219,72 @@
                             
                         </ul>
                             
+                        <p>Puntos a considerar:</p>
+                        
+                        <ul>
+                            <li>
+                                Solamente los Directores podrán solicitar Gestión de Mensajes especificando los indicadores de su interés en el formato <a href="#formato">“Petición de Comunicado Organizacional”</a>.
+                            </li>
+                            <li>
+                                Los indicadores solicitados deberán tener una justificación de peso para su análisis.
+                            </li>
+                            <li>
+                                La información se entregará 1 semana después de la fecha límite de lectura que el Director le asigne al comunicado.
+                            </li>
+                        </ul>
+                        
                     </div>
 	            </div>
                 
+                <div class="row">
+	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
+	                    <h3>7. Imagen Institucional</h3>
+	                    
+                        <p>
+                            Todo correo (Outlook o Gmail) de la Organización deberá incluir la firma institucional que se le asigna a cada colaborador al ingresar a laborar. Esta firma no debe ser modificada.
+                            <br>
+                            La firma se compone de la siguiente información:
+                        </p>
+                        
+                        <ul>
+                        
+                            <li>Nombre y primer apellido</li>
+
+                            <li>Área a la que pertenece</li>
+
+                            <li>Dirección y teléfono de la oficina</li>
+
+                            <li>Correo electrónico</li>
+
+                            <li>Página web de la empresa</li>
+
+                        </ul>
+                            
+                        <p>
+                            No deberá incluirse ninguna información adicional a la mencionada.
+                            <br>
+                            Cualquier observación no contenida en esta Política deberá ser resuelta por la Dirección General.
+                        </p>
+                        
+                    </div>
+	            </div>
+                
+	        </div>
+        </div>
+
+        <div id="formato" class="call-to-action-container">
+        	<div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 call-to-action-text wow fadeInLeftBig animated" style="visibility: visible; animation: fadeInLeftBig; -webkit-animation: fadeInLeftBig;">
+	                    <p class="fa fa-file-text-o">
+	                    	Petici&oacute;n de Comunicado Organizacional.
+	                    </p>
+	                    <div class="call-to-action-button">
+	                        <a target="_blank" class="big-link-3" href="https://docs.google.com/a/advanzer.com/forms/d/1_WSYtE5N98kMtSCh_856ohe7QML22VswBa3UTbS9Pwg/viewform">Ir Ahora</a>
+                            
+	                    </div>
+	                </div>
+	            </div>
 	        </div>
         </div>
 
