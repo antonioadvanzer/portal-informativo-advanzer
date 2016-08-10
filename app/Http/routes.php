@@ -32,9 +32,35 @@ Route::get('politicas/ausencias_y_permisos', ['as' => 'absences', 'uses' => 'Mai
 Route::get('politicas/vacaciones', ['as' => 'holidays', 'uses' => 'MainController@pia_getHolidays']);
 Route::get('politicas/viaticos_y_gastos_de_viaje', ['as' => 'travel', 'uses' => 'MainController@pia_getTravelExpenses']);
 
+// Material Grafico
 Route::get('material_grafico', ['as' => 'graphical', 'uses' => 'MainController@pia_getGraphicalMaterial']);
 
+// SGMM
 Route::get('sgmm', ['as' => 'sgmm', 'uses' => 'MainController@pia_getSGMM']);
 
+// Contactos
 Route::get('contacto', ['as' => 'contact', 'uses' => 'MainController@pia_getContact']);
+
+// Identidad
 Route::get('identidad', ['as' => 'company', 'uses' => 'MainController@pia_getAboutUs']);
+
+
+// Access to Dashboard
+Route::group(['prefix' => 'advanzer-admin'], function() {
+
+    // Process to acces to dasboard
+    Route::get('iniciar_sesion', ['as' => 'start', 'uses' => 'AdminController@adminLogIn']);
+    Route::post('iniciar_sesion', ['as' => 'login', 'uses' => 'AdminController@adminStartSession']);
+   
+    Route::group(['middleware' => 'auth'], function() {
+
+        Route::get('/', ['as' => 'main', 'uses' => 'AdminController@index']);
+        Route::get('/cerrar_session', ['as' => 'end', 'uses' => 'AdminController@adminCloseSession']);
+        Route::get('/usuarios', ['as' => 'users', 'uses' => 'AdminController@adminGetUsers']);
+        Route::get('/nuevo_usuario', ['as' => 'user', 'uses' => 'AdminController@adminNewUserForm']);
+        Route::post('/guardar_nuevo_usuario', ['as' => 'saveUser', 'uses' => 'AdminController@adminSaveNewUser']);
+        Route::get('/eliminar_usuario/{id}', ['as' => 'deleteUser', 'uses' => 'AdminController@adminDeleteUser']);
+
+    });
+
+});
