@@ -77,7 +77,7 @@
                     <li id ="users" ><a href="{{ URL::to('advanzer-admin/usuarios') }}"><i class="glyphicon glyphicon-user"></i> Usuarios</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-calendar"></i> Calendario</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-film"></i> Carrusel</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Noticias</a></li>
+                    <li id ="news"><a href="{{ URL::to('advanzer-admin/noticias') }}"><i class="glyphicon glyphicon-list-alt"></i> Noticias</a></li>
                     <!--<li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li>
                     <li><a href="tables.html"><i class="glyphicon glyphicon-list"></i> Tables</a></li>
                     <li><a href="buttons.html"><i class="glyphicon glyphicon-record"></i> Buttons</a></li>

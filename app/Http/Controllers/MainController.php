@@ -10,6 +10,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use View;
 use URL;
+use App\Circular;
+use App\ImageCircular;
+use App\ElementCarrusel;
 
 class MainController extends Controller
 {   
@@ -22,7 +25,13 @@ class MainController extends Controller
      */
     public function index()
     { 
-       return View::make('main.index');
+       $carrusel = ElementCarrusel::all();
+
+       /*foreach($carrusel as $c){
+           var_dump($c->circular); 
+       } 
+       exit;*/
+       return View::make('main.index', ['news' => $carrusel]);
     }
 
     /**

@@ -17,7 +17,13 @@
 <!-- Services Full Width Text -->
         <div class="services-full-width-container">
         	<div class="container">
-            	
+                
+            	<div class=row align="center">
+                    <a onclick="window.history.back();">
+                        <img width="5%" style="min-width: 50px" src="{{ URL::to('img/elementos/back.png') }}" alt="" >
+                    </a>
+                </div>
+                
         		<div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
 	            		<p>Atracci&oacute;n de Talento</p>

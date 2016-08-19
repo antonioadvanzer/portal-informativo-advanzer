@@ -13,6 +13,9 @@ use URL;
 use Auth;
 use Hash;
 use App\User;
+use App\Circular;
+use App\ImageCircular;
+use App\ElementCarrusel;
 
 class AdminController extends Controller
 {
@@ -74,7 +77,30 @@ class AdminController extends Controller
         return redirect('advanzer-admin/iniciar_sesion');
 
     }
+
+    /**
+     * Display users table.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminGetUsers()
+    {   
+        $users = User::all();
+        return View::make('admin.users.users', ['users' => $users]);
+    }
     
+    /**
+     * Display users table.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminGetNews()
+    {   
+        $news = Circular::all();
+        return View::make('admin.news.news', ['news' => $news]);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -87,6 +113,28 @@ class AdminController extends Controller
     }
 
     /**
+     * Display the form form creating new user.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminNewUserForm()
+    {   
+        return View::make('admin.users.new_user');
+    }
+
+    /**
+     * Display the form form creating new circular.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminNewCircularForm()
+    {   
+        return View::make('admin.news.new_circular');
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -95,40 +143,6 @@ class AdminController extends Controller
     public function store(Request $request)
     {
         //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Display users table.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function adminGetUsers()
-    {   
-        $users = User::all();
-        return View::make('admin.users', ['users' => $users]);
-    }
-
-    /**
-     * Display form new user.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function adminNewUserForm()
-    {   
-        return View::make('admin.new_user');
     }
 
     /**
@@ -146,6 +160,93 @@ class AdminController extends Controller
         ]);
 
         return "success"; 
+    }
+    private $urlNews = "img/noticias";
+    /**
+     * Save new circular.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminSaveNewCircular(Request $request)
+    {   
+        // Store circular saved
+        try{
+            $circular = Circular::create([
+                            'title' => $request->get('title'),
+                            'summary' => $request->get('summary'),
+                            'content' => $request->get('content'),
+                        ]);
+        }catch(\Exception $e){
+            //echo $e;
+        }
+
+        // getting all of the post data
+        $files = $request->file('file');
+
+        // Making counting of uploaded images
+        $file_count = count($files);
+
+        // start count how many uploaded
+        $uploadcount = 0;
+        
+        
+        foreach($files as $file) {
+
+        //$rules = array('file' => 'required'); //'required|mimes:png,gif,jpeg,txt,pdf,doc'
+        //$validator = Validator::make(array('file'=> $file), $rules);
+
+            /*if($validator->passes()){
+                $destinationPath = 'uploads';
+                $filename = $file->getClientOriginalName();
+                $upload_success = $file->move($destinationPath, $filename);
+                $uploadcount ++;
+            }*/
+        
+            try{
+
+                if ($file !== null) {
+                
+                //echo $file->getClientOriginalName();
+                //dd($file);exit;
+
+                    $destinationPath = $this->urlNews;
+                    $filename = $file->getClientOriginalName();
+                    $upload_success = $file->move($destinationPath, $filename);
+                    $uploadcount ++; 
+                }
+               
+            }catch(\Exception $e){
+                    echo $e;
+            }
+
+            ImageCircular::create([
+                'path' => $filename,
+                'id_circular' => $circular->id
+            ]);
+            
+        }
+
+        /*if($uploadcount == $file_count){
+            Session::flash('success', 'Upload successfully'); 
+            return Redirect::to('upload');
+        }else {
+            return Redirect::to('upload')->withInput()->withErrors($validator);
+        }*/
+
+
+        echo "success"; 
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
     }
 
     /**
@@ -194,4 +295,5 @@ class AdminController extends Controller
 
         return redirect('advanzer-admin/usuarios');        
     }
+
 }

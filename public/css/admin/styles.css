@@ -663,3 +663,126 @@ body {
   top: -9999px;
   left: -9999px;
 }
+
+/* Section to add images in news */
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+form{
+    background-color:white;
+}
+#maindiv{
+    /*width:960px;*/
+    width: inherit;
+    margin:10px auto; 
+    padding:10px;
+    font-family: 'Droid Sans', sans-serif;
+}
+#formdiv{
+    /*width:500px;*/
+    width: 100%;
+    float: left; 
+    text-align: center;
+    /*border: 5px solid #2C3338;*/
+    border: 1px solid #ccc;
+    display: inline-block;
+    white-space: nowrap
+}
+form{
+    padding: 40px 20px;
+    box-shadow: 0px 0px 10px;
+    border-radius: 2px;
+}
+h2{
+    margin-left: 30px;
+}
+.upload{
+    background-color:#ff0000;
+    border:1px solid #ff0000;
+    color:#fff;
+    border-radius:5px;
+    padding:10px;
+    text-shadow:1px 1px 0px green;
+    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+.upload:hover{
+    cursor:pointer;
+    background:#c20b0b;
+    border:1px solid #c20b0b;
+    box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+}
+#file{
+    /*color:green;
+    padding:5px; border:1px dashed #123456;
+    background-color: #f9ffe5;*/
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+.file{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#file + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: white;
+    display: inline-block;
+}
+
+#file:focus + label,
+#file + label:hover {
+    background-color: beige;
+}
+
+#upload{
+    margin-left: 45px;
+}
+
+#noerror{
+    color:green;
+    text-align: left;
+}
+#error{
+    color:red;
+    text-align: left;
+}
+#img{ 
+    width: 27px;
+    border: none; 
+    height: 27px;
+    margin-left: -20px;
+    margin-bottom: 91px;
+}
+
+.abcd{
+    text-align: center;
+}
+
+.abcd img{
+    height:100px;
+    width:100px;
+    padding: 5px;
+    border: 1px solid rgb(232, 222, 189);
+}
+b{
+    color:red;
+}
+#formget{
+    float:right;
+}
+
+#plus{
+    border: 3px solid #000;
+}
+
+#impl{
+    width: 50px;
+    height: 50px;
+}
+
+#filediv{
+    width: 100%
+}
