@@ -6,7 +6,7 @@ function chim(e){
         var element = document.getElementById("file"+e);
         //alert(element.value);
         if (element.files && element.files[0]) {ci++;
-                 abc += 1; //increementing global variable by 1
+                abc += 1; //increementing global variable by 1
 				
 				var z = abc - 1;
                 var x = $(element).parent().find('#previewimg' + z).remove();

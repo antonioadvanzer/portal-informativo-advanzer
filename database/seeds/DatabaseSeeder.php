@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
 
         ImageCircular::create([
             'id' => 1,
-            'path' => "img/slider/intranet.jpg",
+            'path' => "intranet.jpg",
             'id_circular' => 1
         ]);
 

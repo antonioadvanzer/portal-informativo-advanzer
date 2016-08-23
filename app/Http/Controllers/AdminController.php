@@ -12,6 +12,7 @@ use View;
 use URL;
 use Auth;
 use Hash;
+use DB;
 use App\User;
 use App\Circular;
 use App\ImageCircular;
@@ -170,6 +171,8 @@ class AdminController extends Controller
      */
     public function adminSaveNewCircular(Request $request)
     {   
+        DB::beginTransaction();
+
         // Store circular saved
         try{
             $circular = Circular::create([
@@ -178,7 +181,9 @@ class AdminController extends Controller
                             'content' => $request->get('content'),
                         ]);
         }catch(\Exception $e){
-            //echo $e;
+            echo $e;
+            DB::rollBack();
+            exit;
         }
 
         // getting all of the post data
@@ -213,17 +218,19 @@ class AdminController extends Controller
                     $destinationPath = $this->urlNews;
                     $filename = $file->getClientOriginalName();
                     $upload_success = $file->move($destinationPath, $filename);
-                    $uploadcount ++; 
+                    $uploadcount ++;
+
+                    ImageCircular::create([
+                        'path' => $filename,
+                        'id_circular' => $circular->id
+                    ]); 
                 }
                
             }catch(\Exception $e){
                     echo $e;
+                    DB::rollBack();
+                    exit;
             }
-
-            ImageCircular::create([
-                'path' => $filename,
-                'id_circular' => $circular->id
-            ]);
             
         }
 
@@ -234,6 +241,7 @@ class AdminController extends Controller
             return Redirect::to('upload')->withInput()->withErrors($validator);
         }*/
 
+        DB::commit();
 
         echo "success"; 
     }
@@ -261,6 +269,26 @@ class AdminController extends Controller
     }
 
     /**
+     * Show the form for editing the specified Cirucular.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminEditCircular($id)
+    {
+        $circular = Circular::find($id);
+
+        if(!empty($circular)){
+            
+            $pictures = ImageCircular::where('id_circular',$id)->get();
+
+            return View::make('admin.news.update_circular', ['circular' => $circular, 'pictures' => $pictures]);
+        }else{
+            return redirect('advanzer-admin/noticias');
+        }
+    }
+        
+    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -270,6 +298,78 @@ class AdminController extends Controller
     public function update(Request $request, $id)
     {
         //
+    }
+
+    /**
+     * Update the specified circular in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminUpdateCircular(Request $request)
+    {
+        DB::beginTransaction();
+
+        try{
+
+            Circular::where('id', $request->get('id'))
+                ->update([
+                    'title' => $request->get('title'),
+                    'summary' => $request->get('summary'),
+                    'content' => $request->get('content'),
+                ]);
+            
+            if($imgs = $request->get('imgs')){
+
+                // creating variable to store conditions
+                $ifimg = array();
+                
+                foreach($imgs as $img){
+                    $ifimg[] = ['id', "!=", $img];
+                }
+
+                // if user deleted any pictures
+                ImageCircular::where('id_circular', $request->get('id'))
+                    ->where($ifimg)
+                    ->delete();
+            
+            }
+
+            // getting all of the post data
+            $files = $request->file('file');
+
+            // Making counting of uploaded images
+            $file_count = count($files);
+
+            // start count how many uploaded
+            $uploadcount = 0;
+            
+            foreach($files as $file) {
+
+                    if ($file !== null) {
+
+                        $destinationPath = $this->urlNews;
+                        $filename = $file->getClientOriginalName();
+                        $upload_success = $file->move($destinationPath, $filename);
+                        $uploadcount ++;
+
+                        ImageCircular::create([
+                            'path' => $filename,
+                            'id_circular' => $request->get('id')
+                        ]); 
+                    }
+            }
+
+        }catch(\Exception $e){
+            echo $e;
+            DB::rollBack();
+            exit;
+        }
+        
+        DB::commit();
+
+        echo "success";
     }
 
     /**
@@ -294,6 +394,21 @@ class AdminController extends Controller
         User::where('id',$id)->delete();
 
         return redirect('advanzer-admin/usuarios');        
+    }
+
+    /**
+     * Remove the specified circular with images.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminDeleteCircular($id)
+    {   
+        ElementCarrusel::where('id_circular',$id)->delete();
+        ImageCircular::where('id_circular',$id)->delete();
+        Circular::where('id',$id)->delete();
+
+        return redirect('advanzer-admin/noticias');        
     }
 
 }

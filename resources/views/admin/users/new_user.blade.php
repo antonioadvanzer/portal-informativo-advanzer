@@ -101,10 +101,14 @@
                         },
                     dataType: "text"
                     
-                }).done(function() {
-                  $("#nus").removeClass("hide");
-                }).fail(function(data) {console.log(data);
-                  $("#nuf").removeClass("hide");
+                }).done(function(data) {
+                    console.log(data);
+                    window.location.href = "#nus";
+                    $("#nus").removeClass("hide");
+                }).fail(function(data) {
+                    console.log(data);
+                    window.location.href = "#nuf";
+                    $("#nuf").removeClass("hide");
                 });
                 
                 

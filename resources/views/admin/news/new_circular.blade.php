@@ -41,9 +41,10 @@
                                     </div>-->
                                     <div style="display: block;" id="filediv">
                                         <input onchange="chim(0)" id="file0" name="file[]" type="file" class="file">
-                                        <label id="plus" for="file0"><img id="impl" src="http://localhost:8000/img/admin/windows/plus-24-512.png"></label><br><br>
+                                        <label id="plus" for="file0"><img id="impl" src="{{ URL::to('img/admin/windows/plus-24-512.png') }}"></label><br><br>
                                     </div>
-                                    <input type="button" id="add_more" class="upload" value="Agregar mas archivos"/>
+                                    <!--<input type="button" id="add_more" class="upload" value="Agregar mas archivos"/>-->
+                                    <input type="hidden" id="add_more" >
                                 </div>
                             </div>
                             
@@ -67,6 +68,7 @@
 @section('script')
         <script src="{{ URL::to('js/admin/own/addImages.js') }}"></script>
         <script>
+            $("#news").addClass("current");
             
             /*$("#news").addClass("current");
             
@@ -132,10 +134,16 @@
                     processData: false,
                     contentType: false
                     
-                }).done(function(data) {console.log(data);
-                  $("#nus").removeClass("hide");
-                }).fail(function(data) {console.log(data);
-                  $("#nuf").removeClass("hide");
+                }).done(function(data) {
+                    console.log(data);
+                    window.location.href = "#nus";
+                    $("#nus").removeClass("hide");
+                    //location.reload();
+                    
+                }).fail(function(data) {
+                    console.log(data);
+                    $("#nuf").removeClass("hide");
+                    window.location.href = "#nuf";              
                 });
                      
             }));

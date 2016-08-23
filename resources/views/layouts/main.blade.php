@@ -115,7 +115,7 @@
                     <li id="graphics">
 						<a href="{{ URL::to('material_grafico') }}"><i class="fa fa-picture-o"></i><br>Identidad Corporativa</a>
 					</li>
-					<li id="news" class="dropdown">
+					<li id="publications" class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
 							<i class="fa fa-bookmark"></i><br>Publicaciones <span class="caret"></span>
 						</a>
@@ -123,8 +123,8 @@
                             <li id="birthday">
                                 <a href="#"><i class="fa fa-birthday-cake"></i>&nbsp;&nbsp;Cumpleaños del mes</a>
                             </li>
-							<li id="" >
-                                <a href="#"><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Noticias</a>
+							<li id="news" >
+                                <a href="{{ URL::to('noticias') }}"><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Noticias</a>
                             </li>
 						</ul>
                     </li>

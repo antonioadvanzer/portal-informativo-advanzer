@@ -33,8 +33,8 @@
                                 </li>-->
                                 
                                 @foreach($news as $new)
-                                <li data-thumb="{{ URL::to(''.$new->image->path) }}">
-                                    <img src="{{ URL::to(''.$new->image->path) }}">
+                                <li data-thumb="{{ URL::to('img/noticias/'.$new->image->path) }}">
+                                    <img src="{{ URL::to('img/noticias/'.$new->image->path) }}">
                                     <div class="flex-caption">
                                     	{{ $new->circular->summary }}
                                     </div>

@@ -8,6 +8,21 @@
 					<div class="panel-title">Noticias</div>
                     
 				</div>
+                
+                <div id="openModal" class="modalDialog">
+                    <div class="contact-form wow fadeInLeft">
+                        <a href="#close" title="Close" class="close">X</a>
+                        <div align="center">
+                            <h4>¿Estas seguro(a) que deseas eliminar esta Noticia?</h4>
+                            <h5><b>Atenci&oacute;n:</b> esta acci&oacute;n tambi&eacute;n eliminará a los elementos de carrusel ligados.</h5>
+                            <a class="button" id="confirmDeleteCircular">Aceptar</a>
+                            <a class="button" href="#close">Cancelar</a>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            
   				<div class="panel-body">
                     <a class="btn btn-success" href="{{ URL::to('advanzer-admin/nueva_noticia') }}">Nuevo</a><br><br>
   					<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
@@ -38,8 +53,8 @@
 								<td>{{ $s }}</td>
                                 <td>{{ $n->created_at }}</td>
                                 <td>
-                                    <a class="glyphicon glyphicon-remove" href="{{ URL::to('advanzer-admin/eliminar_usuario').'/'.$n->id }}"></a>
-                                    <a class="glyphicon glyphicon-edit" href="{{ URL::to('advanzer-admin/eliminar_usuario').'/'.$n->id }}"></a>
+                                    <a class="glyphicon glyphicon-edit" href="{{ URL::to('advanzer-admin/editar_noticia').'/'.$n->id }}"></a>
+                                    <a id="{{ $n->id }}" class="glyphicon glyphicon-remove deleteCircular" href="#openModal"></a>
                                 </td>
 							</tr>
                             @endforeach
@@ -55,6 +70,19 @@
     
 <script>
     $("#news").addClass("current");
+    
+    var circular = "";
+    var url = "{{ URL::to('advanzer-admin/eliminar_noticia') }}"
+    
+    $("#confirmDeleteCircular").click( function () {
+        window.location.href = circular;
+    });
+    
+    $(".deleteCircular").click( function (event){
+        
+        circular = url + '/' + event.target.id;
+    });
+    
 </script>
     
 <link href="{{ URL::to('vendors/datatables/dataTables.bootstrap.css') }}" rel="stylesheet" media="screen">

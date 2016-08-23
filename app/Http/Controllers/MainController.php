@@ -227,6 +227,38 @@ class MainController extends Controller
     }
 
     /**
+     * Display a view with news.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getNews()
+    {   
+        $news = Circular::all();
+        
+        return View::make('main.news', ['news' => $news]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getCircular($id)
+    {
+        $circular = Circular::find($id);
+
+        if(!empty($circular)){
+            
+            //$pictures = ImageCircular::where('id_circular',$id)->get();
+
+            return View::make('main.circular', ['circular' => $circular]);
+        }else{
+            return redirect('noticias');
+        }
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id

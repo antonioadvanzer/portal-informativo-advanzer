@@ -27,6 +27,6 @@ class Circular extends Model
 
     // Find a get all pictures 
     public function getImages(){
-        return $this->hasMany('ImageCircular');
+        return $this->hasMany('App\ImageCircular','id_circular');
     }
 }
