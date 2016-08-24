@@ -250,9 +250,9 @@ class MainController extends Controller
 
         if(!empty($circular)){
             
-            //$pictures = ImageCircular::where('id_circular',$id)->get();
+            $pictures = ImageCircular::where('id_circular',$id)->get();
 
-            return View::make('main.circular', ['circular' => $circular]);
+            return View::make('main.circular', ['circular' => $circular, 'images' => $pictures]);
         }else{
             return redirect('noticias');
         }

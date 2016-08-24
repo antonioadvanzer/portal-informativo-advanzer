@@ -39,7 +39,29 @@
 	                </div>
 	            </div>
 
-	            
+	            <div class="row">
+	            	<div id="" class="">
+	            		
+                        <div class="media">
+                            
+                            @foreach($images as $image)
+                            <a class="thumbnail">
+                                <img src="{{ URL::to('img/noticias/'.$image->path) }}">
+                            </a>
+                            @endforeach
+                            
+                            <div class="thumb-viewer">
+                                <a class="prev"></a>
+                                <a class="next"></a>
+                                <a class="exit">x</a>
+                                <div class="viewer-body">
+                                </div>
+                            </div>
+                        </div>
+                        
+	            	</div>
+	            </div><br><br><br>
+                
 	        </div>
         </div>
 @endsection
@@ -47,5 +69,41 @@
 @section('script')
         <script>
             $("#publications").addClass("active");
+            
+            $(function() {
+               var thumbnail =  $('.thumbnail');
+               var container = $('.viewer-body');
+               var exit = $('.exit');
+               var next = $('.next');
+               var prev = $('.prev');
+
+               thumbnail.click(function(){
+                var content = $(this).html();
+                thumbnail.removeClass('open');
+                $(this).addClass('open');
+                $('body').addClass('view-open');
+                container.html(content);
+              });
+
+              next.click(function() {
+                var total = $('.media .thumbnail').length;
+               if ($('.open').index() === total- 1){
+                   $('.thumbnail:last-child').addClass('open');
+                }
+              else{$('.open').removeClass('open').next().toggleClass('open');}
+                 var content = $('.open').html();
+                 container.html(content);
+              });
+
+              prev.click(function() {
+                if ($('.open').index() == 0){$('.thumbnail:first-child').addClass('open');}
+                else{ $('.open').removeClass('open').prev().toggleClass('open');}
+                 var content = $('.open').html();
+                 container.html(content);
+              });
+
+               exit.click(function() {$('body').removeClass('view-open'); });  
+
+            });
         </script>
 @endsection
