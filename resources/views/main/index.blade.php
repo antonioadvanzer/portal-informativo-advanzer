@@ -8,7 +8,7 @@
                     <div class="col-sm-10 col-sm-offset-1 slider">
                         <div class="flexslider">
                             <ul class="slides">
-                                <li data-thumb="{{ URL::to('img/slider/1.jpg') }}">
+                                <!--<li data-thumb="{{ URL::to('img/slider/1.jpg') }}">
                                     <img src="{{ URL::to('img/slider/1.jpg') }}">
                                     <div class="flex-caption">
                                     	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
@@ -30,7 +30,16 @@
                                     	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
                                     	Lorem ipsum dolor sit amet, consectetur.
                                     </div>
+                                </li>-->
+                                
+                                @foreach($news as $new)
+                                <li data-thumb="{{ URL::to('img/noticias/'.$new->image->path) }}">
+                                    <img src="{{ URL::to('img/noticias/'.$new->image->path) }}">
+                                    <div class="flex-caption">
+                                    	{{ $new->circular->summary }}
+                                    </div>
                                 </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

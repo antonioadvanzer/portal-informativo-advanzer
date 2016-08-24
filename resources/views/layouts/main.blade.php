@@ -104,6 +104,7 @@
                     <li id="home">
 						<a href="{{ URL::to('') }}"><i class="fa fa-home"></i><br>Principal</a>
 					</li>
+                    <li id="about" ><a href="{{ URL::to('identidad') }}"><i class="fa fa-building"></i><br>Quienes Somos</a></li>
 					<li id="organization" >
 						<a href="#"><i class="fa fa-sitemap"></i><br>Estructura Organizacional</a>
 					</li>
@@ -112,18 +113,18 @@
 					</li>
 					<!---->
                     <li id="graphics">
-						<a href="{{ URL::to('material_grafico') }}"><i class="fa fa-picture-o"></i><br>Material Gr&aacute;fico</a>
+						<a href="{{ URL::to('material_grafico') }}"><i class="fa fa-picture-o"></i><br>Identidad Corporativa</a>
 					</li>
-					<li id="news" class="dropdown">
+					<li id="publications" class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
-							<i class="fa fa-newspaper-o"></i><br>Noticias <span class="caret"></span>
+							<i class="fa fa-bookmark"></i><br>Publicaciones <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-left" role="menu">
                             <li id="birthday">
                                 <a href="#"><i class="fa fa-birthday-cake"></i>&nbsp;&nbsp;Cumpleaños del mes</a>
                             </li>
-							<li id="" >
-                                <a href="#"><i class="fa fa-bookmark"></i>&nbsp;&nbsp;Publicaciones</a>
+							<li id="news" >
+                                <a href="{{ URL::to('noticias') }}"><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Noticias</a>
                             </li>
 						</ul>
                     </li>
@@ -133,20 +134,18 @@
                     <li id="sgmm">
 						<a href="{{ URL::to('sgmm') }}"><i class="fa fa-info"></i><br>SGMM</a>
 					</li>
-                    <!--<li id="contact">
+                    <li id="contact" >
                         <a href="{{ URL::to('contacto') }}"><i class="glyphicon glyphicon-phone-alt"></i><br>Contacto</a>
-                    </li>-->
-                    <li id="company" class="dropdown">
+                    </li>
+                    <!--<li id="company" class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
 							<i class="fa fa-users"></i><br>Nosotros <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-left" role="menu">
-							<li id="contact" >
-                                <a href="{{ URL::to('contacto') }}"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp;&nbsp;Contacto</a>
-                            </li>
-							<li id="about" ><a href="{{ URL::to('identidad') }}"><i class="fa fa-building"></i>&nbsp;&nbsp;Identidad</a></li>
+							
+							
 						</ul>
-                    </li>
+                    </li>-->
 				</ul>
 			</div>
 		</div>

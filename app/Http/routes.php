@@ -25,7 +25,7 @@ Route::get('politicas/bono_anual_consultoria', ['as' => 'bonnus', 'uses' => 'Mai
 Route::get('politicas/cartas_y_constancias_laborales', ['as' => 'letters', 'uses' => 'MainController@pia_getLettersAndConstancies']);
 Route::get('politicas/certificaciones_y_cursos', ['as' => 'certifications', 'uses' => 'MainController@pia_getCertificationsAndCourses']);
 Route::get('politicas/codigo_de_vestimenta', ['as' => 'dress', 'uses' => 'MainController@pia_getDressCode']);
-Route::get('politicas/comunicacion_interna', ['as' => 'dress', 'uses' => 'MainController@pia_getInternalComunication']);
+Route::get('politicas/comunicacion_interna', ['as' => 'people', 'uses' => 'MainController@pia_getInternalComunication']);
 Route::get('politicas/dias_festivos', ['as' => 'days', 'uses' => 'MainController@pia_getFreeDays']);
 Route::get('politicas/horarios', ['as' => 'schedules', 'uses' => 'MainController@pia_getSchedules']);
 Route::get('politicas/ausencias_y_permisos', ['as' => 'absences', 'uses' => 'MainController@pia_getAbsences']);
@@ -44,11 +44,14 @@ Route::get('contacto', ['as' => 'contact', 'uses' => 'MainController@pia_getCont
 // Identidad
 Route::get('identidad', ['as' => 'company', 'uses' => 'MainController@pia_getAboutUs']);
 
+// Noticias
+Route::get('noticias', ['as' => 'news', 'uses' => 'MainController@pia_getNews']);
+Route::get('noticias/ver_noticia/{id}', ['as' => 'showCircular', 'uses' => 'MainController@pia_getCircular']);
 
 // Access to Dashboard
 Route::group(['prefix' => 'advanzer-admin'], function() {
 
-    // Process to acces to dasboard
+    // Process to access to dashboard
     Route::get('iniciar_sesion', ['as' => 'start', 'uses' => 'AdminController@adminLogIn']);
     Route::post('iniciar_sesion', ['as' => 'login', 'uses' => 'AdminController@adminStartSession']);
    
@@ -60,7 +63,12 @@ Route::group(['prefix' => 'advanzer-admin'], function() {
         Route::get('/nuevo_usuario', ['as' => 'user', 'uses' => 'AdminController@adminNewUserForm']);
         Route::post('/guardar_nuevo_usuario', ['as' => 'saveUser', 'uses' => 'AdminController@adminSaveNewUser']);
         Route::get('/eliminar_usuario/{id}', ['as' => 'deleteUser', 'uses' => 'AdminController@adminDeleteUser']);
-
+        Route::get('/noticias', ['as' => 'news', 'uses' => 'AdminController@adminGetNews']);
+        Route::get('/nueva_noticia', ['as' => 'circular', 'uses' => 'AdminController@adminNewCircularForm']);
+        Route::post('/guardar_nueva_noticia', ['as' => 'saveCircular', 'uses' => 'AdminController@adminSaveNewCircular']);
+        Route::get('/eliminar_noticia/{id}', ['as' => 'deleteCircular', 'uses' => 'AdminController@adminDeleteCircular']);
+        Route::get('/editar_noticia/{id}', ['as' => 'editCircular', 'uses' => 'AdminController@adminEditCircular']);
+        Route::post('/actualizar_noticia', ['as' => 'updateCircular', 'uses' => 'AdminController@adminUpdateCircular']);
     });
 
 });

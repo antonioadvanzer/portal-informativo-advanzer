@@ -10,6 +10,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use View;
 use URL;
+use App\Circular;
+use App\ImageCircular;
+use App\ElementCarrusel;
 
 class MainController extends Controller
 {   
@@ -22,7 +25,13 @@ class MainController extends Controller
      */
     public function index()
     { 
-       return View::make('main.index');
+       $carrusel = ElementCarrusel::all();
+
+       /*foreach($carrusel as $c){
+           var_dump($c->circular); 
+       } 
+       exit;*/
+       return View::make('main.index', ['news' => $carrusel]);
     }
 
     /**
@@ -215,6 +224,38 @@ class MainController extends Controller
     public function pia_getAboutUs()
     { 
        return View::make('main.company');
+    }
+
+    /**
+     * Display a view with news.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getNews()
+    {   
+        $news = Circular::all();
+        
+        return View::make('main.news', ['news' => $news]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getCircular($id)
+    {
+        $circular = Circular::find($id);
+
+        if(!empty($circular)){
+            
+            $pictures = ImageCircular::where('id_circular',$id)->get();
+
+            return View::make('main.circular', ['circular' => $circular, 'images' => $pictures]);
+        }else{
+            return redirect('noticias');
+        }
     }
 
     /**
