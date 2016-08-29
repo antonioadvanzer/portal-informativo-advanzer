@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
 
         Circular::create([
             'id' => 1,
-            'title' => "Nueva installación intranet",
+            'title' => "Nueva instalación intranet",
             'summary' => "El portal informativo Advanzer/Entuizer ha sido instalado con exito",
             'content' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 

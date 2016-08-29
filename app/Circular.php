@@ -29,4 +29,9 @@ class Circular extends Model
     public function getImages(){
         return $this->hasMany('App\ImageCircular','id_circular');
     }
+
+    // Find a get one element by circular
+    public function getElementsCarrusel(){
+        return $this->hasMany('App\ElementCarrusel','id_circular');
+    }
 }

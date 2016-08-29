@@ -19,18 +19,22 @@
 Route::get('/', ['as' => 'index', 'uses' => 'MainController@index']);
 
 // Politicas Advanzer
-Route::get('politicas', ['as' => 'politics', 'uses' => 'MainController@pia_getPolitics']);
-Route::get('politicas/atraccion_de_talento', ['as' => 'politics', 'uses' => 'MainController@pia_getAttractingTalent']);
-Route::get('politicas/bono_anual_consultoria', ['as' => 'bonnus', 'uses' => 'MainController@pia_getAnnualBonus']);
-Route::get('politicas/cartas_y_constancias_laborales', ['as' => 'letters', 'uses' => 'MainController@pia_getLettersAndConstancies']);
-Route::get('politicas/certificaciones_y_cursos', ['as' => 'certifications', 'uses' => 'MainController@pia_getCertificationsAndCourses']);
-Route::get('politicas/codigo_de_vestimenta', ['as' => 'dress', 'uses' => 'MainController@pia_getDressCode']);
-Route::get('politicas/comunicacion_interna', ['as' => 'people', 'uses' => 'MainController@pia_getInternalComunication']);
-Route::get('politicas/dias_festivos', ['as' => 'days', 'uses' => 'MainController@pia_getFreeDays']);
-Route::get('politicas/horarios', ['as' => 'schedules', 'uses' => 'MainController@pia_getSchedules']);
-Route::get('politicas/ausencias_y_permisos', ['as' => 'absences', 'uses' => 'MainController@pia_getAbsences']);
-Route::get('politicas/vacaciones', ['as' => 'holidays', 'uses' => 'MainController@pia_getHolidays']);
-Route::get('politicas/viaticos_y_gastos_de_viaje', ['as' => 'travel', 'uses' => 'MainController@pia_getTravelExpenses']);
+Route::group(['prefix' => 'politicas'], function() {
+    
+    Route::get('', ['as' => 'politics', 'uses' => 'MainController@pia_getPolitics']);
+    Route::get('/atraccion_de_talento', ['as' => 'politics', 'uses' => 'MainController@pia_getAttractingTalent']);
+    Route::get('/bono_anual_consultoria', ['as' => 'bonnus', 'uses' => 'MainController@pia_getAnnualBonus']);
+    Route::get('/cartas_y_constancias_laborales', ['as' => 'letters', 'uses' => 'MainController@pia_getLettersAndConstancies']);
+    Route::get('/certificaciones_y_cursos', ['as' => 'certifications', 'uses' => 'MainController@pia_getCertificationsAndCourses']);
+    Route::get('/codigo_de_vestimenta', ['as' => 'dress', 'uses' => 'MainController@pia_getDressCode']);
+    Route::get('/comunicacion_interna', ['as' => 'people', 'uses' => 'MainController@pia_getInternalComunication']);
+    Route::get('/dias_festivos', ['as' => 'days', 'uses' => 'MainController@pia_getFreeDays']);
+    Route::get('/horarios', ['as' => 'schedules', 'uses' => 'MainController@pia_getSchedules']);
+    Route::get('/ausencias_y_permisos', ['as' => 'absences', 'uses' => 'MainController@pia_getAbsences']);
+    Route::get('/vacaciones', ['as' => 'holidays', 'uses' => 'MainController@pia_getHolidays']);
+    Route::get('/viaticos_y_gastos_de_viaje', ['as' => 'travel', 'uses' => 'MainController@pia_getTravelExpenses']);
+
+});
 
 // Material Grafico
 Route::get('material_grafico', ['as' => 'graphical', 'uses' => 'MainController@pia_getGraphicalMaterial']);
@@ -45,8 +49,12 @@ Route::get('contacto', ['as' => 'contact', 'uses' => 'MainController@pia_getCont
 Route::get('identidad', ['as' => 'company', 'uses' => 'MainController@pia_getAboutUs']);
 
 // Noticias
-Route::get('noticias', ['as' => 'news', 'uses' => 'MainController@pia_getNews']);
-Route::get('noticias/ver_noticia/{id}', ['as' => 'showCircular', 'uses' => 'MainController@pia_getCircular']);
+Route::group(['prefix' => 'noticias'], function() {
+
+    Route::get('/{page?}', ['as' => 'news', 'uses' => 'MainController@pia_getNews']);
+    Route::get('/ver_noticia/{id}', ['as' => 'showCircular', 'uses' => 'MainController@pia_getCircular']);
+
+});
 
 // Access to Dashboard
 Route::group(['prefix' => 'advanzer-admin'], function() {
@@ -69,6 +77,7 @@ Route::group(['prefix' => 'advanzer-admin'], function() {
         Route::get('/eliminar_noticia/{id}', ['as' => 'deleteCircular', 'uses' => 'AdminController@adminDeleteCircular']);
         Route::get('/editar_noticia/{id}', ['as' => 'editCircular', 'uses' => 'AdminController@adminEditCircular']);
         Route::post('/actualizar_noticia', ['as' => 'updateCircular', 'uses' => 'AdminController@adminUpdateCircular']);
+        Route::get('/cambiar_estado_elemento_carrusel/{id}', ['as' => 'updateElementCarrusel', 'uses' => 'AdminController@pia_changeCircular']);
     });
 
 });
