@@ -25,7 +25,8 @@ class MainController extends Controller
      */
     public function index()
     { 
-       $carrusel = ElementCarrusel::all();
+        // Get all new activate to show on carrusel
+        $carrusel = ElementCarrusel::where('used',1)->get();
 
        /*foreach($carrusel as $c){
            var_dump($c->circular); 
@@ -233,13 +234,13 @@ class MainController extends Controller
      */
     public function pia_getNews()
     {   
-        $news = Circular::all();
+        $news = Circular::orderBy('created_at', 'DESC')->paginate(9);;
         
         return View::make('main.news', ['news' => $news]);
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified circular.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

@@ -19,7 +19,7 @@
 	        <div class="container">
 	            <div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>Selecciona la Noticias que quieres ver:</p>
+	            		<p>Selecciona la Noticia que quieres ver:</p>
 	            	</div>
 	            </div>
 	            <div class="row">
@@ -175,7 +175,7 @@
                             </div>
                             
                         </div>
-		                
+		                {{ $news->links() }}
 	            </div>
 	        </div>
         </div>

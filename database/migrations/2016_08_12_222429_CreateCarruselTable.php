@@ -16,6 +16,7 @@ class CreateCarruselTable extends Migration
             $table->increments('id');
             $table->integer('id_circular')->unsigned();
             $table->integer('id_img_circular')->unsigned();
+            $table->boolean('used')->default(1);
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('id_circular')->references('id')->on('circular');

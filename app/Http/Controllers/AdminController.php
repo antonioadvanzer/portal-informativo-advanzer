@@ -241,6 +241,22 @@ class AdminController extends Controller
             return Redirect::to('upload')->withInput()->withErrors($validator);
         }*/
 
+        try{
+
+            $ic = ImageCircular::where('id_circular',$circular->id)->get()->first();
+
+            ElementCarrusel::create([
+                'id_circular' => $circular->id,
+                'id_img_circular' => $ic->id,
+                'used' => ($request->get('public') ? 1 : 0 )
+            ]);
+
+        }catch(\Exception $e){
+            echo $e;
+            DB::rollBack();
+            exit;
+        }
+
         DB::commit();
 
         echo "success"; 
@@ -370,6 +386,21 @@ class AdminController extends Controller
         DB::commit();
 
         echo "success";
+    }
+
+    /**
+     * Allow edit status of specified circular on carrusel.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_changeCircular($id)
+    { 
+        $ec = ElementCarrusel::where('id_circular',$id)->get()->first();
+
+        ElementCarrusel::where('id_circular',$id)->update(["used" => ( $ec->used ? 0 : 1 )]);
+
+       return redirect('advanzer-admin/noticias');
     }
 
     /**
