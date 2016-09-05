@@ -14,6 +14,7 @@ use View;
 use URL;
 use Session;
 use Socialite;
+use Exception;
 use App\Circular;
 use App\ImageCircular;
 use App\ElementCarrusel;
@@ -38,15 +39,35 @@ class MainController extends Controller
        exit;*/
        return View::make('main.index', ['news' => $carrusel]);
     }
-
+	
+	// call a google login account
     public function redirectToGoogle()
     {
         return Socialite::driver('google')->redirect();
     }
-
-    public function handleGoogleCallback()
-    {echo "aaa";exit;
-        /*try {
+	
+	// validate if user is advanzer employed
+    public function handleGoogleCallback(Request $request)
+    {//var_dump($request->fullUrl());exit;
+    	try{
+			$user = Socialite::driver('google')->user();
+			//var_dump($user->user);exit;
+			//echo $user->email;
+    		
+    		if( ($user->user['domain'] == "advanzer.com") || ($user->user['domain'] == "entuizer.com")){
+	    		//$value = session('users', ['email' => $user->email, 'domain' => $user->user['domain']]);
+	    		Session::put(['users' => $user->email]);
+	    		return redirect()->guest('');
+			}else{
+				 return redirect()->guest('https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dopenid%2Bprofile%2Bemail%26response_type%3Dcode%26redirect_uri%3Dhttp://intranet.advanzer.com:5000/auth/google/callback%26state%3Dwclq8ztvxzbUhWfH4ukxe74Woac2ZUdxzFIRWpiz%26client_id%3D607109204233-2dsjtfpqu9v48mdo31ukt5jkhilpi5h2.apps.googleusercontent.com%26from_login%3D1%26as%3D-1e6b8d5797988cf4&oauth=1&sarp=1&scc=1#identifier');
+			}
+    	
+		}catch (Exception $e) {
+            //return $e;
+            return redirect()->guest('https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dopenid%2Bprofile%2Bemail%26response_type%3Dcode%26redirect_uri%3Dhttp://intranet.advanzer.com:5000/auth/google/callback%26state%3Dwclq8ztvxzbUhWfH4ukxe74Woac2ZUdxzFIRWpiz%26client_id%3D607109204233-2dsjtfpqu9v48mdo31ukt5jkhilpi5h2.apps.googleusercontent.com%26from_login%3D1%26as%3D-1e6b8d5797988cf4&oauth=1&sarp=1&scc=1#identifier');
+        }
+	 	 
+		 /*try {
             $user = Socialite::driver('google')->user();
             
             $userModel = new User;
@@ -56,7 +77,8 @@ class MainController extends Controller
         } catch (Exception $e) {
             return redirect('auth/facebook');
         }*/
-    }
+    
+	}
 
     /**
      * Show the form for creating a new resource.
