@@ -118,7 +118,7 @@
                 <a href="#close" title="Close" class="close">X</a>
                 <table class="responstable" style="width:100%;">
                     <tr>
-                        <th width="30%"><img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_4COLABORACIÓN.jpg') }}"></th>
+                        <th width="30%"><img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_4COLABORACION.jpg') }}"></th>
                         <th>Promovemos la suma de esfuerzos para el logro de objetivos.</th>
                     </tr>
                     <tr>
@@ -144,7 +144,7 @@
                 <a href="#close" title="Close" class="close">X</a>
                 <table class="responstable" style="width:100%;">
                     <tr>
-                        <th width="30%"><img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_5GESTIÓN DEL CAMBIO.jpg') }}"></th>
+                        <th width="30%"><img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_5GESTION DEL CAMBIO.jpg') }}"></th>
                         <th>Buscamos cambios para mejorar. Impulsamos una cultura de cambio constante y adaptación para evolucionar hacia mejores prácticas.</th>
                     </tr>
                     <tr>
@@ -282,7 +282,7 @@
                                       <div class="link_bg"></div>
                                       <div class="link_title">
                                         <div class=icon> 
-                                            <img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_4COLABORACIÓN.jpg') }}">
+                                            <img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_4COLABORACION.jpg') }}">
                                         </div>
                                       <a href="#colaboracion"><span>Colaboración</span></a>
                                       </div>
@@ -291,7 +291,7 @@
                                       <div class="link_bg"></div>
                                       <div class="link_title">
                                         <div class=icon> 
-                                            <img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_5GESTIÓN DEL CAMBIO.jpg') }}">
+                                            <img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_5GESTION DEL CAMBIO.jpg') }}">
                                         </div>
                                       <a href="#gestion_al_cambio"><span>Gestión al Cambio</span></a>
                                       </div>

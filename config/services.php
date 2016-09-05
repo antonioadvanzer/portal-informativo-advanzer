@@ -35,4 +35,10 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'google' => [
+        'client_id' => '607109204233-2dsjtfpqu9v48mdo31ukt5jkhilpi5h2.apps.googleusercontent.com',
+        'client_secret' => 'edRlqS0IPAJHxmFpu1ck11ku',
+        'redirect' => 'http://intranet.advanzer.com:5000/auth/google/callback',
+    ],
+
 ];

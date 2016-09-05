@@ -6,10 +6,14 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use View;
 use URL;
+use Session;
+use Socialite;
 use App\Circular;
 use App\ImageCircular;
 use App\ElementCarrusel;
@@ -33,6 +37,25 @@ class MainController extends Controller
        } 
        exit;*/
        return View::make('main.index', ['news' => $carrusel]);
+    }
+
+    public function redirectToGoogle()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function handleGoogleCallback()
+    {echo "aaa";exit;
+        /*try {
+            $user = Socialite::driver('google')->user();
+            
+            $userModel = new User;
+            $createdUser = $userModel->addNew($user);
+            Auth::loginUsingId($createdUser->id);
+            return redirect()->route('home');
+        } catch (Exception $e) {
+            return redirect('auth/facebook');
+        }*/
     }
 
     /**

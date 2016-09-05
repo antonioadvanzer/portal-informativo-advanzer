@@ -15,44 +15,53 @@
     return view('welcome');
 });*/
 
-// Pagina principal con el carrusel
-Route::get('/', ['as' => 'index', 'uses' => 'MainController@index']);
+// Control de cuentas de usuario a traves de direcciones de correo electrónico de google
+Route::get('auth/google', 'MainController@redirectToGoogle');
+Route::get('auth/google/callback', 'MainController@handleGoogleCallback');
 
-// Politicas Advanzer
-Route::group(['prefix' => 'politicas'], function() {
+// Control al sitio a traves de la cuenta de Advanzer
+Route::group(['middleware' => 'advanzer'], function() {
     
-    Route::get('', ['as' => 'politics', 'uses' => 'MainController@pia_getPolitics']);
-    Route::get('/atraccion_de_talento', ['as' => 'politics', 'uses' => 'MainController@pia_getAttractingTalent']);
-    Route::get('/bono_anual_consultoria', ['as' => 'bonnus', 'uses' => 'MainController@pia_getAnnualBonus']);
-    Route::get('/cartas_y_constancias_laborales', ['as' => 'letters', 'uses' => 'MainController@pia_getLettersAndConstancies']);
-    Route::get('/certificaciones_y_cursos', ['as' => 'certifications', 'uses' => 'MainController@pia_getCertificationsAndCourses']);
-    Route::get('/codigo_de_vestimenta', ['as' => 'dress', 'uses' => 'MainController@pia_getDressCode']);
-    Route::get('/comunicacion_interna', ['as' => 'people', 'uses' => 'MainController@pia_getInternalComunication']);
-    Route::get('/dias_festivos', ['as' => 'days', 'uses' => 'MainController@pia_getFreeDays']);
-    Route::get('/horarios', ['as' => 'schedules', 'uses' => 'MainController@pia_getSchedules']);
-    Route::get('/ausencias_y_permisos', ['as' => 'absences', 'uses' => 'MainController@pia_getAbsences']);
-    Route::get('/vacaciones', ['as' => 'holidays', 'uses' => 'MainController@pia_getHolidays']);
-    Route::get('/viaticos_y_gastos_de_viaje', ['as' => 'travel', 'uses' => 'MainController@pia_getTravelExpenses']);
+    // Pagina principal con el carrusel
+    Route::get('/', ['as' => 'index', 'uses' => 'MainController@index']);
 
-});
+    // Politicas Advanzer
+    Route::group(['prefix' => 'politicas'], function() {
+        
+        Route::get('', ['as' => 'politics', 'uses' => 'MainController@pia_getPolitics']);
+        Route::get('/atraccion_de_talento', ['as' => 'politics', 'uses' => 'MainController@pia_getAttractingTalent']);
+        Route::get('/bono_anual_consultoria', ['as' => 'bonnus', 'uses' => 'MainController@pia_getAnnualBonus']);
+        Route::get('/cartas_y_constancias_laborales', ['as' => 'letters', 'uses' => 'MainController@pia_getLettersAndConstancies']);
+        Route::get('/certificaciones_y_cursos', ['as' => 'certifications', 'uses' => 'MainController@pia_getCertificationsAndCourses']);
+        Route::get('/codigo_de_vestimenta', ['as' => 'dress', 'uses' => 'MainController@pia_getDressCode']);
+        Route::get('/comunicacion_interna', ['as' => 'people', 'uses' => 'MainController@pia_getInternalComunication']);
+        Route::get('/dias_festivos', ['as' => 'days', 'uses' => 'MainController@pia_getFreeDays']);
+        Route::get('/horarios', ['as' => 'schedules', 'uses' => 'MainController@pia_getSchedules']);
+        Route::get('/ausencias_y_permisos', ['as' => 'absences', 'uses' => 'MainController@pia_getAbsences']);
+        Route::get('/vacaciones', ['as' => 'holidays', 'uses' => 'MainController@pia_getHolidays']);
+        Route::get('/viaticos_y_gastos_de_viaje', ['as' => 'travel', 'uses' => 'MainController@pia_getTravelExpenses']);
 
-// Material Grafico
-Route::get('material_grafico', ['as' => 'graphical', 'uses' => 'MainController@pia_getGraphicalMaterial']);
+    });
 
-// SGMM
-Route::get('sgmm', ['as' => 'sgmm', 'uses' => 'MainController@pia_getSGMM']);
+    // Material Grafico
+    Route::get('material_grafico', ['as' => 'graphical', 'uses' => 'MainController@pia_getGraphicalMaterial']);
 
-// Contactos
-Route::get('contacto', ['as' => 'contact', 'uses' => 'MainController@pia_getContact']);
+    // SGMM
+    Route::get('sgmm', ['as' => 'sgmm', 'uses' => 'MainController@pia_getSGMM']);
 
-// Identidad
-Route::get('identidad', ['as' => 'company', 'uses' => 'MainController@pia_getAboutUs']);
+    // Contactos
+    Route::get('contacto', ['as' => 'contact', 'uses' => 'MainController@pia_getContact']);
 
-// Noticias
-Route::group(['prefix' => 'noticias'], function() {
+    // Identidad
+    Route::get('identidad', ['as' => 'company', 'uses' => 'MainController@pia_getAboutUs']);
 
-    Route::get('/{page?}', ['as' => 'news', 'uses' => 'MainController@pia_getNews']);
-    Route::get('/ver_noticia/{id}', ['as' => 'showCircular', 'uses' => 'MainController@pia_getCircular']);
+    // Noticias
+    Route::group(['prefix' => 'noticias'], function() {
+
+        Route::get('/{page?}', ['as' => 'news', 'uses' => 'MainController@pia_getNews']);
+        Route::get('/ver_noticia/{id}', ['as' => 'showCircular', 'uses' => 'MainController@pia_getCircular']);
+
+    });
 
 });
 
