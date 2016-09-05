@@ -18,7 +18,7 @@ class Advanzer
     {   
         if (!Session::has('users'))
         {
-            return redirect()->guest('auth/google');
+            //return redirect()->guest('auth/google');
         }
         
         return $next($request);

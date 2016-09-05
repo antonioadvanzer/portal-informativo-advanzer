@@ -129,7 +129,7 @@
 						</ul>
                     </li>
 					<li id="job">
-						<a href="#"><i class="fa fa-user"></i><br>Mi Desempeño</a>
+						<a href="http://intranet.advanzer.com:3000"><i class="fa fa-user"></i><br>Mi Desempeño</a>
 					</li>
                     <li id="sgmm">
 						<a href="{{ URL::to('sgmm') }}"><i class="fa fa-info"></i><br>SGMM</a>

@@ -17,3 +17,8 @@ bootstrap/cache/
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
+
+# data about, database, routes, etc.
+config/database.php
+app/Http/Middleware/Advanzer.php
+
