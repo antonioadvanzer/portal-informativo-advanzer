@@ -23,8 +23,11 @@
     <link rel="stylesheet" href="{{ URL::to('css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ URL::to('flexslider/flexslider.css') }}">
     <link rel="stylesheet" href="{{ URL::to('css/form-elements.css') }}">
-    <link rel="stylesheet" href="{{ URL::to('css/advanzer/style.css') }}">
     <link rel="stylesheet" href="{{ URL::to('css/media-queries.css') }}">
+    
+    <!--<link rel="stylesheet" href="{{ URL::to('css/advanzer/style.css') }}">-->
+    
+    <link rel="stylesheet" href="{{ URL::to('css/entuizer/style.css') }}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -104,7 +107,19 @@
                     <li id="home">
 						<a href="{{ URL::to('') }}"><i class="fa fa-home"></i><br>Principal</a>
 					</li>
-                    <li id="about" ><a href="{{ URL::to('identidad') }}"><i class="fa fa-building"></i><br>Quienes Somos</a></li>
+                    <li id="about" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
+							<i class="fa fa-bookmark"></i><br>Quienes Somos <span class="caret"></span>
+						</a>
+                        <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                            <li id="birthday">
+                                <a href="{{ URL::to('identidad/advanzer') }}"><i class="fa"></i>&nbsp;&nbsp;Advanzer</a>
+                            </li>
+							<li id="news" >
+                                <a href="{{ URL::to('identidad/entuizer') }}"><i class="fa"></i>&nbsp;&nbsp;Entuizer</a>
+                            </li>
+						</ul>
+                    </li>
 					<li id="organization" >
 						<a href="#"><i class="fa fa-sitemap"></i><br>Estructura Organizacional</a>
 					</li>

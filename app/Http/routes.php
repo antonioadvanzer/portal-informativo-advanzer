@@ -53,8 +53,10 @@ Route::group(['middleware' => 'advanzer'], function() {
     Route::get('contacto', ['as' => 'contact', 'uses' => 'MainController@pia_getContact']);
 
     // Identidad
-    Route::get('identidad', ['as' => 'company', 'uses' => 'MainController@pia_getAboutUs']);
-
+    Route::group(['prefix' => 'identidad'], function() {
+        Route::get('advanzer', ['as' => 'companyA', 'uses' => 'MainController@pia_getAboutUsAdvanzer']);
+        Route::get('entuizer', ['as' => 'companyE', 'uses' => 'MainController@pia_getAboutUsEntuizer']);
+    });
     // Noticias
     Route::group(['prefix' => 'noticias'], function() {
 

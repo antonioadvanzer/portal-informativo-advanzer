@@ -26,7 +26,7 @@
                 
                 <form action="{{ URL::to('advanzer-admin/iniciar_sesion') }}" method="post" class="form form--login">
                 
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    {!! csrf_field() !!}
 
                     <div class="form__field">
                       <label class="fontawesome-user" for="login__username"><span class="hidden">Nombre de Usuario</span></label>

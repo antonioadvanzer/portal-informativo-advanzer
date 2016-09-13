@@ -20,18 +20,13 @@
                 
                 <table class="responstable" style="width:100%;">
                     <tr>
-                        <th width="30%"><img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_1INTEGRIDAD.jpg') }}"></th>
-                        <th>Actuamos acorde a nuestros principios.</th>
+                        <td>
+                            <h4><img width="15%" class="img-thumbnail" src="{{ URL::to('img/valores_entuizer/EN_VALORES_1INTEGRIDAD VF.png') }}">
+                            Actuamos acorde a nuestros principios.</h4>
+                        </td>
                     </tr>
                     <tr>
-                        <td>
-                            <h4>
-                                <i>
-                                    <b>Brújula</b>
-                                    dirige nuestro camino
-                                </i>
-                            </h4>
-                        </td>
+                        
                         <td>
                             Este valor hace alusión a la congruencia entre “think, believe and do”, así mismo incluye conceptos como:
                             
@@ -57,18 +52,12 @@
                 <a href="#close" title="Close" class="close">X</a>
                 <table class="responstable" style="width:100%;">
                     <tr>
-                        <th width="30%"><img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_2PROACTIVIDAD.jpg') }}"></th>
-                        <th>Tenemos un genuino interés por hacer que las cosas sucedan.</th>
+                        <td>
+                            <h4><img width="15%" class="img-thumbnail" src="{{ URL::to('img/valores_entuizer/EN_VALORES_2PROACTIVIDAD VF.png') }}">
+                            Tenemos un genuino interés por hacer que las cosas sucedan.</h4>
+                        </td>
                     </tr>
                     <tr>
-                        <td>
-                            <h4>
-                                <i>
-                                    <b>Mano</b>
-                                    Alzada, mostrando participación
-                                </i>
-                            </h4>
-                        </td>
                         <td>
                             Proactividad significa asumir el pleno control de la conducta de modo activo.
 
@@ -85,18 +74,12 @@
                 <a href="#close" title="Close" class="close">X</a>
                 <table class="responstable" style="width:100%;">
                     <tr>
-                        <th width="30%"><img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_3COMPROMISO.jpg') }}"></th>
-                        <th>Aseguramos resultados óptimos en tiempo y forma, dirigiéndonos de manera profesional con responsabilidad, formalidad y ética en la práctica de nuestras labores.</th>
+                        <td>
+                            <h4><img style="float:left; margin-right:10px;" width="15%" class="img-thumbnail" src="{{ URL::to('img/valores_entuizer/EN_VALORES_3COMPROMISO VF.png') }}">
+                            Aseguramos resultados óptimos en tiempo y forma, dirigiéndonos de manera profesional con responsabilidad, formalidad y ética en la práctica de nuestras labores.</h4>
+                        </td>
                     </tr>
                     <tr>
-                        <td>
-                            <h4>
-                                <i>
-                                    <b>Manos</b>
-                                     como representación de las responsabilidades contraídas
-                                </i>
-                            </h4>
-                        </td>
                         <td>
                             Consta de tres elementos:
                             
@@ -118,18 +101,12 @@
                 <a href="#close" title="Close" class="close">X</a>
                 <table class="responstable" style="width:100%;">
                     <tr>
-                        <th width="30%"><img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_4COLABORACION.jpg') }}"></th>
-                        <th>Promovemos la suma de esfuerzos para el logro de objetivos.</th>
+                        <td>
+                            <h4><img width="15%" class="img-thumbnail" src="{{ URL::to('img/valores_entuizer/EN_VALORES_4COLABORACION VF.png') }}">
+                            Promovemos la suma de esfuerzos para el logro de objetivos.</h4>
+                        </td>
                     </tr>
                     <tr>
-                        <td>
-                            <h4>
-                                <i>
-                                    <b>Personas </b>
-                                     de distintas disciplinas con un objetivo en común
-                                </i>
-                            </h4>
-                        </td>
                         <td>
                             El trabajo en equipo para alcanzar las metas establecidas, aprovechando y compartiendo la experiencia de los diferentes miembros de la organización. 
                         </td>
@@ -144,18 +121,12 @@
                 <a href="#close" title="Close" class="close">X</a>
                 <table class="responstable" style="width:100%;">
                     <tr>
-                        <th width="30%"><img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_5GESTION DEL CAMBIO.jpg') }}"></th>
-                        <th>Buscamos cambios para mejorar. Impulsamos una cultura de cambio constante y adaptación para evolucionar hacia mejores prácticas.</th>
+                        <td>
+                            <h4><img style="float:left; margin-right:10px;" width="15%" class="img-thumbnail" src="{{ URL::to('img/valores_entuizer/EN_VALORES_5GESTION DEL CAMBIO VF.png') }}">
+                            Buscamos cambios para mejorar. Impulsamos una cultura de cambio constante y adaptación para evolucionar hacia mejores prácticas.</h4>
+                        </td>
                     </tr>
                     <tr>
-                        <td>
-                            <h4>
-                                <i>
-                                    <b>Flechas</b>
-                                     indicando un cambio de dirección
-                                </i>
-                            </h4>
-                        </td>
                         <td>
                             Creemos que “siempre hay un método mejor”, que se alcanza paso a paso con  pequeñas innovaciones y mejoras, adoptadas por toda la organización. Teniendo como resultado el incremento de la calidad, servicio y  reducción de costos. 
                         </td>
@@ -170,18 +141,13 @@
                 <a href="#close" title="Close" class="close">X</a>
                 <table class="responstable" style="width:100%;">
                     <tr>
-                        <th width="30%"><img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_6PENSAMIENTO CREATIVO.jpg') }}"></th>
-                        <th>Incentivamos las ideas y soluciones diferentes. flexibles e innovadoras que marquen la diferencia agregando valor al negocio.</th>
-                    </tr>
-                    <tr>
                         <td>
                             <h4>
-                                <i>
-                                    <b>Persona</b>
-                                      representando la concepción de una idea
-                                </i>
-                            </h4>
+                                <img style="float:left; margin-right:10px;" width="15%" class="img-thumbnail" src="{{ URL::to('img/valores_entuizer/EN_VALORES_6PENSAMIENTO CREATIVO VF.png') }}">
+                            Incentivamos las ideas y soluciones diferentes. flexibles e innovadoras que marquen la diferencia agregando valor al negocio.</h4>
                         </td>
+                    </tr>
+                    <tr>
                         <td>
                             Este valor hace referencia a promover en los colaboradores un pensamiento activo, no conformista, flexible para observar la realidad desde distintos ángulos, con apertura al cambio para buscar alternativas y soluciones diferentes ante las demandas que se presenten.
                         </td>
@@ -197,14 +163,13 @@
             	
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
-	                    <h3>¿Qué es Advanzer?</h3>
+	                    <h3>¿Qué es Entuizer?</h3>
 	                    <p>
-	                    	Somos una empresa que provee soluciones integrales en consultoría y tecnología dirigidas a Gobierno e Iniciativa Privada. Nuestra experiencia nos ha permitido desarrollar metodologías y modelos de procesos únicos que se reflejan en soluciones sólidas replicables e integradas a través de herramientas líderes, para beneficio de nuestros clientes.
-                        </p>
-                        <p>
-                            En Advanzer, estamos comprometidos con escuchar a nuestros clientes para conocer a fondo el valor de su negocio y los retos a los cuáles se enfrentan. Tenemos la flexibilidad y dinamismo que provee nuestra experiencia para dar una respuesta ágil, eficiente, profesional y orientada al mejor resultado para nuestros clientes.
-                            Nuestra gente es nuestro mayor activo, aplicamos nuestra experiencia para beneficio de nuestros clientes.
+	                    	Empresa especializada en el desarrollo de proyectos relacionados con la regulación, investigación e innovación en tecnologías de la información y del conocimiento aplicables a sector público y privado.
 	                	</p>
+                        <p>
+                            En cada uno de nuestros proyectos utilizamos metodología disruptiva que desencadena un proceso de innovación que se traduce en modelos de operación altamente competitivos para nuestros clientes. Tenemos la experiencia, el conocimiento, el profesionalismo y el entendimiento profundo de los retos y oportunidades que enfrenta nuestro entorno en el ámbito de tecnologías de la información y el conocimiento.
+                        </p>
 	                </div>
 	            </div>
 
@@ -212,7 +177,7 @@
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
 	                    <h3>¿Cuál es nuestra misión?</h3>
 	                    <p>
-	                    	Proveer servicios de consultoría reconociendo el valor del negocio de nuestros clientes tanto iniciativa privada como Gobierno a través de la experiencia y conocimiento de nuestro equipo, para crear modelos de operación más eficientes que incrementen y transformen el valor inicial de su negocio o gestión.
+	                    	Generar valor y confianza para nuestros clientes y colaboradores.
 	                </div>
 	            </div>
 
@@ -220,7 +185,8 @@
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
 	                    <h3>¿Cuál es nuestra visión?</h3>
 	                    <p>
-	                    	Ser una empresa de consultoría con una plataforma empresarial en constante evolución, que genere una espiral de crecimiento para sus clientes y equipo.
+	                    	Convertirnos en aliados estratégicos de nuestros clientes para el desarrollo e implementación de soluciones y de tecnologías innovadoras que les ayuden en la toma de decisiones a través 
+                            de nuestro entendimiento de los mercados, del diseño de propuestas concretas y de la capacitación continua del capital humano.
 	                	</p>
 	                </div>
 	            </div>
@@ -255,7 +221,7 @@
                                       <div class="link_bg"></div>
                                       <div class="link_title">
                                         <div class=icon> 
-                                            <img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_1INTEGRIDAD.jpg') }}">
+                                            <img class="img-thumbnail" src="{{ URL::to('img/valores_entuizer/EN_VALORES_1INTEGRIDAD VF.png') }}">
                                         </div>
                                         <a href="#integridad"><span>Integridad</span></a>
                                       </div>
@@ -264,7 +230,7 @@
                                       <div class="link_bg"></div>
                                       <div class="link_title">
                                         <div class=icon> 
-                                            <img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_2PROACTIVIDAD.jpg') }}">
+                                            <img class="img-thumbnail" src="{{ URL::to('img/valores_entuizer/EN_VALORES_2PROACTIVIDAD VF.png') }}">
                                         </div>
                                         <a href="#proactividad"><span>Proactividad</span></a>
                                       </div>
@@ -273,7 +239,7 @@
                                       <div class="link_bg"></div>
                                       <div class="link_title">
                                         <div class=icon> 
-                                           <img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_3COMPROMISO.jpg') }}"> 
+                                           <img class="img-thumbnail" src="{{ URL::to('img/valores_entuizer/EN_VALORES_3COMPROMISO VF.png') }}"> 
                                         </div>
                                         <a href="#compromiso"><span>Compromiso</span></a>
                                       </div>
@@ -282,7 +248,7 @@
                                       <div class="link_bg"></div>
                                       <div class="link_title">
                                         <div class=icon> 
-                                            <img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_4COLABORACION.jpg') }}">
+                                            <img class="img-thumbnail" src="{{ URL::to('img/valores_entuizer/EN_VALORES_4COLABORACION VF.png') }}">
                                         </div>
                                       <a href="#colaboracion"><span>Colaboración</span></a>
                                       </div>
@@ -291,7 +257,7 @@
                                       <div class="link_bg"></div>
                                       <div class="link_title">
                                         <div class=icon> 
-                                            <img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_5GESTION DEL CAMBIO.jpg') }}">
+                                            <img class="img-thumbnail" src="{{ URL::to('img/valores_entuizer/EN_VALORES_5GESTION DEL CAMBIO VF.png') }}">
                                         </div>
                                       <a href="#gestion_al_cambio"><span>Gestión al Cambio</span></a>
                                       </div>
@@ -300,7 +266,7 @@
                                       <div class="link_bg"></div>
                                       <div class="link_title">
                                         <div class=icon> 
-                                            <img src="{{ URL::to('img/valores_advanzer/ADV_VALORES_6PENSAMIENTO CREATIVO.jpg') }}">
+                                            <img class="img-thumbnail" src="{{ URL::to('img/valores_entuizer/EN_VALORES_6PENSAMIENTO CREATIVO VF.png') }}">
                                         </div>
                                       <a href="#pensamiento_creativo"><span>Pensamiento Creativo</span></a>
                                       </div>

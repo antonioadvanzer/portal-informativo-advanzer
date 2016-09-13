@@ -36,7 +36,7 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function adminLogIn()
-    {   
+    {   //$this->middleware('auth');
         if (Auth::check()){ 
             return redirect('advanzer-admin');
         }else{

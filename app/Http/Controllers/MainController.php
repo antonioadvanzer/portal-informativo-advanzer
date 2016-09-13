@@ -56,6 +56,7 @@ class MainController extends Controller
     		
     		if( ($user->user['domain'] == "advanzer.com") || ($user->user['domain'] == "entuizer.com")){
 	    		//$value = session('users', ['email' => $user->email, 'domain' => $user->user['domain']]);
+                
 	    		Session::put(['users' => $user->email]);
 	    		return redirect()->guest('');
 			}else{
@@ -267,9 +268,19 @@ class MainController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function pia_getAboutUs()
+    public function pia_getAboutUsAdvanzer()
     { 
-       return View::make('main.company');
+       return View::make('main.companyAdvanzer');
+    }
+
+    /**
+     * Display a view with identity of company.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getAboutUsEntuizer()
+    { 
+       return View::make('main.companyEntuizer');
     }
 
     /**
