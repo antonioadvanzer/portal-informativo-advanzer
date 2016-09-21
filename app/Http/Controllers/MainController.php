@@ -356,10 +356,10 @@ class MainController extends Controller
      * @param 
      * @return \Illuminate\Http\Response
      */
-    public function sendMail($to, $data){
-        
+    public function sendMail($to, $data, $format){
+        //'emails.test'
         //$data = array('name'=>"Advanzer");
-        Mail::send('emails.test', ['data' => $data], function ($message) use ($data) {
+        Mail::send($format, ['data' => $data], function ($message) use ($data) {
             $message->from('notificaciones.ch@advanzer.com', 'Portal Informativo Advanzer');
             $message->to($to);
         });
