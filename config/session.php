@@ -135,8 +135,8 @@ return [
     |
     */
 
-    'domain' => null,
-    //'domain' => 'advanzer.com',
+    //'domain' => null,
+    'domain' => 'advanzer.com',
 
     /*
     |--------------------------------------------------------------------------

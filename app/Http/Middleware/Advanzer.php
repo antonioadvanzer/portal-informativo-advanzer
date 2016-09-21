@@ -16,9 +16,9 @@ class Advanzer
      */
     public function handle($request, Closure $next)
     {   
-        if (!Session::has('users'))
+        if (!Session::has('user'))
         {
-            //return redirect()->guest('auth/google');
+            return redirect()->guest('auth/google');
         }
         
         return $next($request);
