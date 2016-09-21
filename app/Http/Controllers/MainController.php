@@ -18,6 +18,7 @@ use Exception;
 use App\Circular;
 use App\ImageCircular;
 use App\ElementCarrusel;
+use Mail;
 
 class MainController extends Controller
 {   
@@ -29,7 +30,7 @@ class MainController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { 
+    {   
         // Get all new activate to show on carrusel
         $carrusel = ElementCarrusel::where('used',1)->get();
 
@@ -347,5 +348,21 @@ class MainController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Allow create a email format to send.
+     *
+     * @param 
+     * @return \Illuminate\Http\Response
+     */
+    public function sendMail($to, $data){
+        
+        //$data = array('name'=>"Advanzer");
+        Mail::send('emails.test', ['data' => $data], function ($message) use ($data) {
+            $message->from('notificaciones.ch@advanzer.com', 'Portal Informativo Advanzer');
+            $message->to($to);
+        });
+
     }
 }

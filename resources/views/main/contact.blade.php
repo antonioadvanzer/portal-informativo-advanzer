@@ -20,7 +20,7 @@
 	                    <p>
 	                    	
 	                    </p>
-	                    <form role="form" action="contacto.php" method="post">
+	                    <form role="form" action="" method="post">
 	                    	<div class="form-group">
 	                    		<label for="contact-name">Nombre</label>
 	                        	<input type="text" name="name" placeholder="Ingresa tu nombre..." class="contact-name" id="contact-name">
@@ -47,9 +47,11 @@
         <div class="services-full-width-container">
         	<div class="container">
 	            <div class="row">
-	                
+	            
                     <div class="col-sm-6 services-half-width-text wow fadeInUp card">
 	                    
+                        <input type="hidden" value="0">
+                        
                         <img src="{{ URL::to('img/contacto/122.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
                         <h4>Micaela Llano</h4>
@@ -77,8 +79,19 @@
                         
                         <h4>Melissa Perez</h4>
 	                    <h3>Reclutamiento</h3>
-                        <p>melissa.perez@advanzer.com <br>
-                        staffing@advanzer.com</p>
+                        <p>melissa.perez@advanzer.com</p>
+                        
+                        <a class="fa fa-envelope-o btn" href="#openModal"></a>
+                    
+	                </div>
+                    
+                    <div class="col-sm-6 services-half-width-text wow fadeInUp card">
+                        
+                        <img src="{{ URL::to('img/contacto/2132.jpg') }}" class="img-fluid img-thumbnail image-card">
+                        
+                        <h4>Karla Navarro</h4>
+	                    <h3>Capital Humano</h3>
+                        <p>karla.navarro@advanzer.com</p>
                         
                         <a class="fa fa-envelope-o btn" href="#openModal"></a>
                     
@@ -187,7 +200,7 @@
 
 @section('script')
         <script>
-            $("#company").addClass("active");
+            //$("#company").addClass("active");
             $("#contact").addClass("active");
         </script>
 @endsection
