@@ -80,8 +80,11 @@
 	<div class="container">
 		<div class="col-md-12" align="center"><img width="100%" src="http://drive.google.com/uc?export=view&id=0B7vcCZhlhZiONkE0ZU9qcVU5S3M"></div>
 		<div style="width:80%" class="container">
-			
-			<p>{{ $data['name'] }}</p>
+			<h3>Contacto del Portal Informativo</h3>
+			<p><b>Nombre: </b>{{ $data['name'] }}</p>
+            <p><b>Dirección de Email: </b>{{ $data['email'] }}</p>
+            <p><b>Asunto: </b>{{ $data['subject'] }}</p>
+            <p><b>Mensaje: </b>{{ $data['message'] }}</p>
 		</div>
 		<div class="col-md-12" align="center"><img width="100%" src="http://drive.google.com/uc?export=view&id=0B7vcCZhlhZiOOWNiNHJnZGhnaDA"></div>
 		<footer align="center">

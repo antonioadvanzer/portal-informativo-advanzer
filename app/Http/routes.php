@@ -50,13 +50,17 @@ Route::group(['middleware' => 'advanzer'], function() {
     Route::get('sgmm', ['as' => 'sgmm', 'uses' => 'MainController@pia_getSGMM']);
 
     // Contactos
-    Route::get('contacto', ['as' => 'contact', 'uses' => 'MainController@pia_getContact']);
+    Route::group(['prefix' => 'contacto'], function() {
+        Route::get('/', ['as' => 'contact', 'uses' => 'MainController@pia_getContact']);
+        Route::post('contactarEmpleado', ['as' => 'sendEmail', 'uses' => 'MainController@sendMessageBackOffice']);
+    });
 
     // Identidad
     Route::group(['prefix' => 'identidad'], function() {
         Route::get('advanzer', ['as' => 'companyA', 'uses' => 'MainController@pia_getAboutUsAdvanzer']);
         Route::get('entuizer', ['as' => 'companyE', 'uses' => 'MainController@pia_getAboutUsEntuizer']);
     });
+    
     // Noticias
     Route::group(['prefix' => 'noticias'], function() {
 
