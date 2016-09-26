@@ -18,6 +18,7 @@ use Exception;
 use App\Circular;
 use App\ImageCircular;
 use App\ElementCarrusel;
+use Mail;
 
 class MainController extends Controller
 {   
@@ -29,7 +30,7 @@ class MainController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { 
+    {   
         // Get all new activate to show on carrusel
         $carrusel = ElementCarrusel::where('used',1)->get();
 
@@ -51,13 +52,14 @@ class MainController extends Controller
     {//var_dump($request->fullUrl());exit;
     	try{
 			$user = Socialite::driver('google')->user();
-			//var_dump($user->user);exit;
+			
 			//echo $user->email;
-    		
+    		//echo $user->user['domain'];exit;
     		if( ($user->user['domain'] == "advanzer.com") || ($user->user['domain'] == "entuizer.com")){
 	    		//$value = session('users', ['email' => $user->email, 'domain' => $user->user['domain']]);
-                
+                //var_dump($user->user['domain']);exit;
                 Session::put("user",$user->email);
+				Session::put("empresa",$user->user['domain']);
 	    		//Session::put("user",['email' => $user->email, 'domain' => $user->user['domain']]);
 	    		//Session::put('domain',$user->user['domain']);
 	    		return redirect()->guest('');
@@ -65,7 +67,7 @@ class MainController extends Controller
 				 return redirect()->guest('https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dopenid%2Bprofile%2Bemail%26response_type%3Dcode%26redirect_uri%3Dhttp://intranet.advanzer.com:5000/auth/google/callback%26state%3Dwclq8ztvxzbUhWfH4ukxe74Woac2ZUdxzFIRWpiz%26client_id%3D607109204233-2dsjtfpqu9v48mdo31ukt5jkhilpi5h2.apps.googleusercontent.com%26from_login%3D1%26as%3D-1e6b8d5797988cf4&oauth=1&sarp=1&scc=1#identifier');
 			}
     	
-		}catch (Exception $e) {
+		}catch (Exception $e) {exit;
             //return $e;
             return redirect()->guest('https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dopenid%2Bprofile%2Bemail%26response_type%3Dcode%26redirect_uri%3Dhttp://intranet.advanzer.com:5000/auth/google/callback%26state%3Dwclq8ztvxzbUhWfH4ukxe74Woac2ZUdxzFIRWpiz%26client_id%3D607109204233-2dsjtfpqu9v48mdo31ukt5jkhilpi5h2.apps.googleusercontent.com%26from_login%3D1%26as%3D-1e6b8d5797988cf4&oauth=1&sarp=1&scc=1#identifier');
         }
@@ -349,5 +351,21 @@ class MainController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Allow create a email format to send.
+     *
+     * @param 
+     * @return \Illuminate\Http\Response
+     */
+    public function sendMail($to, $data){
+        
+        //$data = array('name'=>"Advanzer");
+        Mail::send('emails.test', ['data' => $data], function ($message) use ($data) {
+            $message->from('notificaciones.ch@advanzer.com', 'Portal Informativo Advanzer');
+            $message->to($to);
+        });
+
     }
 }

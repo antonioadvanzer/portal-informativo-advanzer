@@ -22,13 +22,14 @@
     <link rel="stylesheet" href="{{ URL::to('css/animate.css') }}">
     <link rel="stylesheet" href="{{ URL::to('css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ URL::to('flexslider/flexslider.css') }}">
-    <link rel="stylesheet" href="{{ URL::to('css/form-elements.css') }}">
+    <!--<link rel="stylesheet" href="{{ URL::to('css/form-elements.css') }}">-->
     <link rel="stylesheet" href="{{ URL::to('css/media-queries.css') }}">
     
-    <!--<link rel="stylesheet" href="{{ URL::to('css/advanzer/style.css') }}">-->
-    	
-	<link rel="stylesheet" href="{{ URL::to('css/entuizer/style.css') }}">
-	
+    @if(session('empresa') == "advanzer.com")
+    <link rel="stylesheet" href="{{ URL::to('css/advanzer/style.css') }}">
+    @elseif(session('empresa') == "entuizer.com")
+    <link rel="stylesheet" href="{{ URL::to('css/entuizer/style.css') }}">
+	@endif
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -61,7 +62,6 @@
 
 </head>
 <body>
-
 	<div class="container">
 		<a href="#" class="">
 		    <img style="max-width:300px;" width="50%" src="{{ URL::to('img/logos/AD_logo.png') }}" class="img-fluid">
@@ -144,7 +144,7 @@
 						</ul>
                     </li>
 					<li id="job">
-						<a href="http://intranet.advanzer.com:3000"><i class="fa fa-user"></i><br>Mi Desempeño</a>
+						<a href="http://intranet.advanzer.com:3000" target="_blank"><i class="fa fa-user"></i><br>Mi Desempeño</a>
 					</li>
                     <li id="sgmm">
 						<a href="{{ URL::to('sgmm') }}"><i class="fa fa-info"></i><br>SGMM</a>
