@@ -57,6 +57,7 @@
     <script src="{{ URL::to('js/jflickrfeed.min.js') }}"></script>
     <script src="{{ URL::to('js/masonry.pkgd.min.js') }}"></script>
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <!--<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>-->
     <script src="{{ URL::to('js/jquery.ui.map.min.js') }}"></script>
     <script src="{{ URL::to('js/scripts.js') }}"></script>
 
@@ -183,12 +184,12 @@
 	        <div class="col-sm-7 footer-copyright wow fadeIn">
 	            <p>Advanzer/Entuizer 2016</p>
 	        </div>
-	        <div class="col-sm-5 footer-social wow fadeIn">
+	        <!--<div class="col-sm-5 footer-social wow fadeIn">
 	            <a href="#"><i class="fa fa-facebook"></i></a>
 	            <a href="#"><i class="fa fa-dribbble"></i></a>
 	            <a href="#"><i class="fa fa-twitter"></i></a>
 	            <a href="#"><i class="fa fa-pinterest"></i></a>
-	        </div>
+	        </div>-->
 	    </div>
 
 	</div>

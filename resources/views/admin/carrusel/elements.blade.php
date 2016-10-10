@@ -23,43 +23,22 @@
                     </div>
                 </div>
             
-  				<div class="panel-body">
-                    <a class="btn btn-success" href="{{ URL::to('advanzer-admin/nueva_noticia') }}">Nuevo</a><br><br>
-  					<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
-						<thead>
-							<tr>
-								<th>Titulo</th>
-								<th>Sumario</th>
-								<th>Descripcion</th>
-                                <th>Fecha</th>
-                                <th>Acciones</th>
-						</thead>
-						<tbody>
-                            @foreach($news as $new => $n)
-							<tr class="odd gradeX">
-								<td>{{ $n->title }}</td>
-								<td>{{ $n->summary }}</td>
-                                
-                                <?php 
-                                    $max_length = 80;
-                                    $s = $n->content;
-                                    if (strlen($s) > $max_length)
-                                    {
-                                        $offset = ($max_length - 3) - strlen($s);
-                                        $s = substr($s, 0, strrpos($s, ' ', $offset)) . '...';
-                                    }
-                                ?>
-                                
-								<td>{{ $s }}</td>
-                                <td>{{ $n->created_at }}</td>
-                                <td>
-                                    <a class="glyphicon glyphicon-edit" href="{{ URL::to('advanzer-admin/editar_noticia').'/'.$n->id }}"></a>
-                                    <a id="{{ $n->id }}" class="glyphicon glyphicon-remove deleteCircular" href="#confirmModal"></a>
-                                </td>
-							</tr>
-                            @endforeach
-                        </tbody>
-					</table>
+  				<div class="">
+                    <!--<a class="btn btn-success" href="{{ URL::to('advanzer-admin/nueva_noticia') }}">Nuevo</a><br><br>-->
+                    
+                    <h1 class="title"></h1>
+                    
+                    <section class="section-container">
+                      <ul>
+                        @foreach($elements as $e)
+                        <li class="list-item">
+                            <a class="removeItem" id="{{ $e->circular->id }}"><img width="30px" src="{{ URL::to('img/elementos/remove.png') }}"></a>
+                            {{ $e->circular->title }}
+                        </li>
+                        @endforeach
+                      </ul>
+                    </section>
+  					
   				</div>
   			</div>
 </div>
@@ -69,26 +48,17 @@
 @section('script')
     
 <script>
-    $("#news").addClass("current");
+    $("#carrusel").addClass("current");
     
-    var circular = "";
-    var url = "{{ URL::to('advanzer-admin/eliminar_noticia') }}"
+    var urlE = "{{ URL::to('advanzer-admin/cambiar_estado_elemento_carrusel') }}"
     
-    $("#confirmDeleteCircular").click( function () {
-        window.location.href = circular;
-    });
-    
-    $(".deleteCircular").click( function (event){
+    $(".removeItem").click( function (event){
         
-        circular = url + '/' + event.target.id;
+        window.location.href = urlE + '/' + this.id;
+        
     });
     
 </script>
     
-<link href="{{ URL::to('vendors/datatables/dataTables.bootstrap.css') }}" rel="stylesheet" media="screen">
-
-<script src="{{ URL::to('vendors/datatables/js/jquery.dataTables.min.js') }}"></script>
-<script src="{{ URL::to('vendors/datatables/dataTables.bootstrap.js') }}"></script>
-<script src="{{ URL::to('js/admin/tables.js') }}"></script>
         
 @endsection

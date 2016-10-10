@@ -852,3 +852,39 @@ b{
 }
 
 .close:hover { background: red; }
+
+/* management carrusel */
+
+.title {
+  font-size: 1.5em;
+  font-family: "Helvetica Naue", Ubuntu, sans-serif;
+}
+
+.section-container {
+  /*width: 600px;*/
+    width: auto;
+    margin: auto;
+}
+
+.list-item {
+  background: #fff;
+  box-shadow: 0 1px 2px #999;
+  font-family: sans-serif;
+  height: 60px;
+  line-height: 30px;
+  list-style: none;
+  font-size: 12pt;
+  margin: 10px 0;
+  padding: 20px 10px;
+  text-align: left;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transition: box-shadow 0.25s ease-in;
+  transition: box-shadow 0.25s ease-in;
+  width: 100%;
+  max-width: 500px;
+}
+.list-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}

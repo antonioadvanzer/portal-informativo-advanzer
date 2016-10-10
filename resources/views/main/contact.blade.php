@@ -21,22 +21,24 @@
 	                    <p>
 	                    	
 	                    </p>
+                        <div id="s" class="alert alert-success" style="display:none">Enviado con &eacute;xito</div>
+                        <div id="f" class="alert alert-danger" style="display:none">Falla al enviar</div>
 	                    <form role="form" action="" method="post">
 	                    	<div class="form-group">
 	                    		<label for="contact-name">Nombre</label>
-	                        	<input type="text" id="name" name="name" placeholder="Ingresa tu nombre..." class="contact-name" id="contact-name">
+	                        	<input type="text" name="name" placeholder="Ingresa tu nombre..." class="contact-name" id="contact-name">
 	                        </div>
 	                    	<div class="form-group">
 	                    		<label for="contact-email">Email</label>
-	                        	<input type="text" id="email" name="email" placeholder="Ingresa tu dirección de correo..." class="contact-email" id="contact-email">
+	                        	<input type="text" name="email" placeholder="Ingresa tu dirección de correo..." class="contact-email" id="contact-email">
 	                        </div>
 	                        <div class="form-group">
 	                        	<label for="contact-subject">Asunto</label>
-	                        	<input type="text" id="subject" name="subject" placeholder="Tu asunto..." class="contact-subject" id="contact-subject">
+	                        	<input type="text" name="subject" placeholder="Tu asunto..." class="contact-subject" id="contact-subject">
 	                        </div>
 	                        <div class="form-group">
 	                        	<label for="contact-message">Mensaje</label>
-	                        	<textarea id="message" name="message" placeholder="Tu mensaje..." class="contact-message" id="contact-message"></textarea>
+	                        	<textarea name="message" placeholder="Tu mensaje..." class="contact-message" id="contact-message"></textarea>
 	                        </div>
 	                        <button id="actionSend" type="submit" class="btn">Enviar</button>
 	                    </form>
@@ -215,10 +217,10 @@
                 
                 $("#actionSend").click(function(){
                     
-                    var name = $("#name");
-                    var email = $("#email");
-                    var subject = $("#subject");
-                    var message = $("#message");
+                    var name = $("#contact-name");
+                    var email = $("#contact-email");
+                    var subject = $("#contact-subject");
+                    var message = $("#contact-message");
                     
                     $.ajaxSetup({
                         headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
@@ -242,10 +244,16 @@
                         console.log(data);
                         //window.location.href = "#nus";
                         //$("#nus").removeClass("hide");
+                        $("#s").show("slow");
+                        name.val("");
+                        email.val("");
+                        subject.val("");
+                        message.val("");
                     }).fail(function(data) {
                         console.log(data);
                         //window.location.href = "#nuf";
                         //$("#nuf").removeClass("hide");
+                        $("#f").show("slow");
                     });
 
                 });

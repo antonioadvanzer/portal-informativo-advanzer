@@ -33,7 +33,7 @@
 	           <div class="col-md-5">
 	              <!-- Logo -->
 	              <div class="logo">
-	                 <h1><a href="index.html">Panel de Administraci&oacute;n</a></h1>
+	                 <h1><a href="#">Panel de Administraci&oacute;n</a></h1>
 	              </div>
 	           </div>
 	           <div class="col-md-5">
@@ -76,7 +76,7 @@
                     <li id="main" class=""><a href="{{ URL::to('advanzer-admin') }}"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
                     <li id ="users" ><a href="{{ URL::to('advanzer-admin/usuarios') }}"><i class="glyphicon glyphicon-user"></i> Usuarios</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-calendar"></i> Calendario</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-film"></i> Carrusel</a></li>
+                    <li id ="carrusel"><a href="{{ URL::to('advanzer-admin/elementos_carrusel_activos') }}"><i class="glyphicon glyphicon-film"></i> Carrusel</a></li>
                     <li id ="news"><a href="{{ URL::to('advanzer-admin/noticias') }}"><i class="glyphicon glyphicon-list-alt"></i> Noticias</a></li>
                     <!--<li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li>
                     <li><a href="tables.html"><i class="glyphicon glyphicon-list"></i> Tables</a></li>

@@ -92,7 +92,7 @@ class AdminController extends Controller
     }
     
     /**
-     * Display users table.
+     * Display news table.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -101,6 +101,18 @@ class AdminController extends Controller
     {   
         $news = Circular::all();
         return View::make('admin.news.news', ['news' => $news]);
+    }
+
+    /**
+     * Display elements of carrusel table.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminGetElementsCarrusel()
+    {   
+        $carrusel = ElementCarrusel::where('used',1)->get();
+        return View::make('admin.carrusel.elements', ['elements' => $carrusel]);
     }
 
     /**
@@ -397,10 +409,10 @@ class AdminController extends Controller
     public function pia_changeCircular($id)
     { 
         $ec = ElementCarrusel::where('id_circular',$id)->get()->first();
-
+        
         ElementCarrusel::where('id_circular',$id)->update(["used" => ( $ec->used ? 0 : 1 )]);
 
-       return redirect('advanzer-admin/noticias');
+        return redirect('advanzer-admin/noticias');
     }
 
     /**
