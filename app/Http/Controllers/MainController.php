@@ -57,11 +57,13 @@ class MainController extends Controller
     		//echo $user->user['domain'];exit;
     		if( ($user->user['domain'] == "advanzer.com") || ($user->user['domain'] == "entuizer.com")){
 	    		//$value = session('users', ['email' => $user->email, 'domain' => $user->user['domain']]);
+
                 //var_dump($user->user['domain']);exit;
                 Session::put("user",$user->email);
 				Session::put("empresa",$user->user['domain']);
 	    		//Session::put("user",['email' => $user->email, 'domain' => $user->user['domain']]);
 	    		//Session::put('domain',$user->user['domain']);
+
 	    		return redirect()->guest('');
 			}else{
 				 return redirect()->guest('https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dopenid%2Bprofile%2Bemail%26response_type%3Dcode%26redirect_uri%3Dhttp://intranet.advanzer.com:5000/auth/google/callback%26state%3Dwclq8ztvxzbUhWfH4ukxe74Woac2ZUdxzFIRWpiz%26client_id%3D607109204233-2dsjtfpqu9v48mdo31ukt5jkhilpi5h2.apps.googleusercontent.com%26from_login%3D1%26as%3D-1e6b8d5797988cf4&oauth=1&sarp=1&scc=1#identifier');
@@ -353,18 +355,61 @@ class MainController extends Controller
         //
     }
 
+    // Stack with all email of backoffice
+    private $emails = array(
+        "m1" => 'micaela.llano@advanzer.com',
+        "m2" => 'amira.chavez@advanzer.com',
+        "m3" => 'melissa.perez@advanzer.com',
+        "m4" => 'karla.navarro@advanzer.com',
+        "m5" => 'martin.garza@advanzer.com',
+        "m6" => 'roman.uranga@advanzer.com',
+        "m7" => 'alejandra.torres@advanzer.com',
+        "m8" => 'anaid.montoya@advanzer.com',
+        "m9" => 'belinda.lopez@advanzer.com',
+        "m10" => 'adriana.peralta@advanzer.com',
+        "m11" => 'gabriela.rodriguez@advanzer.com',
+        "m12" => 'rodolfo.cortes@advanzer.com'
+    );
+
+    /**
+     * You can spefified one user to send email.
+     *
+     * @param 
+     * @return \Illuminate\Http\Response
+     */
+    public function sendMessageBackOffice(Request $request){
+        
+        $data = array(
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'subject' => $request->input('subject'),
+            'message' => $request->input('message'),
+            //'to' => "antonio.baez@advanzer.com"
+            'to' => $this->emails[$request->input('employed')] 
+        );
+
+        //$this->sendMail($this->emails[$request->input('employed')], $data, 'emails.contact');
+        try{
+            $this->sendMail($data, 'emails.contact');
+        }catch(Exception $e){
+            echo $e;
+        }
+        return "Ok";
+    }
+
     /**
      * Allow create a email format to send.
      *
      * @param 
      * @return \Illuminate\Http\Response
      */
-    public function sendMail($to, $data){
-        
+    private function sendMail($data, $format){
+        //'emails.test'
         //$data = array('name'=>"Advanzer");
-        Mail::send('emails.test', ['data' => $data], function ($message) use ($data) {
+        Mail::send($format, ['data' => $data], function ($message) use ($data) {
             $message->from('notificaciones.ch@advanzer.com', 'Portal Informativo Advanzer');
-            $message->to($to);
+            $message->to($data['to']);
+            $message->subject($data['subject']);
         });
 
     }
