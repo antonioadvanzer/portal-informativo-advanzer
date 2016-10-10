@@ -291,7 +291,7 @@ class MainController extends Controller
      */
     public function pia_getNews()
     {   
-        $news = Circular::orderBy('created_at', 'DESC')->paginate(9);;
+        $news = Circular::orderBy('created_at', 'DESC')->paginate(9);
         
         return View::make('main.news', ['news' => $news]);
     }

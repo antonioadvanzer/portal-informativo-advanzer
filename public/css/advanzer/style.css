@@ -192,6 +192,14 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #c0d339
 	position: relative;
 }
 
+.flexslider .slides img {
+    max-height: 460px;
+}
+
+.flex-control-thumbs img {
+    max-height: 115px;
+}
+
 .flex-caption {
     position: absolute;
     left: 0;
