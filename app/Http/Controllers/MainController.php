@@ -18,6 +18,7 @@ use Exception;
 use App\Circular;
 use App\ImageCircular;
 use App\ElementCarrusel;
+use App\Birthday;
 use Mail;
 
 class MainController extends Controller
@@ -242,6 +243,18 @@ class MainController extends Controller
     public function pia_getGraphicalMaterial()
     {
         return View::make('main.graphical_material');
+    }
+
+    /**
+     * Display a view Graphical Material.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getBirthay()
+    {   
+        $calendar = Birthday::all()->first();
+        
+        return View::make('main.birthday', ['calendar' => $calendar]);
     }
 
     /**

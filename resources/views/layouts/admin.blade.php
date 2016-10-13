@@ -55,7 +55,7 @@
 	                      <li class="dropdown">
 	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuario <b class="caret"></b></a>
 	                        <ul class="dropdown-menu animated fadeInUp">
-	                          <li><a href="profile.html">Perfil</a></li>
+	                          <li><a href="#">Perfil</a></li>
 	                          <li><a href="{{ URL::to('advanzer-admin/cerrar_session') }}">Cerrar Sesi&oacute;n</a></li>
 	                        </ul>
 	                      </li>
@@ -75,7 +75,7 @@
                     <!-- Main menu -->
                     <li id="main" class=""><a href="{{ URL::to('advanzer-admin') }}"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
                     <li id ="users" ><a href="{{ URL::to('advanzer-admin/usuarios') }}"><i class="glyphicon glyphicon-user"></i> Usuarios</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-calendar"></i> Calendario</a></li>
+                    <li id ="birthday"><a href="{{URL::to('advanzer-admin/cumpleanos_del_mes')}}"><i class="glyphicon glyphicon-calendar"></i> Cumpleaños del Mes</a></li>
                     <li id ="carrusel"><a href="{{ URL::to('advanzer-admin/elementos_carrusel_activos') }}"><i class="glyphicon glyphicon-film"></i> Carrusel</a></li>
                     <li id ="news"><a href="{{ URL::to('advanzer-admin/noticias') }}"><i class="glyphicon glyphicon-list-alt"></i> Noticias</a></li>
                     <!--<li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li>

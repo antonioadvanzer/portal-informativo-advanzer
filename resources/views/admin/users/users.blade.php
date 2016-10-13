@@ -39,7 +39,9 @@
 								<td>{{ $u->email }}</td>
 								<td>{{ $u->password }}</td>
                                 <td>
+                                    @if(Auth::user()['attributes']['id'] != $u->id)
                                     <a id="{{ $u->id }}" class="glyphicon glyphicon-remove deleteUser" href="#openModal"></a>
+                                    @endif
                                 </td>
 							</tr>
                             @endforeach

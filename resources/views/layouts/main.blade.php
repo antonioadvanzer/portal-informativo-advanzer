@@ -137,7 +137,7 @@
 						</a>
 						<ul class="dropdown-menu dropdown-menu-left" role="menu">
                             <li id="birthday">
-                                <a href="#"><i class="fa fa-birthday-cake"></i>&nbsp;&nbsp;Cumpleaños del mes</a>
+                                <a href="{{ URL::to('cumpleaños_del_mes') }}"><i class="fa fa-birthday-cake"></i>&nbsp;&nbsp;Cumpleaños del mes</a>
                             </li>
 							<li id="news" >
                                 <a href="{{ URL::to('noticias') }}"><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Noticias</a>
@@ -175,13 +175,15 @@
 		<div class="container">
 		    
 	    <div class="row">
-	    	<div class="col-sm-12 wow fadeIn">
+	    	<!--<div class="fe col-sm-12 wow fadeIn">-->
+            <div class="fe col-sm-12">
 	    		<div class="footer-border"></div>
 	    	</div>
 	    </div>
 	    
 	    <div class="row">
-	        <div class="col-sm-7 footer-copyright wow fadeIn">
+	        <!--<div class=" fe col-sm-7 footer-copyright wow fadeIn">-->
+            <div class=" fe col-sm-7 footer-copyright">
 	            <p>Advanzer/Entuizer 2016</p>
 	        </div>
 	        <!--<div class="col-sm-5 footer-social wow fadeIn">

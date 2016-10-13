@@ -46,6 +46,9 @@ Route::group(['middleware' => 'advanzer'], function() {
     // Material Grafico
     Route::get('material_grafico', ['as' => 'graphical', 'uses' => 'MainController@pia_getGraphicalMaterial']);
 
+    // Cumpleaños del Mes
+    Route::get('cumpleaños_del_mes', ['as' => 'birthday', 'uses' => 'MainController@pia_getBirthay']);
+
     // SGMM
     Route::get('sgmm', ['as' => 'sgmm', 'uses' => 'MainController@pia_getSGMM']);
 
@@ -92,8 +95,10 @@ Route::group(['prefix' => 'advanzer-admin'], function() {
         Route::get('/eliminar_noticia/{id}', ['as' => 'deleteCircular', 'uses' => 'AdminController@adminDeleteCircular']);
         Route::get('/editar_noticia/{id}', ['as' => 'editCircular', 'uses' => 'AdminController@adminEditCircular']);
         Route::post('/actualizar_noticia', ['as' => 'updateCircular', 'uses' => 'AdminController@adminUpdateCircular']);
-        Route::get('/cambiar_estado_elemento_carrusel/{id}', ['as' => 'updateElementCarrusel', 'uses' => 'AdminController@pia_changeCircular']);
+        Route::get('/cambiar_estado_elemento_carrusel/{id}', ['as' => 'updateElementCarrusel', 'uses' => 'AdminController@adminChangeCircular']);
         Route::get('/elementos_carrusel_activos', ['as' => 'elementsAvaible', 'uses' => 'AdminController@adminGetElementsCarrusel']);
+        Route::get('/cumpleanos_del_mes', ['as' => 'birthdays', 'uses' => 'AdminController@adminCalendarBirthday']);
+        Route::post('/cambiar_mural', ['as' => 'changeMural', 'uses' => 'AdminController@adminChangeMural']);
     });
 
 });

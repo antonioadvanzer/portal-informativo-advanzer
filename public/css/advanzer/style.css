@@ -11,7 +11,7 @@ body {
     /*font-family: 'Open Sans', sans-serif;*/
     font-family: 'Lato', sans-serif;
     color: #888;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .violet { color: #c0d339; }
@@ -537,6 +537,9 @@ footer {
 .footer-social a { margin: 0 0 0 10px; font-size: 26px; color: #888; }
 .footer-social a:hover, .footer-social a:focus { color: #c0d339; }
 
+.fe{
+    position: static !important;	
+}
 
 /***** Page title *****/
 
@@ -553,7 +556,7 @@ footer {
 .page-title-container h1 {
     display: inline;
     margin-left: 10px;
-    font-family: 'Lobster', cursive;
+    /*font-family: 'Lobster', cursive;*/
     font-size: 24px;
     color: #5d5d5d;
     font-weight: bold;
@@ -564,7 +567,7 @@ footer {
 .page-title-container p {
     display: inline;
     margin-left: 5px;
-    font-size: 14px;
+    font-size: 16px;
     font-style: italic;
     vertical-align: middle;
 }
@@ -738,8 +741,8 @@ footer {
 
 .services-full-width-text h3 {
     margin-top: 25px;
-    font-family: 'Droid Sans', sans-serif;
-    font-size: 16px;
+    /*font-family: 'Droid Sans', sans-serif;*/
+    font-size: 20px;
     color: #5d5d5d;
     font-weight: bold;
     text-transform: uppercase;
@@ -748,7 +751,7 @@ footer {
 
 .services-full-width-text p {
     line-height: 28px;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 /***** Services half width text *****/
@@ -805,7 +808,7 @@ footer {
     width: 80%;
     padding-left: 25px;
     line-height: 30px;
-    font-size: 18px;
+    font-size: 25px;
     font-style: italic;
 }
 
@@ -828,8 +831,8 @@ footer {
 .portfolio-filters {
 	padding-top: 35px;
 	padding-bottom: 10px;
-	font-family: 'Droid Sans', sans-serif;
-    font-size: 16px;
+	/*font-family: 'Droid Sans', sans-serif;*/
+    font-size: 30px;
     color: #5d5d5d;
     font-weight: bold;
     text-align: left;
@@ -884,7 +887,7 @@ footer {
 
 .portfolio-box-text h3 {
     margin-top: 20px;
-    font-family: 'Droid Sans', sans-serif;
+    /*font-family: 'Droid Sans', sans-serif;*/
     font-size: 14px;
     color: #5d5d5d;
     font-weight: bold;
@@ -1565,3 +1568,4 @@ button.btn:focus {
     border: 0;
     color: #fff;
 }
+

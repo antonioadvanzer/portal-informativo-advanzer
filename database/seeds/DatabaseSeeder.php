@@ -5,6 +5,7 @@ Use App\User;
 use App\Circular;
 use App\ImageCircular;
 use App\ElementCarrusel;
+use App\Birthday;
 
 class DatabaseSeeder extends Seeder
 {
@@ -42,6 +43,12 @@ class DatabaseSeeder extends Seeder
         ElementCarrusel::create([
             'id_circular' => 1,
             'id_img_circular' => 1
+        ]);
+
+        Birthday::create([
+            'id' => 1,
+            'description' => "Mural de las fechas de cumpleaños de cada colaborador",
+            'path' => "birthday_cake_and_candles-wallpaper-1440x900.jpg"
         ]);
     }
 }

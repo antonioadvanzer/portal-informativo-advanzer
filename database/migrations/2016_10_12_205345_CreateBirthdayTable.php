@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCircularTable extends Migration
+class CreateBirthdayTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,10 @@ class CreateCircularTable extends Migration
      */
     public function up()
     {
-        //Create table to save news and other things
-        Schema::create('circular', function (Blueprint $table){
+        Schema::create('birthday', function (Blueprint $table){
             $table->increments('id');
-            $table->string('title',90);
-            $table->string('summary',250);
-            $table->string('content',950);
+            $table->string('description',150);
+            $table->string('path',70);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,6 +28,6 @@ class CreateCircularTable extends Migration
      */
     public function down()
     {
-        Schema::dropifExists('circular');
+        Schema::dropIfExists('birthday');
     }
 }

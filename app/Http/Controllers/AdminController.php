@@ -17,6 +17,7 @@ use App\User;
 use App\Circular;
 use App\ImageCircular;
 use App\ElementCarrusel;
+use App\Birthday;
 
 class AdminController extends Controller
 {
@@ -116,6 +117,19 @@ class AdminController extends Controller
     }
 
     /**
+     * Display form to change picture of mural mounth.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminCalendarBirthday()
+    {   
+        $calendar = Birthday::all()->first();
+        
+        return View::make('admin.calendar.birthday', ['calendar' => $calendar]);
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -174,7 +188,10 @@ class AdminController extends Controller
 
         return "success"; 
     }
+    
     private $urlNews = "img/noticias";
+    private $urlMural = "img/cumpleaños";
+    
     /**
      * Save new circular.
      *
@@ -406,13 +423,31 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function pia_changeCircular($id)
+    public function adminChangeCircular($id)
     { 
         $ec = ElementCarrusel::where('id_circular',$id)->get()->first();
         
         ElementCarrusel::where('id_circular',$id)->update(["used" => ( $ec->used ? 0 : 1 )]);
 
         return redirect('advanzer-admin/noticias');
+    }
+
+    /**
+     * Allow change imagen of mural birthday.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function adminChangeMural(Request $request)
+    { 
+        $file = $request->file('mural');        
+        $destinationPath = $this->urlMural;
+        $filename = $file->getClientOriginalName();
+        $file->move($destinationPath, $filename);
+
+        Birthday::where('id',1)->update(["path" => $filename]);
+
+        return redirect('advanzer-admin/cumpleanos_del_mes');
     }
 
     /**

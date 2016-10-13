@@ -9,20 +9,6 @@
                     
 				</div>
                 
-                <div id="confirmModal" class="modalDialog">
-                    <div class="contact-form wow fadeInLeft">
-                        <a href="#close" title="Close" class="close">X</a>
-                        <div align="center">
-                            <h4>¿Estas seguro(a) que deseas eliminar este elemento?</h4>
-                            
-                            <a class="button" id="confirmDeleteCircular">Aceptar</a>
-                            <a class="button" href="#close">Cancelar</a>
-                            <br/>
-                            <br/>
-                        </div>
-                    </div>
-                </div>
-            
   				<div class="">
                     <!--<a class="btn btn-success" href="{{ URL::to('advanzer-admin/nueva_noticia') }}">Nuevo</a><br><br>-->
                     
