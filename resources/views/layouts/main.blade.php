@@ -25,10 +25,11 @@
     <!--<link rel="stylesheet" href="{{ URL::to('css/form-elements.css') }}">-->
     <link rel="stylesheet" href="{{ URL::to('css/media-queries.css') }}">
     
+    @if(session('empresa') == "advanzer.com")
     <link rel="stylesheet" href="{{ URL::to('css/advanzer/style.css') }}">
-    
-    <!--<link rel="stylesheet" href="{{ URL::to('css/entuizer/style.css') }}">-->
-
+    @elseif(session('empresa') == "entuizer.com")
+    <link rel="stylesheet" href="{{ URL::to('css/entuizer/style.css') }}">
+	@endif
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -62,7 +63,6 @@
 
 </head>
 <body>
-
 	<div class="container">
 		<a href="#" class="">
 		    <img style="max-width:300px;" width="50%" src="{{ URL::to('img/logos/AD_logo.png') }}" class="img-fluid">

@@ -53,19 +53,24 @@ class MainController extends Controller
     {//var_dump($request->fullUrl());exit;
     	try{
 			$user = Socialite::driver('google')->user();
-			//var_dump($user->user);exit;
+			
 			//echo $user->email;
-    		
+    		//echo $user->user['domain'];exit;
     		if( ($user->user['domain'] == "advanzer.com") || ($user->user['domain'] == "entuizer.com")){
 	    		//$value = session('users', ['email' => $user->email, 'domain' => $user->user['domain']]);
-                
-	    		Session::put(['user' => $user->email]);
+
+                //var_dump($user->user['domain']);exit;
+                Session::put("user",$user->email);
+				Session::put("empresa",$user->user['domain']);
+	    		//Session::put("user",['email' => $user->email, 'domain' => $user->user['domain']]);
+	    		//Session::put('domain',$user->user['domain']);
+
 	    		return redirect()->guest('');
 			}else{
 				 return redirect()->guest('https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dopenid%2Bprofile%2Bemail%26response_type%3Dcode%26redirect_uri%3Dhttp://intranet.advanzer.com:5000/auth/google/callback%26state%3Dwclq8ztvxzbUhWfH4ukxe74Woac2ZUdxzFIRWpiz%26client_id%3D607109204233-2dsjtfpqu9v48mdo31ukt5jkhilpi5h2.apps.googleusercontent.com%26from_login%3D1%26as%3D-1e6b8d5797988cf4&oauth=1&sarp=1&scc=1#identifier');
 			}
     	
-		}catch (Exception $e) {
+		}catch (Exception $e) {exit;
             //return $e;
             return redirect()->guest('https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dopenid%2Bprofile%2Bemail%26response_type%3Dcode%26redirect_uri%3Dhttp://intranet.advanzer.com:5000/auth/google/callback%26state%3Dwclq8ztvxzbUhWfH4ukxe74Woac2ZUdxzFIRWpiz%26client_id%3D607109204233-2dsjtfpqu9v48mdo31ukt5jkhilpi5h2.apps.googleusercontent.com%26from_login%3D1%26as%3D-1e6b8d5797988cf4&oauth=1&sarp=1&scc=1#identifier');
         }
@@ -392,8 +397,8 @@ class MainController extends Controller
             'email' => $request->input('email'),
             'subject' => $request->input('subject'),
             'message' => $request->input('message'),
-            'to' => "antonio.baez@advanzer.com"
-            //'to' => $this->emails[$request->input('employed')] 
+            //'to' => "antonio.baez@advanzer.com"
+            'to' => $this->emails[$request->input('employed')] 
         );
 
         //$this->sendMail($this->emails[$request->input('employed')], $data, 'emails.contact');
