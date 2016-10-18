@@ -43,11 +43,11 @@
                         
 	                </div>
 	                <div class="col-sm-6 services-half-width-text wow fadeInUp">
-	                    <h3>2. ¿Qué puedo encontrar en <a href="http://www.segurosbanorte.com.mx" target="_blank">www.segurosbanorte.com.mx</a>?</h3>
+	                    <h3>2. ¿Qué puedo encontrar en <a href="http://www.axa.mx" target="_blank">www.axa.mx</a>?</h3>
 	                    
-                        <p>
-	                    	Directorio Médico del plan Mas Visión Médica Colectivo, Informe Médico, Informe del Reclamante, Convenio Pago vía Transferencia.
-	                    </p>
+                        <p>Directorio médico, directorio de hospitales, informe médico, solicitud de rembolso, solicitud de programación, solicitud de pago directo.</p>
+                        
+                        <p>Consulta los hospitales de tu póliza desde <a href="https://www.google.com/url?q=https%3A%2F%2Faxa.mx%2Fweb%2Fservicios-axa%2Fprestadores-de-servicios&sa=D&sntz=1&usg=AFQjCNFtDAKbrtczIwA2l4SXjcn7gve49A" target="_blank"><i>Aquí</i></a>, o llamando a Asistencia Médica Telefónica <b>(01 (800) 911 9999).</b></p>
                         
                         <img src="{{ URL::to('img/sgmm/Tipos-de-seguros.jpg') }}" style="max-width:400px;" width="100%" class="img-fluid">
 	                </div>
@@ -127,7 +127,8 @@
                             
                         </ul>
                     
-	                </div><div class="col-sm-6 services-half-width-text wow fadeInUp">
+	                </div>
+                    <div class="col-sm-6 services-half-width-text wow fadeInUp">
 	                    <h3></h3>
 	                    
                         <img src="{{ URL::to('img/sgmm/vias-de-reclamacion-668x400x80xX.jpg') }}" style="max-width:400px;" width="100%" class="img-fluid">
@@ -137,6 +138,46 @@
 	            </div>
 	        </div>
         </div>
+
+        <div class="services-full-width-container">
+        	<div class="container">
+	            <div class="row">
+	                
+                    <div class="col-sm-6 services-half-width-text wow fadeInUp">
+	                    <h3>Formatos descargables:</h3>
+                        <ul>
+                            <li>
+                                <i class="fa fa-file-pdf-o"></i>
+                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo1NjdmZDZhMmQ5YTEyYTAw">CONDICIONES GENERALES AXA (LINEA HOSP)</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-pdf-o"></i>
+                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo1MTJhY2UwYjY4ZWU1NDlm">Carta Cobertura AXA</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-pdf-o"></i>
+                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDoyOTQ1NjM2MDdjNTdjMWQ0">GM_FORMATO SINIESTROS_InformeMedico_AI346_9sep2015</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-pdf-o"></i>
+                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo1ODcyZDZjZDRiNjYyZmY2">GM_FORMATO SINIESTROS_PagoDirecto_AI347_9sep2015</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-pdf-o"></i>
+                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo0OGU0ZjRiZWQ1NjA1Njc">GM_FORMATO SINIESTROS_SolicitudProgramacion_AI345_29</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-pdf-o"></i>
+                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDoyY2RmMzRkMDdkOTgwMjc3">GM_FORMATO SINIESTROS_SolicitudRembolso</a>
+                            </li>
+                        </ul>
+                    
+	                </div>
+                    
+	            </div>
+	        </div>
+        </div>
+        
 @endsection
 
 @section('script')

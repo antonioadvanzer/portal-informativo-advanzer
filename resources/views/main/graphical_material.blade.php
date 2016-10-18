@@ -7,7 +7,8 @@
                 <div class="row">
                     <div class="col-sm-12 wow fadeIn">
                         <i class="fa fa-picture-o"></i>
-                        <h1>Material Gr&aacute;fico</h1>
+                        <!--<h1>Material Gr&aacute;fico</h1>-->
+                        <h1>Identidad Corporativa</h1>
                         <p>Nuestros folletos, presentaciones y más materiales corporativos</p>
                     </div>
                 </div>

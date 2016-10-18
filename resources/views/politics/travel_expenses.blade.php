@@ -50,6 +50,36 @@
                         </ul>
                         
 	                </div>
+                    
+                    <div class="col-sm-12 services-full-width-text wow fadeInLeft">
+                        <h3>Formatos descargables:</h3>
+                        <ul>
+                            <li>
+                                <i class="fa fa-file-pdf-o"></i>
+                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo2YjM1Yzk4OWJhOTNkY2Q1">DAF-004 MPP para Viaticos y Gastos de Viaje (ADV)</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-pdf-o"></i>
+                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo5MTgwYmExMzkzYjNmOGI">DAF-004 MPP para Viaticos y Gastos de Viaje (SER)</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-excel-o"></i>
+                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo2MTQ2MGViZDk0MzE5ZGI2">F1. Solicitud de gastos de viaje ADV</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-excel-o"></i>
+                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo0MTJlNDc2YjcxODc4ZjEz">F1. Solicitud de gastos de viaje SER</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-excel-o"></i>
+                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDoxZDI5YmRkMTc5NWU5M2Iw">F2. Comprobacion de gastos de viaje ADV</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-excel-o"></i>
+                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDoxZGU2NTU5Yjk3NzBhOGMz">F2. Comprobacion de gastos de viaje SER</a>
+                            </li>
+                        </ul>
+                    </div>
 	            </div>
                 
 	        </div>
