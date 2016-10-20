@@ -267,6 +267,16 @@ class MainController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function pia_getMyPerformance()
+    { 
+       return View::make('main.my_performance');
+    }
+
+    /**
+     * Display a view with specified rules.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function pia_getSGMM()
     { 
        return View::make('main.sgmm');
