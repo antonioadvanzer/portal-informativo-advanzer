@@ -49,6 +49,9 @@ Route::group(['middleware' => 'advanzer'], function() {
     // Cumpleaños del Mes
     Route::get('cumpleaños_del_mes', ['as' => 'birthday', 'uses' => 'MainController@pia_getBirthay']);
 
+     // Mi Desempeño
+    Route::get('mi_desempeño', ['as' => 'performance', 'uses' => 'MainController@pia_getMyPerformance']);
+
     // SGMM
     Route::get('sgmm', ['as' => 'sgmm', 'uses' => 'MainController@pia_getSGMM']);
 
