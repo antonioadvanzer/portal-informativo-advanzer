@@ -30,10 +30,6 @@
                                     
                                     <li>Responsabilidades Funcionales (visita tu <a href="http://www.google.com/url?q=http%3A%2F%2Fintranet.advanzer.com%3A3000&sa=D&sntz=1&usg=AFQjCNErMmg18tCzF3u2X3xHBRO1lAb67A" target="_blank">Portal Personal</a>)
                                         
-                                        <ul>
-                                            <li><a href="https://drive.google.com/open?id=0B20xPQDaUxigWDVFV2hVMTk1ZWM" target="_blank">Arquitectura de Soluciones</a></li>    
-                                        </ul>
-                                        
                                     </li>
                                     <li>
                                         <a href="https://drive.google.com/a/advanzer.com/file/d/0B20xPQDaUxigemhsNGVGaWRhWFE/view?usp=sharing" target="_blank">Compromisos Internos</a>

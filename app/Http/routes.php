@@ -29,7 +29,7 @@ Route::group(['middleware' => 'advanzer'], function() {
     Route::group(['prefix' => 'politicas'], function() {
         
         Route::get('', ['as' => 'politics', 'uses' => 'MainController@pia_getPolitics']);
-        Route::get('/atraccion_de_talento', ['as' => 'politics', 'uses' => 'MainController@pia_getAttractingTalent']);
+        Route::get('/atraccion_de_talento', ['as' => 'talent', 'uses' => 'MainController@pia_getAttractingTalent']);
         Route::get('/bono_anual_consultoria', ['as' => 'bonnus', 'uses' => 'MainController@pia_getAnnualBonus']);
         Route::get('/cartas_y_constancias_laborales', ['as' => 'letters', 'uses' => 'MainController@pia_getLettersAndConstancies']);
         Route::get('/certificaciones_y_cursos', ['as' => 'certifications', 'uses' => 'MainController@pia_getCertificationsAndCourses']);

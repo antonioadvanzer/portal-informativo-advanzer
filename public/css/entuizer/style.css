@@ -967,7 +967,7 @@ footer {
 
 .politica-box-text h3 {
     margin-top: 20px;
-    font-family: 'Droid Sans', sans-serif;
+    /*font-family: 'Droid Sans', sans-serif;*/
     font-size: 14px;
     color: #5d5d5d;
     font-weight: bold;
@@ -1403,7 +1403,7 @@ a.thumbnail:hover{
 .var_nav{
     position:relative;
     background:#ccc; 
-    width:350px;
+    width:300px;
     height:73px;
     margin-bottom:5px;
 }
@@ -1476,6 +1476,7 @@ a.thumbnail:hover{
     position:absolute;
     float:left;
     font-family:arial;
+    margin-left: 25px;
     color:#fff;
     text-decoration:none;
     width:100%;
@@ -1569,4 +1570,114 @@ button.btn:focus {
     color: #fff;
 }
 
-/* contact*/
+/* politics icons advanzer */
+
+.icon-attracting-talent::before{
+    display: inline-block;
+    width: 255px;
+    height: 211px;
+    margin-right: 5px;
+    content: "";
+    background: url(../../img/politicas/advanzer/AtraccionDeTalentos.jpg) no-repeat 0 0;
+    background-size: 100%;
+}
+
+.icon-annual-bonus::before{
+    display: inline-block;
+    width: 255px;
+    height: 273px;
+    margin-right: 5px;
+    content: "";
+    background: url(../../img/politicas/advanzer/BonoAnualConsultoria.tif.jpg) no-repeat 0 0;
+    background-size: 100%;
+}
+
+.icon-letters-and-constancies::before{
+    display: inline-block;
+    width: 255px;
+    height: 255px;
+    margin-right: 5px;
+    content: "";
+    background: url(../../img/politicas/advanzer/CartasyConstanciasLaborales2.jpg) no-repeat 0 0;
+    background-size: 100%;
+}
+
+.icon-certifications-and-courses::before{
+    display: inline-block;
+    width: 255px;
+    height: 213px;
+    margin-right: 5px;
+    content: "";
+    background: url(../../img/politicas/advanzer/CertificacionesCursos.jpg) no-repeat 0 0;
+    background-size: 100%;
+}
+
+.icon-dress-code::before{
+    display: inline-block;
+    width: 255px;
+    height: 244px;
+    margin-right: 5px;
+    content: "";
+    background: url(../../img/politicas/advanzer/CodigoDeVestimenta.jpg) no-repeat 0 0;
+    background-size: 100%;
+}
+
+.icon-internal-comunication::before{
+    display: inline-block;
+    width: 255px;
+    height: 315px;
+    margin-right: 5px;
+    content: "";
+    background: url(../../img/politicas/advanzer/ComunicacionInterna2.jpg) no-repeat 0 0;
+    background-size: 100%;
+}
+
+.icon-free-days::before{
+    display: inline-block;
+    width: 255px;
+    height: 240px;
+    margin-right: 5px;
+    content: "";
+    background: url(../../img/politicas/advanzer/DiasFestivos.tif.jpg) no-repeat 0 0;
+    background-size: 100%;
+}
+
+.icon-schedules::before{
+    display: inline-block;
+    width: 255px;
+    height: 254px;
+    margin-right: 5px;
+    content: "";
+    background: url(../../img/politicas/advanzer/Horarios2.jpg) no-repeat 0 0;
+    background-size: 100%;
+}
+
+.icon-absences::before{
+    display: inline-block;
+    width: 255px;
+    height: 172pxs;
+    margin-right: 5px;
+    content: "";
+    background: url(../../img/politicas/advanzer/AusenciasPermisos.jpg) no-repeat 0 0;
+    background-size: 100%;
+}
+
+.icon-vacations::before{
+    display: inline-block;
+    width: 255px;
+    height: 183px;
+    margin-right: 5px;
+    content: "";
+    background: url(../../img/politicas/advanzer/Vacaciones.jpg) no-repeat 0 0;
+    background-size: 100%;
+}
+
+.icon-travel::before{
+    display: inline-block;
+    width: 255px;
+    height: 261px;
+    margin-right: 5px;
+    content: "";
+    background: url(../../img/politicas/advanzer/ViaticosyGastosDeViaje2.jpg) no-repeat 0 0;
+    background-size: 100%;
+}

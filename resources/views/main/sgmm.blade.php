@@ -175,7 +175,7 @@
                         <ul>
                             <li>
                                 <i class="fa fa-file-pdf-o"></i>
-                                <p><a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo1NjdmZDZhMmQ5YTEyYTAw">CONDICIONES GENERALES AXA (LINEA HOSP)</a></p>
+                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo1NjdmZDZhMmQ5YTEyYTAw">CONDICIONES GENERALES AXA (LINEA HOSP)</a>
                             </li>
                             <li>
                                 <i class="fa fa-file-pdf-o"></i>
