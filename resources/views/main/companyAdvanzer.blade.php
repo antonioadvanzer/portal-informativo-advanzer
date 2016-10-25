@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div id="integridad" class="modalDialog">
+        <div id="integridad" class="modalDialog tableA">
             <div class="" style="max-width:700px;">
                 <a href="#close" title="Close" class="close">X</a>
                 
@@ -47,7 +47,7 @@
             </div>
         </div>
 
-        <div id="proactividad" class="modalDialog">
+        <div id="proactividad" class="modalDialog tableA">
             <div class="" style="max-width:700px;">
                 <a href="#close" title="Close" class="close">X</a>
                 <table class="responstable" style="width:100%;">
@@ -69,7 +69,7 @@
             </div>
         </div>
 
-        <div id="compromiso" class="modalDialog">
+        <div id="compromiso" class="modalDialog tableA">
             <div class="" style="max-width:700px;">
                 <a href="#close" title="Close" class="close">X</a>
                 <table class="responstable" style="width:100%;">
@@ -96,7 +96,7 @@
             </div>
         </div>
 
-        <div id="colaboracion" class="modalDialog">
+        <div id="colaboracion" class="modalDialog tableA">
             <div class="" style="max-width:700px;">
                 <a href="#close" title="Close" class="close">X</a>
                 <table class="responstable" style="width:100%;">
@@ -116,7 +116,7 @@
             </div>
         </div>
 
-        <div id="gestion_al_cambio" class="modalDialog">
+        <div id="gestion_al_cambio" class="modalDialog tableA">
             <div class="" style="max-width:700px;">
                 <a href="#close" title="Close" class="close">X</a>
                 <table class="responstable" style="width:100%;">
@@ -136,7 +136,7 @@
             </div>
         </div>
 
-        <div id="pensamiento_creativo" class="modalDialog">
+        <div id="pensamiento_creativo" class="modalDialog tableA">
             <div class="" style="max-width:700px;">
                 <a href="#close" title="Close" class="close">X</a>
                 <table class="responstable" style="width:100%;">
@@ -144,7 +144,7 @@
                         <td>
                             <h4>
                                 <img style="float:left; margin-right:10px;" width="15%" class="img-thumbnail" src="{{ URL::to('img/valores_advanzer/ADV_VALORES_6PENSAMIENTO CREATIVO VF.png') }}">
-                            Incentivamos las ideas y soluciones diferentes. flexibles e innovadoras que marquen la diferencia agregando valor al negocio.</h4>
+                            Incentivamos las ideas y soluciones diferentes, flexibles e innovadoras que marquen la diferencia agregando valor al negocio.</h4>
                         </td>
                     </tr>
                     <tr>
@@ -215,7 +215,7 @@
 								<li>Honestidad</li>
 							</ul>-->
 	                	      
-                            <nav>
+                            <nav id="advanzer">
                                   <UL>
                                    <li class="var_nav">
                                       <div class="link_bg"></div>

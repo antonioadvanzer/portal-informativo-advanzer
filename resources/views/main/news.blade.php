@@ -175,7 +175,9 @@
                             </div>
                             
                         </div>
+                        <div id="pag">
 		                {{ $news->links() }}
+                        </div>
 	            </div>
 	        </div>
         </div>

@@ -104,7 +104,7 @@
                         
                         <img src="{{ URL::to('img/contacto/100.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
-                        <h4>Mart&iacuten Garza</h4>
+                        <h4>Mart&iacute;n Garza</h4>
 	                    <h3>Finanzas</h3>
                         <p>martin.garza@advanzer.com</p>
                         
@@ -116,7 +116,7 @@
                         
                         <img src="{{ URL::to('img/contacto/167.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
-                        <h4>J&oacutese Rom&aacuten</h4>
+                        <h4>J&oacute;se Rom&aacute;n</h4>
 	                    <h3>Finanzas</h3>
                         <p>roman.uranga@advanzer.com</p>
                         
@@ -152,7 +152,7 @@
                         
                         <img src="{{ URL::to('img/contacto/166.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
-                        <h4>Belinda L&oacutepez</h4>
+                        <h4>Belinda L&oacute;pez</h4>
 	                    <h3>Project Controlling</h3>
                         <p>belinda.lopez@advanzer.com</p>
                         
@@ -165,7 +165,7 @@
                         <img src="{{ URL::to('img/contacto/198.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
                         <h4>Adriana Peralta</h4>
-	                    <h3>Gesti&oacuten Administrativa</h3>
+	                    <h3>Gesti&oacute;n Administrativa</h3>
                         <p>adriana.peralta@advanzer.com</p>
                         
                         <a id="m10" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -176,7 +176,7 @@
                         
                         <img src="{{ URL::to('img/contacto/33.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
-                        <h4>Gabriela Rodr&iacuteguez</h4>
+                        <h4>Gabriela Rodr&iacute;guez</h4>
                         <h3>Mercadotecnia</h3>
                         <p>gabriela.rodriguez@advanzer.com</p>
                         
@@ -188,7 +188,7 @@
                         
                         <img src="{{ URL::to('img/contacto/39.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
-                        <h4>Rodolfo Cort&eacutes</h4>
+                        <h4>Rodolfo Cort&eacute;s</h4>
                         <h3>Arquitectura de Soluciones</h3>
                         <p>rodolfo.cortes@advanzer.com</p>
                         

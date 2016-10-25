@@ -1049,7 +1049,7 @@ footer {
 
 .modalDialog {
 	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
+	/*font-family: Arial, Helvetica, sans-serif;*/
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -1171,6 +1171,16 @@ footer {
     display: table-cell;
     padding: 1em;
   }
+}
+
+/* table style for each company */
+
+.tableA .responstable tr{
+  border: 1px solid #F0F7E7;
+}
+
+.tableA .responstable tr:nth-child(odd) {
+  background-color: #F0F7E7;
 }
 
 /* news */
@@ -1392,6 +1402,17 @@ a.thumbnail:hover{
 }
 .prev:hover, .next:hover, .exit:hover{opacity:1;}
 
+/* pagination style for each company */
+
+div#pag > .pagination > .active > a, div#pag > .pagination > .active, div#pag > .pagination > .active > span{
+    background-color: #478FCB;
+    border-color: #478FCB;
+}
+
+ div#pag .pagination > li > a{
+    color: #478FCB;
+}
+
 /* valores de empresa */
 
 #valores ul{
@@ -1488,6 +1509,12 @@ a.thumbnail:hover{
     display:block;
 }
 
+/* dedicated to show colors about company (Advanzer) */
+
+nav#advanzer .link_bg, nav#advanzer .var_nav:hover .link_bg{
+    background:#C0D339;
+}
+
 /* Form Elements */
 
 input[type="text"], 
@@ -1497,7 +1524,7 @@ textarea {
     vertical-align: middle;
     background: none;
     border: 1px solid #ddd;
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
     font-size: 13px;
     font-weight: 400;
     color: #888;
@@ -1578,7 +1605,7 @@ button.btn:focus {
     height: 211px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/AtraccionDeTalentos.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/entuizer/ENTAtraccionDeTalentos.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
@@ -1588,7 +1615,7 @@ button.btn:focus {
     height: 273px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/BonoAnualConsultoria.tif.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/entuizer/ENTBonoAnualConsultoria.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
@@ -1598,7 +1625,7 @@ button.btn:focus {
     height: 255px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/CartasyConstanciasLaborales2.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/entuizer/ENTCartasyConstanciasLaborales.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
@@ -1608,7 +1635,7 @@ button.btn:focus {
     height: 213px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/CertificacionesCursos.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/entuizer/ENTCertificacionesCursos.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
@@ -1618,7 +1645,7 @@ button.btn:focus {
     height: 244px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/CodigoDeVestimenta.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/entuizer/ENTCodigoDeVestimenta.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
@@ -1638,7 +1665,7 @@ button.btn:focus {
     height: 240px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/DiasFestivos.tif.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/entuizer/ENTdiasfestivo.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
@@ -1648,14 +1675,14 @@ button.btn:focus {
     height: 254px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/Horarios2.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/entuizer/ENTHorarios.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
 .icon-absences::before{
     display: inline-block;
     width: 255px;
-    height: 172pxs;
+    height: 172px;
     margin-right: 5px;
     content: "";
     background: url(../../img/politicas/advanzer/AusenciasPermisos.jpg) no-repeat 0 0;
@@ -1668,7 +1695,7 @@ button.btn:focus {
     height: 183px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/Vacaciones.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/entuizer/ENTvacaciones.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
@@ -1678,6 +1705,6 @@ button.btn:focus {
     height: 261px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/ViaticosyGastosDeViaje2.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/entuizer/ENTViaticosyGastosDeViaje.jpg) no-repeat 0 0;
     background-size: 100%;
 }
