@@ -40,7 +40,7 @@
                         Para cualquier duda relacionada a esta política, puedes contactar a:<br>
                         Román Uranga<br>
                         roman.uranga@advanzer.com<br>
-                        Tel. 8286-9690 ext. 9695</p>
+                        Tel. 81 4162 0003</p>
                         
                         <h5>NOTAS:</h5>
                         

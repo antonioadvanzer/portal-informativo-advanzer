@@ -50,7 +50,7 @@
                                 Esta política aplica a toda la organización
                                 
                             </li>
-                            
+                            <!--
                             <li>
                                 <h3>Lineamientos</h3>
                                 <ul type="a">
@@ -187,19 +187,33 @@
                                 </ul>
                                 
                             </li>
-                            
+                            -->
                         </ul>
                         
-                        <div class="alert alert-info">
+                        <!--<div class="alert alert-info">
                             Cualquier observaci&oacute;n no contenida en esta Política deberá ser resuelta por Capital Humano.
-                        </div>
+                        </div>-->
                         
 	                </div>
 	            </div>
                 
 	        </div>
         </div>
-
+        
+        <div class="call-to-action-container">
+        	<div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 call-to-action-text wow fadeInLeftBig animated" style="visibility: visible; animation: fadeInLeftBig; -webkit-animation: fadeInLeftBig;">
+	                    <p>
+	                    	Dentro de tu Portal Personal podras acceder a un <span class="violet">módulo</span> con un formulario requerido.
+	                    </p>
+	                    <div class="call-to-action-button">
+	                        <a target="_blank" class="big-link-3" href="http://intranet.advanzer.com:3000/vacaciones">Ir Ahora</a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+        </div>
 @endsection
 
 @section('script')

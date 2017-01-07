@@ -165,7 +165,7 @@
                                 <br>
                             </li>
                             <li>
-                                <i>Te&eacute;lefono/Celular</i><br><br>
+                                <i>Tel&eacute;fono/Celular</i><br><br>
                                 <ul>
                                     <li>Las llamadas que se realicen o reciban y que impliquen tratar temas confidenciales, deberán ser atendidas a discreción en algún área que así lo permita.</li>
 

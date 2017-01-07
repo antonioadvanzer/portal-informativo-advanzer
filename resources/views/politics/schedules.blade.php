@@ -55,7 +55,7 @@
                             </li>
                                 <br>
                             <li>
-                                <b>2. Vacaciones en horario</b>
+                                <b>2. Variaciones en horario</b>
                                     <br><br>
                                 En Advanzer nos interesa nuestro personal y entendemos que pueden llegar a existir situaciones particulares que puedan justificar que de manera ocasional haya alguna variación en el horario establecido.
                                     <br>

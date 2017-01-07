@@ -121,6 +121,16 @@ class MainController extends Controller
     }
 
     /**
+     * Display a view under construction.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getUnderConstruction()
+    { 
+       return View::make('help.under_construction');
+    }
+
+    /**
      * Display a view with all politics.
      *
      * @return \Illuminate\Http\Response

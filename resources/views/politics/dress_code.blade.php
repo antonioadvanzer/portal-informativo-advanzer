@@ -152,20 +152,23 @@
                             <tr>
                                 <td style="text-align: left;">
                                     <ul>
-                                        <li>Ropa arrugada, parchada o con orificios.</li>
-                                        <li>Ropa con colores fosforescentes.</li>
-                                        <li>Ropa deportiva, conjuntos de pants, sudaderas, playeras o uniforme de algún equipo de deportes.</li>
-                                        <li>Playeras con logotipos de otras empresas.</li>
-                                        <li>Bermudas o Shorts.</li>
-                                        <li>Blusas de ombligueras, strapless, o que dejen al descubierto el abdomen.</li>
-                                        <li>Blusas transparentes o con escotes pronunciados.</li>
-                                        <li>Pantalones cortos arriba de la rodilla.</li>
-                                        <li>Faldas o pantalones de piel.</li>
-                                        <li>Tenis y sandalias conocidas como “pata de gallo”.</li>
-                                        <li>Sombreros.</li>
-                                        <li>Gorras.</li>
-                                        <li>Pearcings a la vista.</li>
-                                        <li>Chamarras rockeras.</li>
+                                        <li>Vestimenta limpia y planchada.</li>
+                                        <li>Colores que proyecten profesionalismo.</li>
+                                        <li>Camisas de cuello con botones “fajada”.</li>
+                                        <li>Corbatas clásicas.</li>
+                                        <li>Playera tipo polo.</li>
+                                        <li>Blazer o saco.</li>
+                                        <li>Pantalón de vestir, de pinzas o corte de oficina.</li>
+                                        <li>Traje tradicional con corbata discreta.</li>
+                                        <li>Cualquier ropa de mezclilla de corte discreto solamente los viernes (estando asignado a cliente, deberá apegarse a la política y código de vestimenta del cliente).</li>
+                                        <li>Zapatos mocasín o con agujetas ya sea de vestir o de gamuza.</li>
+                                        <li>Calcetines lisos o de algún estampado discreto.</li>
+                                        <li>Cinturón discreto.</li>
+                                        <li>Chamarras.</li>
+                                        <li>Gabardinas.</li>
+                                        <li>Bufandas.</li>
+                                        <li>Guantes y Gorros de invierno.</li>
+                                        
                                     </ul>
                                 </td>
                                 <td>

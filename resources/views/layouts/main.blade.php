@@ -124,7 +124,7 @@
 						</ul>
                     </li>
 					<li id="organization" >
-						<a href="#"><i class="fa fa-sitemap"></i><br>Estructura Organizacional</a>
+						<a href="{{ URL::to('under_construction') }}"><i class="fa fa-sitemap"></i><br>Estructura Organizacional</a>
 					</li>
 					<li id="politics">
 						<a href="{{ URL::to('politicas') }}"><i class="fa fa-th-list"></i><br>Políticas</a>

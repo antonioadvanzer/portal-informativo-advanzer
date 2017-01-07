@@ -259,7 +259,7 @@
                                         <div class=icon> 
                                             <img class="img-thumbnail" src="{{ URL::to('img/valores_entuizer/EN_VALORES_5GESTION DEL CAMBIO VF.png') }}">
                                         </div>
-                                      <a href="#gestion_al_cambio"><span>Gestión al Cambio</span></a>
+                                      <a href="#gestion_al_cambio"><span>Adaptabilidad al Cambio</span></a>
                                       </div>
                                    </li>
                                       <li class="var_nav">

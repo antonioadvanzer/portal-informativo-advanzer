@@ -15,7 +15,7 @@
         </div>
 
 <!-- Services Full Width Text -->
-        <div class="services-full-width-container">
+ <!--       <div class="services-full-width-container">
         	<div class="container">
             	
                 <div class=row align="center">
@@ -46,7 +46,7 @@
                                     
                                         <table class="responstable" style="width:50%;">
                                             <tr>
-                                                <th>Ocaci&oacute;n</th>
+                                                <th>Ocasi&oacute;n</th>
                                                 <th>D&iacute;as Autorizados</th>
                                             </tr>
                                             <tr>
@@ -181,7 +181,41 @@
                 
 	        </div>
         </div>
+-->
+    
+           <div class="services-full-width-container">
+        	<div class="container">
+            	
+                <div class=row align="center">
+                    <a onclick="window.history.back();">
+                        <img width="5%" style="min-width: 50px" src="{{ URL::to('img/elementos/back.png') }}" alt="" >
+                    </a>
+                </div>
+                
+        		<div class="row">
+	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
+	            		<p>Ausencias</p>
+	            	</div>
+                    
+	            </div>
+                
+	        </div>
+        </div>
 
+    <div class="call-to-action-container">
+        	<div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 call-to-action-text wow fadeInLeftBig animated" style="visibility: visible; animation: fadeInLeftBig; -webkit-animation: fadeInLeftBig;">
+	                    <p>
+	                    	Dentro de tu Portal Personal podras acceder a un <span class="violet">módulo</span> con un formulario requerido.
+	                    </p>
+	                    <div class="call-to-action-button">
+	                        <a target="_blank" class="big-link-3" href="http://intranet.advanzer.com:3000/permiso">Ir Ahora</a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+        </div>
 @endsection
 
 @section('script')

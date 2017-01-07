@@ -24,6 +24,9 @@ Route::group(['middleware' => 'advanzer'], function() {
     
     // Pagina principal con el carrusel
     Route::get('/', ['as' => 'index', 'uses' => 'MainController@index']);
+    
+    // Under Construction
+    Route::get('/under_construction', ['as' => 'uc', 'uses' => 'MainController@pia_getUnderConstruction']);
 
     // Politicas Advanzer
     Route::group(['prefix' => 'politicas'], function() {

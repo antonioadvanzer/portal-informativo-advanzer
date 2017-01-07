@@ -28,7 +28,7 @@
                             
 	                    </p>
                         
-                        <p><b>Importante:</b> Favor de tener a la mano tú número de póliza (FW50667A) y certificado.
+                        <p><b>Importante:</b> Favor de tener a la mano tú número de póliza (FW50667B) y certificado.
                         </p>
                         
                         <img src="{{ URL::to('img/sgmm/Foto-Autos.jpg') }}" style="max-width:400px;" width="100%" class="img-fluid">
