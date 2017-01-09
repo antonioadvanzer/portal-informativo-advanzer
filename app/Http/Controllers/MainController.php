@@ -131,6 +131,18 @@ class MainController extends Controller
     }
 
     /**
+     * Display a view with a document.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getDocumentViewer($file)
+    { 
+        $file = URL::to('documents/'.$file);
+
+       return View::make('help.file',["file" => $file]);
+    }
+
+    /**
      * Display a view with all politics.
      *
      * @return \Illuminate\Http\Response

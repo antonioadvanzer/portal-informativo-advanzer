@@ -28,6 +28,9 @@ Route::group(['middleware' => 'advanzer'], function() {
     // Under Construction
     Route::get('/under_construction', ['as' => 'uc', 'uses' => 'MainController@pia_getUnderConstruction']);
 
+    // File
+    Route::get('/documentos/{file}', ['as' => 'file', 'uses' => 'MainController@pia_getDocumentViewer']);
+
     // Politicas Advanzer
     Route::group(['prefix' => 'politicas'], function() {
         
