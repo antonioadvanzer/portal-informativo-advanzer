@@ -80,7 +80,7 @@
                         
                         <ul type="disc">
                             <li>
-                                <a href="https://drive.google.com/a/advanzer.com/file/d/0B20xPQDaUxigSkFlLVl1WlBfQWM/view?usp=sharing" target="_blank">Modelo de Gesti&oacute;n de Desempeño</a>
+                                <h5><b><a href="https://drive.google.com/a/advanzer.com/file/d/0B20xPQDaUxigSkFlLVl1WlBfQWM/view?usp=sharing" target="_blank">Modelo de Gesti&oacute;n de Desempeño</a></b></h5>
                                 
                                 <br>
                                 
@@ -96,14 +96,14 @@
                                 </p>
                                 
                                 <ul type="square">
-                                    <li>Cumpla con las responsabilidades inherentes al rol que se desempeña.</li>
-                                    <li>De muestra de su comportamiento acorde a la expectativa de su posición.</li>
-                                    <li>Logre los objetivos de desarrollo acordados durante el Feedback.</li>
+                                    <li><p>Cumpla con las responsabilidades inherentes al rol que se desempeña.</p></li>
+                                    <li><p>De muestra de su comportamiento acorde a la expectativa de su posición.</p></li>
+                                    <li><p>Logre los objetivos de desarrollo acordados durante el Feedback.</p></li>
                                 </ul>
                                 
                                 <br>
                                 
-                                <p>Los tres componentes del modelo son:</p>
+                                <p>Los cuatro componentes del modelo son:</p>
                                 
                                 <ul type="1">
                                     <li>
@@ -112,7 +112,11 @@
                                         <p>En Advanzer y Entuizer hemos definido 15 competencias laborales que deben estar presentes en los colaboradores. Cada competencia se encuentra integrada por una definición conceptual, conductas clave y comportamientos observables asignables de acuerdo a las posiciones.
                                         </p>
                                         <img class="img-thumbnail" src="{{ URL::to('img/politicas/indicador.png') }}">
-                                        <p><a href="http://intranet.advanzer.com:3000/evaluacion/perfil" target="_blank">Haz clic Aquí para ingresar a tu Portal Personal</a> y conocer cuáles son tus competencias esperadas acorde a tu posición.</p>
+                                        
+                                        <br>
+                                        <h5><a href="http://intranet.advanzer.com:3000/evaluacion/perfil" target="_blank">
+                                            Haz clic Aquí para ingresar a tu Portal Personal</a> y conocer cuáles son tus competencias esperadas acorde a tu posición.</h5>
+                                        
                                     </li>
                                     <li>
                                         <h5><b>Responsabilidades Funcionales</b></h5>
@@ -120,20 +124,22 @@
                                         <p>En Advanzer y Entuizer hemos clasificado las responsabilidades funcionales en 7 dominios.</p>
                                         
                                         <ul type="a">
-                                            <li>Costo</li>
-                                            <li>Tiempo</li>
-                                            <li>Calidad</li>
-                                            <li>Entregables</li>
-                                            <li>Relación con clientes</li>
-                                            <li>Generación de Negocio</li>
-                                            <li>Habilidades</li>
+                                            <li><p>Costo</p></li>
+                                            <li><p>Tiempo</p></li>
+                                            <li><p>Calidad</p></li>
+                                            <li><p>Entregables</p></li>
+                                            <li><p>Relación con clientes</p></li>
+                                            <li><p>Generación de Negocio</p></li>
+                                            <li><p>Habilidades</p></li>
                                         </ul>
                                         
-                                        <p><a href="http://intranet.advanzer.com:3000/evaluacion/perfil" target="_blank">Haz clic Aquí para ingresar a tu Portal Personal</a> y conocer cuáles son tus competencias esperadas acorde a tu posición.</p>
+                                        <h5><a href="http://intranet.advanzer.com:3000/evaluacion/perfil" target="_blank">Haz clic Aquí para ingresar a tu Portal Personal</a> y conocer cuáles son tus competencias esperadas acorde a tu posición.</h5>
+                                        
                                     </li>
                                     <li>
                                         <h5><b>Objetivos de Desarrollo</b></h5>
                                         <p>Son acuerdos entre Jefe Directo y colaborador, descritos como proyectos anuales que favorecen el desarrollo integral del colaborador, área y organización.</p>
+                                        
                                     </li>
                                     <li>
                                         <h5><b>Compromisos Internos</b></h5>
@@ -143,11 +149,11 @@
                                             
                                         <ul type="circle">
                                             <li>
-                                                <b>Comprobación de Gastos de Viaje</b>
+                                                <h5><b>Comprobación de Gastos de Viaje</b></h5>
                                                 <p>Cada colaborador debe presentar sus gastos de viaje acorde a la política establecida, a más tardar 7 días hábiles, a partir de la fecha de regreso Consulta el procedimiento para reportar tus gastos de viaje en la Política correspondiente <a href="http://intranet.advanzer.com:5000/politicas/viaticos_y_gastos_de_viaje" target="_blank">Accede aquí</a>.</p>
                                             </li>
                                             <li>
-                                                <b>Captura de Asignaciones en Harvest</b>
+                                                <h5><b>Captura de Asignaciones en Harvest</b></h5>
                                                 <p>Todo el personal asignado a proyecto debe capturar cada lunes, sus horas asignadas durante la semana, con un máximo de tres semanas de desfase acumulado al año.</p>
                                                 <p>Consulta el procedimiento para captura de horas:</p>
                                                 <p><a href="https://drive.google.com/a/advanzer.com/file/d/0B20xPQDaUxigczZrUDZyNi04Sk0/view?usp=sharing">¿Cuál es el proceso?</a></p>
@@ -156,13 +162,17 @@
 
                                             </li>
                                             <li>
-                                                <b>Actualización de CV</b>
+                                                <h5><b>Actualización de CV</b></h5>
                                                 <p>La actualización de CV se realiza 2 veces al año, (Junio y Diciembre).</p>
                                                 <p>Para realizar la actualización debes de acceder a tu carpeta en Google Drive “3 CV, Educación y Capacitación”, en donde encontrarás los templates correspondientes:</p>
                                                 
                                                 <ul>
-                                                    <li><a href="https://drive.google.com/a/advanzer.com/file/d/0B20xPQDaUxigWkJleUZWMGlMcDA/view?usp=sharing" target="_blank">Formato CV Advanzer</a></li>
-                                                    <li><a href="https://drive.google.com/a/advanzer.com/file/d/0B20xPQDaUxigSlNPU2ViWWt2QkU/view?usp=sharing" target="_blank">Formato CV Entuizer</a></li>
+                                                    <li>
+                                                        <p><a href="https://drive.google.com/a/advanzer.com/file/d/0B20xPQDaUxigWkJleUZWMGlMcDA/view?usp=sharing" target="_blank">Formato CV Advanzer</a></p>
+                                                    </li>
+                                                    <li>
+                                                        <p><a href="https://drive.google.com/a/advanzer.com/file/d/0B20xPQDaUxigSlNPU2ViWWt2QkU/view?usp=sharing" target="_blank">Formato CV Entuizer</a></p>
+                                                    </li>
                                                 </ul>
 
                                             </li>
@@ -171,18 +181,20 @@
                                 </ul>
                         
                             </li>
+                            <br>
                             <li>
-                                <b>Tracks y Posiciones</b>
+                                <h5><b>Tracks y Posiciones</b></h5>
                                 
                                 <p>Consulta la Guía de Tracks y Posiciones, así como la Guía de crecimiento aquí:</p>
                                 
                                 <ul type="circle">
-                                    <li><a href="https://drive.google.com/a/advanzer.com/file/d/0B3jORuMxgro7bjRfUUhqd2pod2s/view?usp=sharing" target="_blank">Guía de Crecimiento</a></li>
-                                    <li><a href="https://drive.google.com/a/advanzer.com/file/d/0B3jORuMxgro7Qkh4RVVibXBNOE0/view?usp=sharing" target="_blank">Fechas importantes</a></li>
+                                    <li><p><a href="https://drive.google.com/a/advanzer.com/file/d/0B3jORuMxgro7bjRfUUhqd2pod2s/view?usp=sharing" target="_blank">Guía de Crecimiento</a></p></li>
+                                    <li><p><a href="https://drive.google.com/a/advanzer.com/file/d/0B3jORuMxgro7Qkh4RVVibXBNOE0/view?usp=sharing" target="_blank">Fechas importantes</a></p></li>
                                 </ul>
                             </li>
+                            <br>
                             <li>
-                                <b>Evaluación Anual de Desempeño</b>
+                                <h5><b>Evaluación Anual de Desempeño</b></h5>
                                 <p>Cada año en Enero, tiene lugar la Evaluación de Desempeño a todos los niveles de la organización.</p> 
                                 <p>Para conocer en qué consiste y cómo se realiza la evaluación, puedes consultar los siguientes tutoriales.
                                 </p>
@@ -190,18 +202,18 @@
                                 <p>Tutoriales:</p>
                             
                                 <ul type="1">
-                                    <li><a href="https://youtu.be/l2rLGFLhZJA" target="_blank">¿Qu&eacute; me eval&uacute;an?</a></li>
-                                    <li><a href="https://youtu.be/07opVy9yK4M" target="_blank">Autoevaluación</a></li>
-                                    <li><a href="https://youtu.be/JWMJxd0WvvY" target="_blank">¿A qui&eacute;n voy a evaluar?</a></li>
-                                    <li><a href="https://youtu.be/zpHTKQv70l8" target="_blank">Evaluación anual 2016</a></li>
-                                    <li><a href="https://youtu.be/sMgj3LRMmlk" target="_blank">Evaluaci&oacute;n 360°</a></li>
-                                    <li><a href="https://youtu.be/jrwSvXOEVUA" target="_blank">Evaluaci&oacute;n de proyecto</a></li>
+                                    <li><p><a href="https://youtu.be/l2rLGFLhZJA" target="_blank">¿Qu&eacute; me eval&uacute;an?</a></p></li>
+                                    <li><p><a href="https://youtu.be/07opVy9yK4M" target="_blank">Autoevaluación</a></p></li>
+                                    <li><p><a href="https://youtu.be/JWMJxd0WvvY" target="_blank">¿A qui&eacute;n voy a evaluar?</a></p></li>
+                                    <li><p><a href="https://youtu.be/zpHTKQv70l8" target="_blank">Evaluación anual 2016</a></p></li>
+                                    <li><p><a href="https://youtu.be/sMgj3LRMmlk" target="_blank">Evaluaci&oacute;n 360°</a></p></li>
+                                    <li><p><a href="https://youtu.be/jrwSvXOEVUA" target="_blank">Evaluaci&oacute;n de proyecto</a></p></li>
                                 </ul>
                                 
                             </li>
+                            <br>
                             <li>
-                                <b>Calendario de Evaluación</b>
-                                <br>
+                                <h5><b>Calendario de Evaluación</b></h5>
                                 <br>
                                 <img class="img-thumbnail" src="{{ URL::to('img/evaluacion/Calendario desempeño 2016.png') }}">
                             </li>

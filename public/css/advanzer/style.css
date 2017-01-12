@@ -1163,7 +1163,7 @@ footer {
   }
 }
 .responstable th, .responstable td {
-  text-align: left;
+  text-align: center;
   margin: .5em 1em;
 }
 @media (min-width: 480px) {
@@ -1707,4 +1707,40 @@ button.btn:focus {
     content: "";
     background: url(../../img/politicas/advanzer/ViaticosyGastosDeViaje2.jpg) no-repeat 0 0;
     background-size: 100%;
+}
+
+ul.lineamiento {
+    list-style-type:lower-latin;
+    list-style-position: outside;
+}
+
+ul.lineamiento li{
+    
+}
+
+ul.lineamiento li:before {
+    /*content: ")";*/
+}
+
+ul.lineamiento li p{
+    margin-left: 10px;
+    
+}
+
+ul.ambos {
+    list-style-type:lower-latin;
+    list-style-position: outside;
+}
+
+ul.ambos li{
+    
+}
+
+ul.ambos li:before {
+    /*content: ")";*/
+}
+
+ul.ambos li p{
+    margin-left: 10px;
+    
 }

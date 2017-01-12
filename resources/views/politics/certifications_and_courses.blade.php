@@ -72,7 +72,7 @@
                                 El apoyo estará sujeto a la disponibilidad del curso de acuerdo al proveedor seleccionado por Capital Humano y a las siguientes condiciones de acuerdo a la antigüedad del empleado solicitante:
                                 </p>
                                 
-                                <table class="responstable" style="width:50%">
+                                <table class="responstable" style="width:50%; text-align: center" align="center">
                                     <tr>
                                         <th>Antigüedad</th>
                                         <th>Porcentaje a cargo de Empleado</th>
@@ -100,7 +100,7 @@
                                 </table>
                                 
                             </li>
-                            
+                            <br>
                             <li>
                                 <h4>b) Compromiso de parte del Empleado</h4>
                                 
@@ -112,7 +112,7 @@
                                 Antigüedad 5 años o más: Se compromete el empleado a permanecer tres años después de completada la Academia.
                                 </p>
                             </li>
-                            
+                            <br>
                             <li>
                                 <h4>c) Quebrantamiento del Compromiso de Permanencia</h4>
                                 

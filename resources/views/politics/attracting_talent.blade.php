@@ -61,22 +61,22 @@
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
 	                    <h3>4. Lineamientos</h3>
 	                    
-	                    	<ul style="list-style-type:none">
-		                    	<li><b>a)</b>    Cualquier área que, por arranque o modificación de proyecto, carga de trabajo o colocación de recursos a clientes externos, deberán realizar su petición a través de una requisición de personal</li>
+	                    	<ul class="lineamiento">
+                                <li><p>Cualquier área que, por arranque o modificación de proyecto, carga de trabajo o colocación de recursos a clientes externos, deberán realizar su petición a través de una requisición de personal</p></li>
 
-								<li><b>b)</b>    Las posiciones autorizadas para realizar una requisición de personal son: Gerente, Gerente Sr y Director. Cuando un Consultor Sr depende directamente de una Dirección también podrá elaborar requisiciones de personal previa solicitud a CH.</li>
+								<li><p>Las posiciones autorizadas para realizar una requisición de personal son: Gerente, Gerente Sr y Director. Cuando un Consultor Sr depende directamente de una Dirección también podrá elaborar requisiciones de personal previa solicitud a CH.</p></li>
 
-								<li><b>c)</b>     Deberá realizarse una requisición de personal, por cada posición que se requiera.</li>
+								<li><p>Deberá realizarse una requisición de personal, por cada posición que se requiera.</p></li>
 
-								<li><b>d)</b>    El área de Atracción de Talento comenzará la búsqueda de candidatos hasta que la requisición se encuentre (Autorizada, Aprobada), dado que hasta ese momento se considera oficial.</li>
+								<li><p>El área de Atracción de Talento comenzará la búsqueda de candidatos hasta que la requisición se encuentre (Autorizada, Aprobada), dado que hasta ese momento se considera oficial.</p></li>
 
-								<li><b>e)</b>    El solicitante deberá darle seguimiento a través de su Portal Personal a la requisición hasta asegurarse que cuenta con la autorización final.</li>
+								<li><p>El solicitante deberá darle seguimiento a través de su Portal Personal a la requisición hasta asegurarse que cuenta con la autorización final.</p></li>
 
-								<li><b>f)</b>      Cualquier candidato referido será sujeto al proceso que se tiene establecido por Atracción de Talento.</li>
+								<li><p>Cualquier candidato referido será sujeto al proceso que se tiene establecido por Atracción de Talento.</p></li>
 
-								<li><b>g)</b>    Capital Humano es quien define el sueldo a ofertar al candidato de acuerdo al nivel solicitado y al costo asignado.</li>
+								<li><p>Capital Humano es quien define el sueldo a ofertar al candidato de acuerdo al nivel solicitado y al costo asignado.</p></li>
 
-								<li><b>h)</b>    El entrevistador no puede realizar propuestas económicas al candidato.</li>
+								<li><p>El entrevistador no puede realizar propuestas económicas al candidato.</p></li>
 							</ul>
 	                	
 	                </div>
@@ -86,7 +86,7 @@
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
 	                    <h3>5. Procedimiento</h3>
 	                    
-	                    	<h4>Recursos para Proyecto Advanzer/Entuizer</h4> 
+                        <h4><b>Recursos para Proyecto Advanzer/Entuizer</b></h4> 
 
 	                    	<ul>
 								<li>El solicitante deberá ingresar a su Portal Personal  y realizar la solicitud de recursos vía requisición de personal, complementando todos los campos que en ella se solicitan. (Ver ejemplo en Anexo 1)</li>
@@ -112,9 +112,9 @@
 								<li>Oferta económica únicamente es realizada por Gerencia de Capital Humano.</li>
 							</ul>
 
-						    <h4>Recursos Colocación Externa</h4>
+						    <h4><b>Recursos Colocación Externa</b></h4>
 
-						    <ul>
+						    <ul type="circle">
 
 								<li>El solicitante del Área Comercial deberá ingresar a su Portal Personal y elaborar una requisición de personal complementando todos los campos que en ella se solicitan.</li>
 
@@ -128,22 +128,22 @@
 
 								<li>Después de la entrevista el solicitante del Área Comercial, deberá compartir con Atracción de Talento el resultado de la entrevista para continuar con el proceso.</li>
 
-								<li>Si el resultado de la entrevista técnica es positivo, Atracción de Talento aplicará las baterías psicométricas correspondientes a la posición. En caso contrario se reiniciar el proceso de búsqueda.<li>
+                                <li>Si el resultado de la entrevista técnica es positivo, Atracción de Talento aplicará las baterías psicométricas correspondientes a la posición. En caso contrario se reiniciar el proceso de búsqueda.</li>
 
 								<li>Atracción de Talento enviará un resumen de las baterías psicométricas y el resultado de la entrevista técnica al solicitante del Área Comercial para que éste solicite el Vo.Bo. del cliente y se proceda a ofertar al candidato.</li>     
 
 							</ul>
 							 
 
-							<h4>Para ambos procesos:</h4>
+							<h4><b>Para ambos procesos:</b></h4>
 							
-							<ul style="list-style-type:none">
+							<ul class="ambos">
 							
-							<li><b>a.</b>Todos los autorizadores cuentan con un plazo de 30 días para dar Aceptar/Autorizar la requisición de personal recibida. Si en este periodo la requisición no es aceptada por el Director de Área o Autorizada por el Director General/Socio, ésta es cancelada y en caso de requerirse la posición, deberá el solicitante reactivarla de nuevo en el Portal. Este proceso se puede llevar a cabo solo 1 vez por cada posición cancelada.</li>
+							<li><p>Todos los autorizadores cuentan con un plazo de 30 días para dar Aceptar/Autorizar la requisición de personal recibida. Si en este periodo la requisición no es aceptada por el Director de Área o Autorizada por el Director General/Socio, ésta es cancelada y en caso de requerirse la posición, deberá el solicitante reactivarla de nuevo en el Portal. Este proceso se puede llevar a cabo solo 1 vez por cada posición cancelada.</p></li>
 
-							<li><b>b.</b>Si el proyecto se retrasa o se cancela, el solicitante deberá poner la requisición en estatus de “Stand by” para que Atracción de Talento se entere.</li>
+							<li><p>Si el proyecto se retrasa o se cancela, el solicitante deberá poner la requisición en estatus de “Stand by” para que Atracción de Talento se entere.</p></li>
 
-							<li><b>c.</b>Todas las requisiciones en estatus de “Stand by” por un periodo mayor a 30 días, serán canceladas y en caso de requerirse la posición, deberá el solicitante reactivarla en el Portal. Este proceso solo se puede llevar a cabo 1 vez por cada posición cancelada.</li>
+							<li><p>Todas las requisiciones en estatus de “Stand by” por un periodo mayor a 30 días, serán canceladas y en caso de requerirse la posición, deberá el solicitante reactivarla en el Portal. Este proceso solo se puede llevar a cabo 1 vez por cada posición cancelada.</p></li>
 
 							</ul>
 	                	

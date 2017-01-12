@@ -199,6 +199,20 @@
                     
 	            </div>
                 
+                <div class="row">
+	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
+	                    
+	                    <h3>Objetivo:</h3>
+                        <p>Dar a conocer el procedimiento oficial autorizado que cada empleado debe seguir al momento de solicitar un permiso de ausencia.</p>
+                        
+                        <h3>Alcance:</h3>
+                        <p>Esta política aplica a toda la organización.</p>
+                        
+                        
+	                </div>
+	            </div>
+                
+                
 	        </div>
         </div>
 
@@ -207,7 +221,7 @@
 	            <div class="row">
 	                <div class="col-sm-12 call-to-action-text wow fadeInLeftBig animated" style="visibility: visible; animation: fadeInLeftBig; -webkit-animation: fadeInLeftBig;">
 	                    <p>
-	                    	Dentro de tu Portal Personal podras acceder a un <span class="violet">módulo</span> con un formulario requerido.
+	                    	Conoce el detalle de la Política y el Formulario de Solicitud en tu Portal Personal
 	                    </p>
 	                    <div class="call-to-action-button">
 	                        <a target="_blank" class="big-link-3" href="http://intranet.advanzer.com:3000/permiso">Ir Ahora</a>

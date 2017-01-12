@@ -50,7 +50,8 @@
 	            <div class="row">
 	                <div class="col-sm-12 call-to-action-text wow fadeInLeftBig animated" style="visibility: visible; animation: fadeInLeftBig; -webkit-animation: fadeInLeftBig;">
 	                    <p>
-	                    	Dentro de tu Portal Personal podras acceder a un <span class="violet">módulo</span> con un formulario requerido.
+                            Accede al Formulario de Solicitud en tu <span class="violet">Portal Personal</span>
+
 	                    </p>
 	                    <div class="call-to-action-button">
 	                        <a target="_blank" class="big-link-3" href="http://intranet.advanzer.com:3000/solicitar_carta">Ir Ahora</a>
