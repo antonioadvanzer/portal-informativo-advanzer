@@ -250,7 +250,9 @@ class AdminController extends Controller
         // start count how many uploaded
         $uploadcount = 0;
         
-        
+        $destinationPath = $this->urlNews."/".$request->get('title');
+        File::makeDirectory($destinationPath, 0777);
+
         foreach($files as $file) {
 
         //$rules = array('file' => 'required'); //'required|mimes:png,gif,jpeg,txt,pdf,doc'
@@ -270,9 +272,7 @@ class AdminController extends Controller
                 //echo $file->getClientOriginalName();
                 //dd($file);exit;
 
-                    $destinationPath = $this->urlNews."/".$request->get('title');
                     $filename = $file->getClientOriginalName();
-                    File::makeDirectory($destinationPath, 0777);
                     $upload_success = $file->move($destinationPath, $filename);
                     $uploadcount ++;
 
@@ -349,16 +349,17 @@ class AdminController extends Controller
         // start count how many uploaded
         $uploadcount = 0;
         
-        
+        $destinationPath = $this->urlBirthday."/".$request->get('title');
+        File::makeDirectory($destinationPath, 0777);
+
         foreach($files as $file) {
         
             try{
 
                 if ($file !== null) {
 
-                    $destinationPath = $this->urlBirthday."/".$request->get('title');
+                    
                     $filename = $file->getClientOriginalName();
-                    File::makeDirectory($destinationPath, 0777);
                     $upload_success = $file->move($destinationPath, $filename);
                     $uploadcount ++;
 
@@ -498,19 +499,21 @@ class AdminController extends Controller
 
             // start count how many uploaded
             $uploadcount = 0;
+
+            $destinationPath = $this->urlNews."/".$request->get('title');
+            if(!is_dir($destinationPath)){
+                $directory = File::makeDirectory($destinationPath, 0777);
+            }
             
             foreach($files as $file) {
 
                     if ($file !== null) {
 
                         //$destinationPath = $this->urlNews;
-                        $destinationPath = $this->urlNews."/".$request->get('title');
-                        if(!is_dir($destinationPath)){
-                            $directory = File::makeDirectory($destinationPath, 0777);
-                        }
+                        
                         $filename = $file->getClientOriginalName();
                         $upload_success = $file->move($destinationPath, $filename);
-                        $uploadcount ++;
+                        $uploadcount++;
 
                         ImageCircular::create([
                             'path' => $destinationPath."/".$filename,
@@ -574,16 +577,18 @@ class AdminController extends Controller
 
             // start count how many uploaded
             $uploadcount = 0;
+
+            $destinationPath = $this->urlBirthday."/".$request->get('title');
+            if(!is_dir($destinationPath)){
+                $directory = File::makeDirectory($destinationPath, 0777);
+            }
             
             foreach($files as $file) {
 
                     if ($file !== null) {
 
                         //$destinationPath = $this->urlNews;
-                        $destinationPath = $this->urlBirthday."/".$request->get('title');
-                        if(!is_dir($destinationPath)){
-                            $directory = File::makeDirectory($destinationPath, 0777);
-                        }
+                        
                         $filename = $file->getClientOriginalName();
                         $upload_success = $file->move($destinationPath, $filename);
                         $uploadcount ++;
