@@ -24,11 +24,12 @@
                     </a>
                 </div>
                 
-        		<div class="row">
+                <div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>Bono Anual Consultor&iacute;a</p>
+                        <span class="politic-icon icon-annual-bonus"></span>
+                        <p class="politic-tittle">Bono Anual Consultor&iacute;a</p>
 	            	</div>
-	            </div>
+	            </div><br>
 
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">

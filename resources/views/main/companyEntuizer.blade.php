@@ -163,19 +163,19 @@
             	
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
-	                    <h3>¿Qué es Entuizer?</h3>
+	                    <h3>¿Qui&eacute;n es Entuizer?</h3>
 	                    <p>
 	                    	Empresa especializada en el desarrollo de proyectos relacionados con la regulación, investigación e innovación en tecnologías de la información y del conocimiento aplicables a sector público y privado.
 	                	</p>
                         <p>
-                            En cada uno de nuestros proyectos utilizamos metodología disruptiva que desencadena un proceso de innovación que se traduce en modelos de operación altamente competitivos para nuestros clientes. Tenemos la experiencia, el conocimiento, el profesionalismo y el entendimiento profundo de los retos y oportunidades que enfrenta nuestro entorno en el ámbito de tecnologías de la información y el conocimiento.
+                            Nuestra gente es nuestro mayor activo, aplicamos nuestra experiencia para beneficio de nuestros clientes.
                         </p>
 	                </div>
 	            </div>
 
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
-	                    <h3>¿Cuál es nuestra misión?</h3>
+	                    <h3>Misi&oacute;n?</h3>
 	                    <p>
 	                    	Generar valor y confianza para nuestros clientes y colaboradores.
 	                </div>
@@ -183,7 +183,7 @@
 
                 <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
-	                    <h3>¿Cuál es nuestra visión?</h3>
+	                    <h3>Visi&oacute;n</h3>
 	                    <p>
 	                    	Convertirnos en aliados estratégicos de nuestros clientes para el desarrollo e implementación de soluciones y de tecnologías innovadoras que les ayuden en la toma de decisiones a través 
                             de nuestro entendimiento de los mercados, del diseño de propuestas concretas y de la capacitación continua del capital humano.

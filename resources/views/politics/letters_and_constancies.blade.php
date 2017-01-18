@@ -24,11 +24,12 @@
                     </a>
                 </div>
                 
-        		<div class="row">
+                <div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>Cartas y Constancias Laborales</p>
+                        <span class="politic-icon icon-letters-and-constancies"></span>
+                        <p class="politic-tittle">Cartas y Constancias Laborales</p>
 	            	</div>
-	            </div>
+	            </div><br>
 
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">

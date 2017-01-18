@@ -24,11 +24,12 @@
                     </a>
                 </div>
                 
-        		<div class="row">
+                <div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>Certificaci&oacute;n SAP</p>
+                        <span class="politic-icon icon-certifications-and-courses"></span>
+                        <p class="politic-tittle">Certificaci&oacute;n SAP</p>
 	            	</div>
-	            </div>
+	            </div><br>
 
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
@@ -72,7 +73,7 @@
                                 El apoyo estará sujeto a la disponibilidad del curso de acuerdo al proveedor seleccionado por Capital Humano y a las siguientes condiciones de acuerdo a la antigüedad del empleado solicitante:
                                 </p>
                                 
-                                <table class="responstable" style="width:50%; text-align: center" align="center">
+                                <table class="responstable" style="width:50%;" align="center">
                                     <tr>
                                         <th>Antigüedad</th>
                                         <th>Porcentaje a cargo de Empleado</th>

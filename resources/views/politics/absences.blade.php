@@ -192,11 +192,11 @@
                     </a>
                 </div>
                 
-        		<div class="row">
+                <div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>Ausencias</p>
+                        <span class="politic-icon icon-absences"></span>
+                        <p class="politic-tittle">Ausencias</p>
 	            	</div>
-                    
 	            </div>
                 
                 <div class="row">

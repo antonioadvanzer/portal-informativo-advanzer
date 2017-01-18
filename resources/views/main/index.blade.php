@@ -33,12 +33,15 @@
                                 </li>-->
                                 
                                 @foreach($news as $new)
-                                <li data-thumb="{{ URL::to('img/noticias/'.$new->image->path) }}">
-                                    <a href="{{ URL::to('noticias/ver_noticia/'.$new->image->id_circular) }}">
-                                        <img src="{{ URL::to('img/noticias/'.$new->image->path) }}">
-                                    </a>
+                                <li data-thumb="{{ URL::to($new->image->path) }}">
+                                        <img src="{{ URL::to($new->image->path) }}">
                                     <div class="flex-caption">
                                     	{{ $new->circular->summary }}
+                                        <br>
+                                        <a class="btn btn-success" href="{{ URL::to('noticias/ver_noticia/'.$new->image->id_circular) }}" aria-label="Settings">
+                                          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                            Ir a la Noticia
+                                        </a>
                                     </div>
                                 </li>
                                 @endforeach

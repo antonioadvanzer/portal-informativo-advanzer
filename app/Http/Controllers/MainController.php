@@ -19,6 +19,8 @@ use App\Circular;
 use App\ImageCircular;
 use App\ElementCarrusel;
 use App\Birthday;
+use App\BirthdayHistory;
+use App\ImageBirthdayHistory;
 use Mail;
 
 class MainController extends Controller
@@ -277,7 +279,7 @@ class MainController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function pia_getBirthay()
+    public function pia_getBirthday()
     {   
         $calendar = Birthday::all()->first();
         
@@ -363,6 +365,38 @@ class MainController extends Controller
             return View::make('main.circular', ['circular' => $circular, 'images' => $pictures]);
         }else{
             return redirect('noticias');
+        }
+    }
+
+    /**
+     * Display a view with birthdays history.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getBirthdays()
+    {   
+        $birthdays = BirthdayHistory::orderBy('created_at', 'DESC')->paginate(12);
+        
+        return View::make('main.birthdays', ['birthdays' => $birthdays]);
+    }
+
+    /**
+     * Display the specified circular.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getBirthdayAlbum($id)
+    {
+        $album = BirthdayHistory::find($id);
+
+        if(!empty($album)){
+            
+            $pictures = ImageBirthdayHistory::where('id_birthday_history',$id)->get();
+
+            return View::make('main.album', ['album' => $album, 'images' => $pictures]);
+        }else{
+            return redirect('historial_de_cumpleaños');
         }
     }
 

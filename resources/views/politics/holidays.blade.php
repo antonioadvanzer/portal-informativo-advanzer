@@ -24,12 +24,11 @@
                     </a>
                 </div>
                 
-        		<div class="row">
+                <div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>Vacaciones</p>
-                        
+                        <span class="politic-icon icon-vacations"></span>
+                        <p class="politic-tittle">Vacaciones</p>
 	            	</div>
-                    
 	            </div>
 
 	            <div class="row">

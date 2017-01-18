@@ -26,9 +26,11 @@
                 
         		<div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>Atracci&oacute;n de Talento</p>
+	            		
+                        <span class="politic-icon icon-attracting-talent"></span>
+                        <p class="politic-tittle">Atracci&oacute;n de Talento</p>
 	            	</div>
-	            </div>
+	            </div><br>
 
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">

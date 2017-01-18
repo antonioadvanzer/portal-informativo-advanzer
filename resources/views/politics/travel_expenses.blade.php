@@ -24,13 +24,12 @@
                     </a>
                 </div>
                 
-        		<div class="row">
+                <div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>Vi&aacute;ticos y Gastos de Viaje</p>
-                        
+                        <span class="politic-icon icon-travel"></span>
+                        <p class="politic-tittle">Vi&aacute;ticos y Gastos de Viaje</p>
 	            	</div>
-                    
-	            </div>
+	            </div><br><br>
 
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">

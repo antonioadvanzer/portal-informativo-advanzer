@@ -29,7 +29,7 @@
                             <div class="circulares">
                                 
                                 @foreach($news as $n)
-                                <?php $img = URL::to("img/noticias/".$n->getImages->first()['path']) ?>
+                                <?php $img = URL::to($n->getImages->first()['path']) ?>
                                 
                                 <a class="circular" href="{{ URL::to('noticias/ver_noticia/'.$n->id) }}">
                                     <span class="circular-header" style="background-image: url('{{ $img }}');">

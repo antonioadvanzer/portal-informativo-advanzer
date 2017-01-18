@@ -39,7 +39,7 @@
                                 @foreach($pictures as $pic)
                                 <div id="{{ 'acpic'.$pic->id }}" name="{{ 'acpic'.$pic->id }}" class="abcd">
                                     <input type="hidden" name="imgs[]" value="{{ $pic->id }}">
-                                    <img id="{{ 'previewimg'.$pic->id }}" src="{{ URL::to('img/noticias/'.$pic->path) }}">
+                                    <img id="{{ 'previewimg'.$pic->id }}" src="{{ URL::to($pic->path) }}">
                                     <img alt="delete" src="{{ URL::to('img/admin/windows/x.png') }}" id="img" onclick="deleteImage('{{ $pic->id }}')" >
                                 </div>
                                 @endforeach

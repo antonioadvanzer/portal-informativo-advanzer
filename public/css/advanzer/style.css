@@ -882,7 +882,8 @@ footer {
 }
 
 .portfolio-box-text {
-	padding: 0 15px 20px 15px;
+	/*padding: 0 15px 20px 15px;*/
+    padding: 0 15px auto 15px;
 }
 
 .portfolio-box-text h3 {
@@ -1605,107 +1606,107 @@ button.btn:focus {
     height: 211px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/AtraccionDeTalentos.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/advanzer-rendered/ADVAtraccionDeTalentos.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
 .icon-annual-bonus::before{
     display: inline-block;
     width: 255px;
-    height: 273px;
+    height: 211px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/BonoAnualConsultoria.tif.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/advanzer-rendered/ADVBonoAnualConsultoria.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
 .icon-letters-and-constancies::before{
     display: inline-block;
     width: 255px;
-    height: 255px;
+    height: 211px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/CartasyConstanciasLaborales2.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/advanzer-rendered/ADVCartasyConstanciasLaborales2.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
 .icon-certifications-and-courses::before{
     display: inline-block;
     width: 255px;
-    height: 213px;
+    height: 211px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/CertificacionesCursos.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/advanzer-rendered/ADVCertificacionesCursos.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
 .icon-dress-code::before{
     display: inline-block;
     width: 255px;
-    height: 244px;
+    height: 211px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/CodigoDeVestimenta.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/advanzer-rendered/ADVCodigoDeVestimenta.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
 .icon-internal-comunication::before{
     display: inline-block;
     width: 255px;
-    height: 315px;
+    height: 211px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/ComunicacionInterna2.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/advanzer-rendered/ADVComunicacionInterna2.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
 .icon-free-days::before{
     display: inline-block;
     width: 255px;
-    height: 240px;
+    height: 211px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/DiasFestivos.tif.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/advanzer-rendered/ADVDiasFestivos.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
 .icon-schedules::before{
     display: inline-block;
     width: 255px;
-    height: 254px;
+    height: 211px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/Horarios2.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/advanzer-rendered/ADVHorarios2.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
 .icon-absences::before{
     display: inline-block;
     width: 255px;
-    height: 172px;
+    height: 211px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/AusenciasPermisos.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/advanzer-rendered/ADVAusenciasPermisos.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
 .icon-vacations::before{
     display: inline-block;
     width: 255px;
-    height: 183px;
+    height: 211px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/Vacaciones.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/advanzer-rendered/ADVVacaciones.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
 .icon-travel::before{
     display: inline-block;
     width: 255px;
-    height: 261px;
+    height: 211px;
     margin-right: 5px;
     content: "";
-    background: url(../../img/politicas/advanzer/ViaticosyGastosDeViaje2.jpg) no-repeat 0 0;
+    background: url(../../img/politicas/advanzer-rendered/ADVViaticosyGastosDeViaje2.jpg) no-repeat 0 0;
     background-size: 100%;
 }
 
@@ -1744,3 +1745,94 @@ ul.ambos li p{
     margin-left: 10px;
     
 }
+
+.politic-icon {
+    float:left; 
+    margin-right:192px;
+    margin-bottom:10%;
+    width: 100%;  
+    max-width:192px;
+    max-height:110px;
+}
+
+p.politic-tittle {
+    margin: 70px 0 10px;
+}
+
+/* Birthday History*/
+
+/* My Tweaks - Center the boxes on the page */
+
+div.birthday_history {
+width:auto;
+height:400px;
+padding-top: 40px;
+margin: 0 auto;
+}
+
+/* White Border around Photos*/
+.box li {
+  background-color: #fff;
+  padding: 10px;
+    padding-bottom: 25px;
+}
+
+.box img {
+  width: 250px;
+  height: 250px;
+}
+
+/* Source: http://matthamm.com/box-shadow-curl.html */
+
+ul.box, ul.box2, ul.box3, ul.box4 {
+position: relative;
+z-index: 1; /* prevent shadows falling behind containers with backgrounds */
+/*overflow: hidden;*/
+list-style: none;
+margin: 0;
+padding: 0; }
+
+
+ul.box li, ul.box2 li, ul.box3 li, ul.box4 li {
+position: relative;
+float: left;
+margin: 0 15px 30px 0;
+-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; }
+
+
+ul.box li:before,
+ul.box li:after,
+ul.box2 li:after,
+ul.box2 li:before,
+ul.box4 li:after {
+content: '';
+z-index: -1;
+position: absolute;
+left: 10px;
+bottom: 10px;
+width: 70%;
+max-width: 300px; /* avoid rotation causing ugly appearance at large container widths */
+max-height: 100px;
+height: 55%;
+-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+-webkit-transform: skew(-15deg) rotate(-6deg);
+-moz-transform: skew(-15deg) rotate(-6deg);
+-ms-transform: skew(-15deg) rotate(-6deg);
+-o-transform: skew(-15deg) rotate(-6deg);
+transform: skew(-15deg) rotate(-6deg); }
+
+
+
+ul.box li:after,
+ul.box4 li:after {
+left: auto;
+right: 10px;
+-webkit-transform: skew(15deg) rotate(6deg);
+-moz-transform: skew(15deg) rotate(6deg);
+-ms-transform: skew(15deg) rotate(6deg);
+-o-transform: skew(15deg) rotate(6deg);
+transform: skew(15deg) rotate(6deg); }

@@ -20,7 +20,7 @@
 	        <div class="container">
 	            
                 @if(session('empresa') == "advanzer.com")
-                <div class="row">
+                <!--<div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
 	            		<p>Publicidad:</p>
 	            	</div>
@@ -50,7 +50,7 @@
 		                </div>
                         
 	                </div>
-	            </div>
+	            </div>-->
                 @endif
                 
                 <div class="row">

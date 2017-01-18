@@ -46,7 +46,7 @@
                             
                             @foreach($images as $image)
                             <a class="thumbnail">
-                                <img src="{{ URL::to('img/noticias/'.$image->path) }}">
+                                <img src="{{ URL::to($image->path) }}">
                             </a>
                             @endforeach
                             

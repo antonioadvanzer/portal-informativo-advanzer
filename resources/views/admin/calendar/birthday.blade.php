@@ -51,7 +51,7 @@
 @section('script')
     
 <script>
-    $("#birthday").addClass("current");
+    $("#birthday-calendar").addClass("current");
 </script>
     
         

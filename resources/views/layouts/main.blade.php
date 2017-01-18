@@ -139,7 +139,10 @@
 						</a>
 						<ul class="dropdown-menu dropdown-menu-left" role="menu">
                             <li id="birthday">
-                                <a href="{{ URL::to('cumpleaños_del_mes') }}"><i class="fa fa-birthday-cake"></i>&nbsp;&nbsp;Cumpleaños del mes</a>
+                                <a href="{{ URL::to('cumpleaños_del_mes') }}"><i class="fa fa-birthday-cake"></i>&nbsp;&nbsp;Calendario de Cumpleaños</a>
+                            </li>
+                            <li id="birthday-history">
+                                <a href="{{ URL::to('historial_de_cumpleaños') }}"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Historial de Cumpleaños</a>
                             </li>
 							<li id="news" >
                                 <a href="{{ URL::to('noticias') }}"><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Noticias</a>

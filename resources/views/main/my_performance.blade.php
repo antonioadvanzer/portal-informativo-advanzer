@@ -215,7 +215,7 @@
                             <li>
                                 <h5><b>Calendario de Evaluación</b></h5>
                                 <br>
-                                <img class="img-thumbnail" src="{{ URL::to('img/evaluacion/Calendario desempeño 2016.png') }}">
+                                <img class="img-thumbnail" src="{{ URL::to('img/evaluacion/Calendario desempeno 2016.png') }}">
                             </li>
                         </ul>
                         

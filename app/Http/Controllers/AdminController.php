@@ -13,11 +13,14 @@ use URL;
 use Auth;
 use Hash;
 use DB;
+use File;
 use App\User;
 use App\Circular;
 use App\ImageCircular;
 use App\ElementCarrusel;
 use App\Birthday;
+use App\BirthdayHistory;
+use App\ImageBirthdayHistory;
 
 class AdminController extends Controller
 {
@@ -125,8 +128,19 @@ class AdminController extends Controller
     public function adminCalendarBirthday()
     {   
         $calendar = Birthday::all()->first();
-        
         return View::make('admin.calendar.birthday', ['calendar' => $calendar]);
+    }
+
+    /**
+     * Display birthdays table.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminGetBirthdays()
+    {   
+        $birthdays = BirthdayHistory::all();
+        return View::make('admin.calendar.birthdays_history', ['birthdays' => $birthdays]);
     }
 
     /**
@@ -162,6 +176,17 @@ class AdminController extends Controller
     }
 
     /**
+     * Display the form form creating new album.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminNewAlbumForm()
+    {   
+        return View::make('admin.calendar.new_album');
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -191,6 +216,7 @@ class AdminController extends Controller
     
     private $urlNews = "img/noticias";
     private $urlMural = "img/cumpleaños";
+    private $urlBirthday = "img/historial de cumpleanos";
     
     /**
      * Save new circular.
@@ -244,13 +270,14 @@ class AdminController extends Controller
                 //echo $file->getClientOriginalName();
                 //dd($file);exit;
 
-                    $destinationPath = $this->urlNews;
+                    $destinationPath = $this->urlNews."/".$request->get('title');
                     $filename = $file->getClientOriginalName();
+                    File::makeDirectory($destinationPath, 0777);
                     $upload_success = $file->move($destinationPath, $filename);
                     $uploadcount ++;
 
                     ImageCircular::create([
-                        'path' => $filename,
+                        'path' => $destinationPath."/".$filename,
                         'id_circular' => $circular->id
                     ]); 
                 }
@@ -284,6 +311,68 @@ class AdminController extends Controller
             echo $e;
             DB::rollBack();
             exit;
+        }
+
+        DB::commit();
+
+        echo "success"; 
+    }
+
+    /**
+     * Save new album.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminSaveNewAlbum(Request $request)
+    {   
+        DB::beginTransaction();
+
+        // Store circular saved
+        try{
+            $birthday = BirthdayHistory::create([
+                            'title' => $request->get('title'),
+                            'summary' => $request->get('summary'),
+                            'content' => $request->get('content'),
+                        ]);
+        }catch(\Exception $e){
+            DB::rollBack();
+            dd($e);
+        }
+
+        // getting all of the post data
+        $files = $request->file('file');
+
+        // Making counting of uploaded images
+        $file_count = count($files);
+
+        // start count how many uploaded
+        $uploadcount = 0;
+        
+        
+        foreach($files as $file) {
+        
+            try{
+
+                if ($file !== null) {
+
+                    $destinationPath = $this->urlBirthday."/".$request->get('title');
+                    $filename = $file->getClientOriginalName();
+                    File::makeDirectory($destinationPath, 0777);
+                    $upload_success = $file->move($destinationPath, $filename);
+                    $uploadcount ++;
+
+                    ImageBirthdayHistory::create([
+                        'path' => $destinationPath."/".$filename,
+                        'id_birthday_history' => $birthday->id
+                    ]); 
+                }
+               
+            }catch(\Exception $e){
+                    DB::rollBack();
+                    dd($e);
+            }
+            
         }
 
         DB::commit();
@@ -330,6 +419,26 @@ class AdminController extends Controller
             return View::make('admin.news.update_circular', ['circular' => $circular, 'pictures' => $pictures]);
         }else{
             return redirect('advanzer-admin/noticias');
+        }
+    }
+
+    /**
+     * Show the form for editing the specified Álbum.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminEditAlbum($id)
+    {
+        $album = BirthdayHistory::find($id);
+
+        if(!empty($album)){
+            
+            $pictures = ImageBirthdayHistory::where('id_birthday_history',$id)->get();
+
+            return View::make('admin.calendar.update_album', ['album' => $album, 'pictures' => $pictures]);
+        }else{
+            return redirect('advanzer-admin/historial_de_noticias');
         }
     }
         
@@ -394,14 +503,94 @@ class AdminController extends Controller
 
                     if ($file !== null) {
 
-                        $destinationPath = $this->urlNews;
+                        //$destinationPath = $this->urlNews;
+                        $destinationPath = $this->urlNews."/".$request->get('title');
+                        if(!is_dir($destinationPath)){
+                            $directory = File::makeDirectory($destinationPath, 0777);
+                        }
                         $filename = $file->getClientOriginalName();
                         $upload_success = $file->move($destinationPath, $filename);
                         $uploadcount ++;
 
                         ImageCircular::create([
-                            'path' => $filename,
+                            'path' => $destinationPath."/".$filename,
                             'id_circular' => $request->get('id')
+                        ]); 
+                    }
+            }
+
+        }catch(\Exception $e){
+            echo $e;
+            DB::rollBack();
+            exit;
+        }
+        
+        DB::commit();
+
+        echo "success";
+    }
+
+    /**
+     * Update the specified album in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminUpdateAlbum(Request $request)
+    {
+        DB::beginTransaction();
+
+        try{
+
+            BirthdayHistory::where('id', $request->get('id'))
+                ->update([
+                    'title' => $request->get('title'),
+                    'summary' => $request->get('summary'),
+                    'content' => $request->get('content'),
+                ]);
+            
+            if($imgs = $request->get('imgs')){
+
+                // creating variable to store conditions
+                $ifimg = array();
+                
+                foreach($imgs as $img){
+                    $ifimg[] = ['id', "!=", $img];
+                }
+
+                // if user deleted any pictures
+                ImageBirthdayHistory::where('id_birthday_history', $request->get('id'))
+                    ->where($ifimg)
+                    ->delete();
+            
+            }
+
+            // getting all of the post data
+            $files = $request->file('file');
+
+            // Making counting of uploaded images
+            $file_count = count($files);
+
+            // start count how many uploaded
+            $uploadcount = 0;
+            
+            foreach($files as $file) {
+
+                    if ($file !== null) {
+
+                        //$destinationPath = $this->urlNews;
+                        $destinationPath = $this->urlBirthday."/".$request->get('title');
+                        if(!is_dir($destinationPath)){
+                            $directory = File::makeDirectory($destinationPath, 0777);
+                        }
+                        $filename = $file->getClientOriginalName();
+                        $upload_success = $file->move($destinationPath, $filename);
+                        $uploadcount ++;
+
+                        ImageBirthdayHistory::create([
+                            'path' => $destinationPath."/".$filename,
+                            'id_birthday_history' => $request->get('id')
                         ]); 
                     }
             }

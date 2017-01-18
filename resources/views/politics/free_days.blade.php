@@ -24,11 +24,12 @@
                     </a>
                 </div>
                 
-        		<div class="row">
+                <div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>D&iacute;as Festivos</p>
+                        <span class="politic-icon icon-free-days"></span>
+                        <p class="politic-tittle">D&iacute;as Festivos</p>
 	            	</div>
-	            </div>
+	            </div><br>
 
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">

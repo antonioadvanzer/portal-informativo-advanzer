@@ -24,12 +24,13 @@
                     </a>
                 </div>
                 
-        		<div class="row">
+                <div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>Horarios</p>
+                        <span class="politic-icon icon-schedules"></span>
+                        <p class="politic-tittle">Horarios</p>
 	            	</div>
-	            </div>
-
+	            </div><br>
+                
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
 	                    <h3></h3>

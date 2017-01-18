@@ -24,11 +24,12 @@
                     </a>
                 </div>
                 
-        		<div class="row">
+                <div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>C&oacute;digo de Vestimenta</p>
+                        <span class="politic-icon icon-dress-code"></span>
+                        <p class="politic-tittle">C&oacute;digo de Vestimenta</p>
 	            	</div>
-	            </div>
+	            </div><br>
 
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
