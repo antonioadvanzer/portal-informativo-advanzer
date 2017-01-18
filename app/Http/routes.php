@@ -53,8 +53,14 @@ Route::group(['middleware' => 'advanzer'], function() {
     Route::get('material_grafico', ['as' => 'graphical', 'uses' => 'MainController@pia_getGraphicalMaterial']);
 
     // Cumpleaños del Mes
-    Route::get('cumpleaños_del_mes', ['as' => 'birthday', 'uses' => 'MainController@pia_getBirthay']);
+    Route::get('cumpleaños_del_mes', ['as' => 'birthday', 'uses' => 'MainController@pia_getBirthday']);
 
+    Route::group(['prefix' => 'historial_de_cumpleaños'], function() {
+        // Historial de Cumpleaños del Mes
+        Route::get('/{page?}', ['as' => 'birthday', 'uses' => 'MainController@pia_getBirthdays']);
+
+        Route::get('/ver_album/{id}', ['as' => 'showalbum', 'uses' => 'MainController@pia_getBirthdayAlbum']);
+    });
      // Mi Desempeño
     Route::get('mi_desempeño', ['as' => 'performance', 'uses' => 'MainController@pia_getMyPerformance']);
 
@@ -108,6 +114,11 @@ Route::group(['prefix' => 'advanzer-admin'], function() {
         Route::get('/elementos_carrusel_activos', ['as' => 'elementsAvaible', 'uses' => 'AdminController@adminGetElementsCarrusel']);
         Route::get('/cumpleanos_del_mes', ['as' => 'birthdays', 'uses' => 'AdminController@adminCalendarBirthday']);
         Route::post('/cambiar_mural', ['as' => 'changeMural', 'uses' => 'AdminController@adminChangeMural']);
+        Route::get('/historial_de_cumpleaños', ['as' => 'birthdays', 'uses' => 'AdminController@adminGetBirthdays']);
+        Route::get('/nuevo_album', ['as' => 'birthdays', 'uses' => 'AdminController@adminNewAlbumForm']);
+        Route::post('/guardar_nuevo_album', ['as' => 'saveAlbum', 'uses' => 'AdminController@adminSaveNewAlbum']);
+        Route::get('/editar_album/{id}', ['as' => 'editAlbum', 'uses' => 'AdminController@adminEditAlbum']);
+        Route::post('/actualizar_album', ['as' => 'updateAlbum', 'uses' => 'AdminController@adminUpdateAlbum']);
     });
 
 });
