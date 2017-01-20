@@ -119,6 +119,7 @@ Route::group(['prefix' => 'advanzer-admin'], function() {
         Route::post('/guardar_nuevo_album', ['as' => 'saveAlbum', 'uses' => 'AdminController@adminSaveNewAlbum']);
         Route::get('/editar_album/{id}', ['as' => 'editAlbum', 'uses' => 'AdminController@adminEditAlbum']);
         Route::post('/actualizar_album', ['as' => 'updateAlbum', 'uses' => 'AdminController@adminUpdateAlbum']);
+        Route::get('/eliminar_album/{id}', ['as' => 'deleteAlbum', 'uses' => 'AdminController@adminDeleteAlbum']);
     });
 
 });

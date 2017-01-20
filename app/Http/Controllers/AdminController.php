@@ -683,4 +683,18 @@ class AdminController extends Controller
         return redirect('advanzer-admin/noticias');        
     }
 
+    /**
+     * Remove the specified circular with images.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminDeleteAlbum($id)
+    {   
+        ImageBirthdayHistory::where('id_birthday_history',$id)->delete();
+        BirthdayHistory::where('id',$id)->delete();
+
+        return redirect('advanzer-admin/historial_de_cumpleaños');        
+    }
+
 }

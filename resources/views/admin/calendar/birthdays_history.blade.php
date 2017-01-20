@@ -72,7 +72,7 @@
     $("#birthday-history").addClass("current");
     
     var circular = "";
-    var url = "{{ URL::to('advanzer-admin/eliminar_noticia') }}"
+    var url = "{{ URL::to('advanzer-admin/eliminar_album') }}"
     
     $("#confirmDeleteCircular").click( function () {
         window.location.href = circular;
@@ -81,12 +81,6 @@
     $(".deleteCircular").click( function (event){
         
         circular = url + '/' + event.target.id;
-    });
-    
-    var urlE = "{{ URL::to('advanzer-admin/cambiar_estado_elemento_carrusel') }}"
-    
-    $("#changeCircularStatus").click( function () {
-        window.location.href = circular;
     });
     
 </script>
