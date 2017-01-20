@@ -215,7 +215,7 @@
                             <li>
                                 <h5><b>Calendario de Evaluación</b></h5>
                                 <br>
-                                <img class="img-thumbnail" src="{{ URL::to('img/evaluacion/A&E_Calendario Evaluación Desempeño 2016 v4.0.jpg') }}">
+                                <img class="img-thumbnail" src="{{ URL::to('img/evaluacion/A&E_Calendario_Evaluacion_Desempeno_2016 v4.0.jpg') }}">
                             </li>
                         </ul>
                         
