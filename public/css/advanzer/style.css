@@ -1001,7 +1001,7 @@ footer {
     padding: 10px;
     
     background: #ecf9ec;
-    padding: .75em 2em 0em 2em;
+    padding: .75em 1em 0em 2em;
     border-top-left-radius: .6em;
     border-top-right-radius: .6em;
 }
@@ -1840,3 +1840,8 @@ right: 10px;
 -ms-transform: skew(15deg) rotate(6deg);
 -o-transform: skew(15deg) rotate(6deg);
 transform: skew(15deg) rotate(6deg); }
+
+.main-menu{
+    width: 100%; 
+    max-width: 1220px; 
+}

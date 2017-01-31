@@ -79,7 +79,7 @@
 
     <!-- Top menu -->
 	<nav class="navbar" role="navigation">
-		<div class="container">
+		<div class="container main-menu">
             <!--<div class="col-md-3" >
                 <p>
                     <img style="float: right; margin: 0px 0px 15px 15px;" src="img/logos/AD_logo.png" class="img-fluid">
@@ -151,6 +151,9 @@
                     </li>
 					<li id="job">
 						<a href="{{ URL::to('mi_desempeño') }}"><i class="fa fa-user"></i><br>Mi Desempeño</a>
+					</li>
+                    <li id="cart">
+						<a href="{{ URL::to('despensa') }}"><i class="fa fa-shopping-cart"></i><br>Despensa</a>
 					</li>
                     <li id="sgmm">
 						<a href="{{ URL::to('sgmm') }}"><i class="fa fa-info"></i><br>SGMM</a>

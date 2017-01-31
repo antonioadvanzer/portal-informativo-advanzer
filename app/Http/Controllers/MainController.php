@@ -307,6 +307,16 @@ class MainController extends Controller
     }
 
     /**
+     * Display a view with specified rules.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getCart()
+    { 
+       return View::make('main.cart');
+    }
+
+    /**
      * Display a view with contacts.
      *
      * @return \Illuminate\Http\Response
@@ -442,12 +452,14 @@ class MainController extends Controller
         "m4" => 'karla.navarro@advanzer.com',
         "m5" => 'martin.garza@advanzer.com',
         "m6" => 'roman.uranga@advanzer.com',
-        "m7" => 'alejandra.torres@advanzer.com',
+        "m7" => 'carlos.dominguez@advanzer.com',
         "m8" => 'anaid.montoya@advanzer.com',
-        "m9" => 'belinda.lopez@advanzer.com',
-        "m10" => 'adriana.peralta@advanzer.com',
-        "m11" => 'gabriela.rodriguez@advanzer.com',
-        "m12" => 'rodolfo.cortes@advanzer.com'
+        "m9" => 'awendy.uribe@advanzer.com',
+        "m10" => 'alejandra.torres@advanzer.com',
+        "m11" => 'belinda.lopez@advanzer.com',
+        "m12" => 'gabriela.rodriguez@advanzer.com',
+        "m13" => 'rodolfo.cortes@advanzer.com',
+        "m14" => 'juancarlos.zamarron@advanzer.com'
     );
 
     /**

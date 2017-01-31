@@ -67,6 +67,9 @@ Route::group(['middleware' => 'advanzer'], function() {
     // SGMM
     Route::get('sgmm', ['as' => 'sgmm', 'uses' => 'MainController@pia_getSGMM']);
 
+    // Despensa
+    Route::get('despensa', ['as' => 'cart', 'uses' => 'MainController@pia_getCart']);
+
     // Contactos
     Route::group(['prefix' => 'contacto'], function() {
         Route::get('/', ['as' => 'contact', 'uses' => 'MainController@pia_getContact']);
