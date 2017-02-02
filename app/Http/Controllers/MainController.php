@@ -22,6 +22,7 @@ use App\Birthday;
 use App\BirthdayHistory;
 use App\ImageBirthdayHistory;
 use Mail;
+use Carbon\Carbon;
 
 class MainController extends Controller
 {   
@@ -297,13 +298,23 @@ class MainController extends Controller
     }
 
     /**
+     * Display a view with all benefits.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getBenefits()
+    { 
+       return View::make('main.benefits');
+    }
+
+    /**
      * Display a view with specified rules.
      *
      * @return \Illuminate\Http\Response
      */
     public function pia_getSGMM()
     { 
-       return View::make('main.sgmm');
+       return View::make('benefits.sgmm');
     }
 
     /**
@@ -313,7 +324,7 @@ class MainController extends Controller
      */
     public function pia_getCart()
     { 
-       return View::make('main.cart');
+       return View::make('benefits.cart');
     }
 
     /**
@@ -383,10 +394,39 @@ class MainController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function pia_getBirthdays()
-    {   
-        $birthdays = BirthdayHistory::orderBy('created_at', 'DESC')->paginate(12);
-        
+    public function pia_getBirthdays($month=null, $year=null)
+    {  // $mytime = Carbon::now();
+//echo $mytime->toDateTimeString();
+
+//echo strtotime('01/31/2017');
+//echo "<br>".date('Y-m-d',strtotime('01/31/2017'));
+
+//$st = Carbon::createFromDate("m-d-Y",'01-31-2017');
+//echo "<br>".$st->toDateString();
+//exit;
+        //Session::put("user",$user->email);
+        //dd(session("empresa"));
+        //dd($mounth." ".$year);
+
+        $birthdays = null;
+
+        if($month != null and $year != null){
+            //dd(strtotime($year."-".$mounth));
+            //dd(date("Y-m-d",strtotime($year."-".$mounth."-01")));
+
+            //echo date("Y-m-d", mktime(0, 0, 0, 1, $mounth, $year ));
+            
+            $date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
+            $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
+            //dd($date1." ".$date2);
+            $birthdays = BirthdayHistory::where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
+
+            //exit;
+        }else{
+            $birthdays = BirthdayHistory::orderBy('date', 'DESC')->paginate(12);
+        }
+
+            
         return View::make('main.birthdays', ['birthdays' => $birthdays]);
     }
 

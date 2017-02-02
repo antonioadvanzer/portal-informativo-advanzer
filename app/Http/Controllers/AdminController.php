@@ -325,7 +325,14 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function adminSaveNewAlbum(Request $request)
-    {   
+    {   //echo date("Y-m-d");
+        //echo str_replace('/', '-', $request->get('date')); exit;
+        //echo date("m-d-Y", str_replace('/', '-', $request->get('date'))); exit;
+        //echo date("Y-m-d",str_replace('/', '-', $request->get('date'))); exit;
+
+        //echo strtotime('01/31/2017');
+        //echo "<br>".date('Y-m-d',strtotime('01/31/2017'));
+
         DB::beginTransaction();
 
         // Store circular saved
@@ -334,6 +341,9 @@ class AdminController extends Controller
                             'title' => $request->get('title'),
                             'summary' => $request->get('summary'),
                             'content' => $request->get('content'),
+                            //'date' => $request->get('date')
+                            //'date' => str_replace('/', '-', $request->get('date'))
+                            'date' => date('Y-m-d',strtotime($request->get('date')))
                         ]);
         }catch(\Exception $e){
             DB::rollBack();
@@ -551,6 +561,7 @@ class AdminController extends Controller
                     'title' => $request->get('title'),
                     'summary' => $request->get('summary'),
                     'content' => $request->get('content'),
+                    'date' => date('Y-m-d',strtotime($request->get('date')))
                 ]);
             
             if($imgs = $request->get('imgs')){

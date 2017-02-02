@@ -55,21 +55,29 @@ Route::group(['middleware' => 'advanzer'], function() {
     // Cumpleaños del Mes
     Route::get('cumpleaños_del_mes', ['as' => 'birthday', 'uses' => 'MainController@pia_getBirthday']);
 
-    Route::group(['prefix' => 'historial_de_cumpleaños'], function() {
-        // Historial de Cumpleaños del Mes
-        Route::get('/{page?}', ['as' => 'birthday', 'uses' => 'MainController@pia_getBirthdays']);
-
+    Route::group(['prefix' => 'historial_de_cumpleanos'], function() {
+        
         Route::get('/ver_album/{id}', ['as' => 'showalbum', 'uses' => 'MainController@pia_getBirthdayAlbum']);
+        
+        // Historial de Cumpleaños del Mes
+        Route::get('/{month?}/{year?}/{page?}', ['as' => 'birthday', 'uses' => 'MainController@pia_getBirthdays']);
+
     });
+
      // Mi Desempeño
     Route::get('mi_desempeño', ['as' => 'performance', 'uses' => 'MainController@pia_getMyPerformance']);
 
-    // SGMM
-    Route::get('sgmm', ['as' => 'sgmm', 'uses' => 'MainController@pia_getSGMM']);
+    Route::group(['prefix' => 'beneficios'], function() {
 
-    // Despensa
-    Route::get('despensa', ['as' => 'cart', 'uses' => 'MainController@pia_getCart']);
+        Route::get('', ['as' => 'benefits', 'uses' => 'MainController@pia_getBenefits']);
 
+        // SGMM
+        Route::get('/sgmm', ['as' => 'sgmm', 'uses' => 'MainController@pia_getSGMM']);
+
+        // Despensa
+        Route::get('/despensa', ['as' => 'cart', 'uses' => 'MainController@pia_getCart']);
+    });
+    
     // Contactos
     Route::group(['prefix' => 'contacto'], function() {
         Route::get('/', ['as' => 'contact', 'uses' => 'MainController@pia_getContact']);

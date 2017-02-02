@@ -51,7 +51,7 @@
                                 ?>
                                 
 								<td>{{ $s }}</td>
-                                <td>{{ $b->created_at }}</td>
+                                <td>{{ $b->date }}</td>
                                 <td>
                                     <a class="glyphicon glyphicon-edit" href="{{ URL::to('advanzer-admin/editar_album').'/'.$b->id }}"></a>
                                     <a id="{{ $b->id }}" class="glyphicon glyphicon-remove deleteCircular" href="#confirmModal"></a>

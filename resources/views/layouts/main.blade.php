@@ -96,7 +96,7 @@
 			</div>
 			
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse menu-header" id="top-navbar-1">
+			<div class="collapse navbar-collapse" id="top-navbar-1">
 				<ul class="nav navbar-nav navbar-right">
 					<!--<li class="dropdown active">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
@@ -142,21 +142,27 @@
                                 <a href="{{ URL::to('cumpleaños_del_mes') }}"><i class="fa fa-birthday-cake"></i>&nbsp;&nbsp;Calendario de Cumpleaños</a>
                             </li>
                             <li id="birthday-history">
-                                <a href="{{ URL::to('historial_de_cumpleaños') }}"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Historial de Cumpleaños</a>
+                                <a href="{{ URL::to('historial_de_cumpleanos') }}"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Historial de Cumpleaños</a>
                             </li>
 							<li id="news" >
                                 <a href="{{ URL::to('noticias') }}"><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Noticias</a>
+                            </li>
+                            <li id="news" >
+                                <a href="{{ URL::to('eventos') }}"><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;Eventos</a>
                             </li>
 						</ul>
                     </li>
 					<li id="job">
 						<a href="{{ URL::to('mi_desempeño') }}"><i class="fa fa-user"></i><br>Mi Desempeño</a>
 					</li>
-                    <li id="cart">
+                    <!--<li id="cart">
 						<a href="{{ URL::to('despensa') }}"><i class="fa fa-shopping-cart"></i><br>Despensa</a>
 					</li>
                     <li id="sgmm">
 						<a href="{{ URL::to('sgmm') }}"><i class="fa fa-info"></i><br>SGMM</a>
+					</li>-->
+                    <li id="benefit">
+						<a href="{{ URL::to('beneficios') }}"><i class="fa fa-thumbs-up"></i><br>Benficios</a>
 					</li>
                     <li id="contact" >
                         <a href="{{ URL::to('contacto') }}"><i class="glyphicon glyphicon-phone-alt"></i><br>Contacto</a>

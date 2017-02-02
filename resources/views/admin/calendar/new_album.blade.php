@@ -32,6 +32,12 @@
                             <textarea id="content" name="content" class="form-control" placeholder="" rows="5" required></textarea>
                         </div>
                         <div class="form-group">
+                            <label>Fecha</label><br>
+                            <input id="date" name="date" class="datepicker form-control" data-date-format="yyyy/dd/mm">
+                        </div>
+                        
+                        
+                        <div class="form-group">
                             <label>Imagenes</label>
                             <div id="maindiv">
                                 <div id="formdiv">
@@ -69,6 +75,10 @@
         <script src="{{ URL::to('js/admin/own/addImages.js') }}"></script>
         <script>
             $("#birthday-history").addClass("current");
+            
+            $('.datepicker').datepicker({
+                format: 'yyyy/mm/dd'
+            });
             
             $("#newCircular").on('submit',(function(e){ 
                 

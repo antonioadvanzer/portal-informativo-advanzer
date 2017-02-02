@@ -8,7 +8,7 @@
                     <div class="col-sm-12 wow fadeIn">
                         <i class="fa fa-shopping-cart"></i>
                         <h1>Despensa </h1>
-                        <p></p>
+                        <p>En Advanzer y Entuizer, todos los colaboradores cuentan con el beneficio de Vales de Despensa.</p>
                     </div>
                 </div>
             </div>
@@ -17,13 +17,20 @@
 <!-- Services Full Width Text -->
         <div class="services-full-width-container">
         	<div class="container">
+                
+                <div class=row align="center">
+                    <a onclick="window.history.back();">
+                        <img width="5%" style="min-width: 50px" src="{{ URL::to('img/elementos/back.png') }}" alt="" >
+                    </a>
+                </div>
             	
                 <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
-	                    <h3></h3>
-	                    <p>
-                            Ya cuentas con tu tarjeta OneCard. En ella recibirás la 2a quincena de cada mes, una recarga de acuerdo a la siguiente tabla:
-                        </p>
+	                    
+                        <h3>¿Cómo funciona?</h3>
+
+                        <p>A través de tu tarjeta OneCard, recibirás la Segunda Quincena de cada mes, una recarga de saldo de acuerdo a la siguiente tabla:</p>
+                        
                         
                         <table class="responstable" style="width:50%;">
                                     <tr>

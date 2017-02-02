@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 wow fadeIn">
-                        <i class="fa fa-info"></i>
+                        <i class="fa fa-life-ring"></i>
                         <h1>SGMM</h1>
                         <p></p>
                     </div>
@@ -17,6 +17,13 @@
         <!-- Dudas y respuestas -->
         <div class="services-half-width-container">
         	<div class="container">
+                
+                <div class=row align="center">
+                    <a onclick="window.history.back();">
+                        <img width="5%" style="min-width: 50px" src="{{ URL::to('img/elementos/back.png') }}" alt="" >
+                    </a>
+                </div>
+                
 	            <div class="row">
 	                <div class="col-sm-6 services-full-width-text wow fadeInLeft">
 	                    <h3>1. ¿Cómo reporto mi siniestro?</h3>
