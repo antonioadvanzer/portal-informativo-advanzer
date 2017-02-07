@@ -148,7 +148,7 @@
                                 <a href="{{ URL::to('noticias') }}"><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;Noticias</a>
                             </li>
                             <li id="news" >
-                                <a href="{{ URL::to('eventos') }}"><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;Eventos</a>
+                                <a href="{{ URL::to('historial_de_eventos') }}"><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;Historial de Eventos</a>
                             </li>
 						</ul>
                     </li>
@@ -161,7 +161,7 @@
                     <li id="sgmm">
 						<a href="{{ URL::to('sgmm') }}"><i class="fa fa-info"></i><br>SGMM</a>
 					</li>-->
-                    <li id="benefit">
+                    <li id="benefits">
 						<a href="{{ URL::to('beneficios') }}"><i class="fa fa-thumbs-up"></i><br>Benficios</a>
 					</li>
                     <li id="contact" >

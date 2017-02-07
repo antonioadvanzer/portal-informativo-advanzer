@@ -44,6 +44,6 @@
 
 @section('script')
         <script>
-            $("#graphics").addClass("active");
+            $("#publications").addClass("active");
         </script>
 @endsection

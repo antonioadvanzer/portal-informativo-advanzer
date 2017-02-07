@@ -63,7 +63,7 @@
 			                	<!--<img src="{{ URL::to('img/politicas/Talento.png') }}" alt="" data-at2x="{{ URL::to('img/politicas/Talento.png') }}">-->
                                 <span class="icon-life-insurance"></span>
 			                	<div class="portfolio-box-text">
-			                		<h3><a href="{{ URL::to('beneficios/seguro de vida') }}">TDUMediAccess - Seguro de Vida</a></h3>
+			                		<h3><a href="{{ URL::to('beneficios/seguro_de_vida') }}">TDUMediAccess - Seguro de Vida</a></h3>
 			                		<p></p>
 			                	</div>
 			                </div>
@@ -77,6 +77,6 @@
 
 @section('script')
         <script>
-            $("#politics").addClass("active");
+            $("#benefits").addClass("active");
         </script>
 @endsection

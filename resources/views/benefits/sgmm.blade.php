@@ -217,6 +217,6 @@
 @section('script')
 
         <script>
-            $("#sgmm").addClass("active");
+            $("#benefits").addClass("active");
         </script>
 @endsection

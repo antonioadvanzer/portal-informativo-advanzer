@@ -8,6 +8,8 @@ use App\ElementCarrusel;
 use App\Birthday;
 use App\BirthdayHistory;
 use App\ImageBirthdayHistory;
+use App\EventHistory;
+use App\ImageEventHistory;
 
 class DatabaseSeeder extends Seeder
 {
@@ -68,6 +70,23 @@ class DatabaseSeeder extends Seeder
             'id' => 1,
             'path' => "img/historial de cumpleanos/felicidades/birthdays.jpg",
             'id_birthday_history' => 1
+        ]);
+
+        EventHistory::create([
+            'id' => 1,
+            'title' => "Evento",
+            'summary' => "El portal informativo Advanzer/Entuizer ha sido instalado con exito",
+            'content' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
+                            Lorem ipsum dolor sit amet, consectetur.Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
+                            lobortis nisl ut aliquip ex ea commodo consequat.",
+            'date' => "2017-01-17"
+        ]);
+
+        ImageEventHistory::create([
+            'id' => 1,
+            'path' => "img/historial de eventos/evento/networking-events-uae.jpg",
+            'id_event_history' => 1
         ]);
 
     }

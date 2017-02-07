@@ -64,6 +64,15 @@ Route::group(['middleware' => 'advanzer'], function() {
 
     });
 
+    Route::group(['prefix' => 'historial_de_eventos'], function() {
+        
+        Route::get('/ver_album/{id}', ['as' => 'showalbum', 'uses' => 'MainController@pia_getEventAlbum']);
+        
+        // Historial de Eventos
+        Route::get('/{month?}/{year?}/{page?}', ['as' => 'event', 'uses' => 'MainController@pia_getEvents']);
+
+    });
+
      // Mi Desempeño
     Route::get('mi_desempeño', ['as' => 'performance', 'uses' => 'MainController@pia_getMyPerformance']);
 
@@ -76,6 +85,12 @@ Route::group(['middleware' => 'advanzer'], function() {
 
         // Despensa
         Route::get('/despensa', ['as' => 'cart', 'uses' => 'MainController@pia_getCart']);
+
+        // TDUMEDIACCESS
+        Route::get('/seguro_de_vida', ['as' => 'tdu', 'uses' => 'MainController@pia_getTDU']);
+
+        // Educación
+        Route::get('/educacion', ['as' => 'tdu', 'uses' => 'MainController@pia_getStudy']);
     });
     
     // Contactos
@@ -110,20 +125,25 @@ Route::group(['prefix' => 'advanzer-admin'], function() {
     Route::group(['middleware' => 'auth'], function() {
 
         Route::get('/', ['as' => 'main', 'uses' => 'AdminController@index']);
+        
         Route::get('/cerrar_session', ['as' => 'end', 'uses' => 'AdminController@adminCloseSession']);
         Route::get('/usuarios', ['as' => 'users', 'uses' => 'AdminController@adminGetUsers']);
         Route::get('/nuevo_usuario', ['as' => 'user', 'uses' => 'AdminController@adminNewUserForm']);
         Route::post('/guardar_nuevo_usuario', ['as' => 'saveUser', 'uses' => 'AdminController@adminSaveNewUser']);
         Route::get('/eliminar_usuario/{id}', ['as' => 'deleteUser', 'uses' => 'AdminController@adminDeleteUser']);
+        
         Route::get('/noticias', ['as' => 'news', 'uses' => 'AdminController@adminGetNews']);
         Route::get('/nueva_noticia', ['as' => 'circular', 'uses' => 'AdminController@adminNewCircularForm']);
         Route::post('/guardar_nueva_noticia', ['as' => 'saveCircular', 'uses' => 'AdminController@adminSaveNewCircular']);
         Route::get('/eliminar_noticia/{id}', ['as' => 'deleteCircular', 'uses' => 'AdminController@adminDeleteCircular']);
         Route::get('/editar_noticia/{id}', ['as' => 'editCircular', 'uses' => 'AdminController@adminEditCircular']);
         Route::post('/actualizar_noticia', ['as' => 'updateCircular', 'uses' => 'AdminController@adminUpdateCircular']);
+        
         Route::get('/cambiar_estado_elemento_carrusel/{id}', ['as' => 'updateElementCarrusel', 'uses' => 'AdminController@adminChangeCircular']);
         Route::get('/elementos_carrusel_activos', ['as' => 'elementsAvaible', 'uses' => 'AdminController@adminGetElementsCarrusel']);
+        
         Route::get('/cumpleanos_del_mes', ['as' => 'birthdays', 'uses' => 'AdminController@adminCalendarBirthday']);
+        
         Route::post('/cambiar_mural', ['as' => 'changeMural', 'uses' => 'AdminController@adminChangeMural']);
         Route::get('/historial_de_cumpleaños', ['as' => 'birthdays', 'uses' => 'AdminController@adminGetBirthdays']);
         Route::get('/nuevo_album', ['as' => 'birthdays', 'uses' => 'AdminController@adminNewAlbumForm']);
@@ -131,6 +151,13 @@ Route::group(['prefix' => 'advanzer-admin'], function() {
         Route::get('/editar_album/{id}', ['as' => 'editAlbum', 'uses' => 'AdminController@adminEditAlbum']);
         Route::post('/actualizar_album', ['as' => 'updateAlbum', 'uses' => 'AdminController@adminUpdateAlbum']);
         Route::get('/eliminar_album/{id}', ['as' => 'deleteAlbum', 'uses' => 'AdminController@adminDeleteAlbum']);
+        
+        Route::get('/historial_de_eventos', ['as' => 'events', 'uses' => 'AdminController@adminGetEvents']);
+        Route::get('/nuevo_evento', ['as' => 'events', 'uses' => 'AdminController@adminNewAlbumEventForm']);
+        Route::post('/guardar_nuevo_evento', ['as' => 'saveAlbum', 'uses' => 'AdminController@adminSaveNewAlbumEvent']);
+        Route::get('/editar_event/{id}', ['as' => 'editAlbum', 'uses' => 'AdminController@adminEditAlbumEvent']);
+        Route::post('/actualizar_evento', ['as' => 'updateAlbum', 'uses' => 'AdminController@adminUpdateAlbumEvent']);
+        Route::get('/eliminar_evento/{id}', ['as' => 'deleteAlbum', 'uses' => 'AdminController@adminDeleteAlbumEvent']);
     });
 
 });

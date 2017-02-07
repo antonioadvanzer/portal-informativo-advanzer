@@ -21,6 +21,8 @@ use App\ElementCarrusel;
 use App\Birthday;
 use App\BirthdayHistory;
 use App\ImageBirthdayHistory;
+use App\EventHistory;
+use App\ImageEventHistory;
 use Mail;
 use Carbon\Carbon;
 
@@ -284,7 +286,7 @@ class MainController extends Controller
     {   
         $calendar = Birthday::all()->first();
         
-        return View::make('main.birthday', ['calendar' => $calendar]);
+        return View::make('birthdays.birthday', ['calendar' => $calendar]);
     }
 
     /**
@@ -328,6 +330,26 @@ class MainController extends Controller
     }
 
     /**
+     * Display a view with specified rules.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getTDU()
+    { 
+       return View::make('benefits.tdu');
+    }
+
+    /**
+     * Display a view with specified rules.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getStudy()
+    { 
+       return View::make('benefits.study');
+    }
+    
+    /**
      * Display a view with contacts.
      *
      * @return \Illuminate\Http\Response
@@ -366,7 +388,7 @@ class MainController extends Controller
     {   
         $news = Circular::orderBy('created_at', 'DESC')->paginate(9);
         
-        return View::make('main.news', ['news' => $news]);
+        return View::make('news.news', ['news' => $news]);
     }
 
     /**
@@ -383,7 +405,7 @@ class MainController extends Controller
             
             $pictures = ImageCircular::where('id_circular',$id)->get();
 
-            return View::make('main.circular', ['circular' => $circular, 'images' => $pictures]);
+            return View::make('news.circular', ['circular' => $circular, 'images' => $pictures]);
         }else{
             return redirect('noticias');
         }
@@ -395,19 +417,22 @@ class MainController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function pia_getBirthdays($month=null, $year=null)
-    {  // $mytime = Carbon::now();
-//echo $mytime->toDateTimeString();
+    {  
+        // $mytime = Carbon::now();
+            //echo $mytime->toDateTimeString();
 
-//echo strtotime('01/31/2017');
-//echo "<br>".date('Y-m-d',strtotime('01/31/2017'));
+            //echo strtotime('01/31/2017');
+            //echo "<br>".date('Y-m-d',strtotime('01/31/2017'));
 
-//$st = Carbon::createFromDate("m-d-Y",'01-31-2017');
-//echo "<br>".$st->toDateString();
-//exit;
-        //Session::put("user",$user->email);
-        //dd(session("empresa"));
-        //dd($mounth." ".$year);
+            //$st = Carbon::createFromDate("m-d-Y",'01-31-2017');
+            //echo "<br>".$st->toDateString();
+            //exit;
+                //Session::put("user",$user->email);
+                //dd(session("empresa"));
+                //dd($mounth." ".$year);
 
+        
+        
         $birthdays = null;
 
         if($month != null and $year != null){
@@ -427,11 +452,11 @@ class MainController extends Controller
         }
 
             
-        return View::make('main.birthdays', ['birthdays' => $birthdays]);
+        return View::make('birthdays.birthdays', ['birthdays' => $birthdays]);
     }
 
     /**
-     * Display the specified circular.
+     * Display the specified birthday album.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -444,9 +469,52 @@ class MainController extends Controller
             
             $pictures = ImageBirthdayHistory::where('id_birthday_history',$id)->get();
 
-            return View::make('main.album', ['album' => $album, 'images' => $pictures]);
+            return View::make('birthdays.album', ['album' => $album, 'images' => $pictures]);
         }else{
             return redirect('historial_de_cumpleaños');
+        }
+    }
+
+    /**
+     * Display a view with events history.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getEvents($month=null, $year=null)
+    {   
+        $events = null;
+
+        if($month != null and $year != null){
+            
+            $date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
+            $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
+            
+            $events = EventHistory::where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
+
+        }else{
+            $events = EventHistory::orderBy('date', 'DESC')->paginate(12);
+        }
+
+        return View::make('events.events', ['events' => $events]);
+    }
+
+    /**
+     * Display the specified event album.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getEventAlbum($id)
+    {
+        $album = EventHistory::find($id);
+
+        if(!empty($album)){
+            
+            $pictures = ImageEventHistory::where('id_event_history',$id)->get();
+
+            return View::make('events.album', ['album' => $album, 'images' => $pictures]);
+        }else{
+            return redirect('historial_de_eventos');
         }
     }
 

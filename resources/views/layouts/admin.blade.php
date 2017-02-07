@@ -77,6 +77,7 @@
                     <li id ="users" ><a href="{{ URL::to('advanzer-admin/usuarios') }}"><i class="glyphicon glyphicon-user"></i> Usuarios</a></li>
                     <li id ="birthday-calendar"><a href="{{URL::to('advanzer-admin/cumpleanos_del_mes')}}"><i class="glyphicon glyphicon-calendar"></i>Calendario Cumpleaños</a></li>
                     <li id ="birthday-history"><a href="{{URL::to('advanzer-admin/historial_de_cumpleaños')}}"><i class="glyphicon glyphicon-star-empty"></i>Historial de Cumpleaños</a></li>
+                    <li id ="event-history"><a href="{{URL::to('advanzer-admin/historial_de_eventos')}}"><i class="glyphicon glyphicon glyphicon-th-large"></i>Historial de Eventos</a></li>
                     <li id ="carrusel"><a href="{{ URL::to('advanzer-admin/elementos_carrusel_activos') }}"><i class="glyphicon glyphicon-film"></i> Carrusel</a></li>
                     <li id ="news"><a href="{{ URL::to('advanzer-admin/noticias') }}"><i class="glyphicon glyphicon-list-alt"></i> Noticias</a></li>
                     <!--<li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li>

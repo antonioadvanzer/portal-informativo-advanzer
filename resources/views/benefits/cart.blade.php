@@ -144,6 +144,6 @@
 
 @section('script')
         <script>
-            $("#cart").addClass("active");
+            $("#benefits").addClass("active");
         </script>
 @endsection

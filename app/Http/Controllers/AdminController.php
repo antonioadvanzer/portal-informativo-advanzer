@@ -21,6 +21,8 @@ use App\ElementCarrusel;
 use App\Birthday;
 use App\BirthdayHistory;
 use App\ImageBirthdayHistory;
+use App\EventHistory;
+use App\ImageEventHistory;
 
 class AdminController extends Controller
 {
@@ -144,6 +146,18 @@ class AdminController extends Controller
     }
 
     /**
+     * Display events table.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminGetEvents()
+    {   
+        $events = EventHistory::all();
+        return View::make('admin.events.events_history', ['events' => $events]);
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -187,6 +201,17 @@ class AdminController extends Controller
     }
 
     /**
+     * Display the form form creating new event album.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminNewAlbumEventForm()
+    {   
+        return View::make('admin.events.new_album');
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -217,6 +242,7 @@ class AdminController extends Controller
     private $urlNews = "img/noticias";
     private $urlMural = "img/cumpleaños";
     private $urlBirthday = "img/historial de cumpleanos";
+    private $urlEvent = "img/historial de eventos";
     
     /**
      * Save new circular.
@@ -368,7 +394,6 @@ class AdminController extends Controller
 
                 if ($file !== null) {
 
-                    
                     $filename = $file->getClientOriginalName();
                     $upload_success = $file->move($destinationPath, $filename);
                     $uploadcount ++;
@@ -376,6 +401,69 @@ class AdminController extends Controller
                     ImageBirthdayHistory::create([
                         'path' => $destinationPath."/".$filename,
                         'id_birthday_history' => $birthday->id
+                    ]); 
+                }
+               
+            }catch(\Exception $e){
+                    DB::rollBack();
+                    dd($e);
+            }
+            
+        }
+
+        DB::commit();
+
+        echo "success"; 
+    }
+
+    /**
+     * Save new album.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminSaveNewAlbumEvent(Request $request)
+    {   
+        DB::beginTransaction();
+
+        // Store circular saved
+        try{
+            $birthday = EventHistory::create([
+                            'title' => $request->get('title'),
+                            'summary' => $request->get('summary'),
+                            'content' => $request->get('content'),
+                            'date' => date('Y-m-d',strtotime($request->get('date')))
+                        ]);
+        }catch(\Exception $e){
+            DB::rollBack();
+            dd($e);
+        }
+
+        // getting all of the post data
+        $files = $request->file('file');
+
+        // Making counting of uploaded images
+        $file_count = count($files);
+
+        // start count how many uploaded
+        $uploadcount = 0;
+        
+        $destinationPath = $this->urlEvent."/".$request->get('title');
+        File::makeDirectory($destinationPath, 0777);
+
+        foreach($files as $file) {
+        
+            try{
+
+                if ($file !== null) {
+
+                    $filename = $file->getClientOriginalName();
+                    $upload_success = $file->move($destinationPath, $filename);
+                    $uploadcount ++;
+
+                    ImageEventHistory::create([
+                        'path' => $destinationPath."/".$filename,
+                        'id_event_history' => $birthday->id
                     ]); 
                 }
                
@@ -452,7 +540,27 @@ class AdminController extends Controller
             return redirect('advanzer-admin/historial_de_noticias');
         }
     }
-        
+
+    /**
+     * Show the form for editing the specified Álbum Event.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminEditAlbumEvent($id)
+    {
+        $album = EventHistory::find($id);
+
+        if(!empty($album)){
+            
+            $pictures = ImageEventHistory::where('id_event_history',$id)->get();
+
+            return View::make('admin.events.update_album', ['album' => $album, 'pictures' => $pictures]);
+        }else{
+            return redirect('advanzer-admin/historial_de_eventos');
+        }
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -623,6 +731,85 @@ class AdminController extends Controller
     }
 
     /**
+     * Update the specified album in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminUpdateAlbumEvent(Request $request)
+    {
+        DB::beginTransaction();
+
+        try{
+
+            EventHistory::where('id', $request->get('id'))
+                ->update([
+                    'title' => $request->get('title'),
+                    'summary' => $request->get('summary'),
+                    'content' => $request->get('content'),
+                    'date' => date('Y-m-d',strtotime($request->get('date')))
+                ]);
+            
+            if($imgs = $request->get('imgs')){
+
+                // creating variable to store conditions
+                $ifimg = array();
+                
+                foreach($imgs as $img){
+                    $ifimg[] = ['id', "!=", $img];
+                }
+
+                // if user deleted any pictures
+                ImageEventHistory::where('id_event_history', $request->get('id'))
+                    ->where($ifimg)
+                    ->delete();
+            
+            }
+
+            // getting all of the post data
+            $files = $request->file('file');
+
+            // Making counting of uploaded images
+            $file_count = count($files);
+
+            // start count how many uploaded
+            $uploadcount = 0;
+
+            $destinationPath = $this->urlEvent."/".$request->get('title');
+            if(!is_dir($destinationPath)){
+                $directory = File::makeDirectory($destinationPath, 0777);
+            }
+            
+            foreach($files as $file) {
+
+                    if ($file !== null) {
+
+                        //$destinationPath = $this->urlNews;
+                        
+                        $filename = $file->getClientOriginalName();
+                        $upload_success = $file->move($destinationPath, $filename);
+                        $uploadcount ++;
+
+                        ImageEventHistory::create([
+                            'path' => $destinationPath."/".$filename,
+                            'id_event_history' => $request->get('id')
+                        ]); 
+                    }
+            }
+
+        }catch(\Exception $e){
+            echo $e;
+            DB::rollBack();
+            exit;
+        }
+        
+        DB::commit();
+
+        echo "success";
+    }
+
+    /**
      * Allow edit status of specified circular on carrusel.
      *
      * @param  int  $id
@@ -695,7 +882,7 @@ class AdminController extends Controller
     }
 
     /**
-     * Remove the specified circular with images.
+     * Remove the specified album with images.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -708,4 +895,17 @@ class AdminController extends Controller
         return redirect('advanzer-admin/historial_de_cumpleaños');        
     }
 
+    /**
+     * Remove the specified event with images.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function adminDeleteAlbumEvent($id)
+    {   
+        ImageEventHistory::where('id_event_history',$id)->delete();
+        EventHistory::where('id',$id)->delete();
+
+        return redirect('advanzer-admin/historial_de_eventos');        
+    }
 }
