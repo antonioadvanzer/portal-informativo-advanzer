@@ -983,7 +983,7 @@ class AdminController extends Controller
     public function adminDeleteAlbum($id)
     {   
         ElementCarrusel::where('id_circular',$id)->delete();
-        ImageCircular::where('id_birthday_history',$id)->delete();
+        ImageCircular::where('id_circular',$id)->delete();
         Circular::where('id',$id)->delete();
 
         return redirect('advanzer-admin/historial_de_cumpleaños');        
@@ -998,7 +998,7 @@ class AdminController extends Controller
     public function adminDeleteAlbumEvent($id)
     {   
         ElementCarrusel::where('id_circular',$id)->delete();
-        ImageCircular::where('id_event_history',$id)->delete();
+        ImageCircular::where('id_circular',$id)->delete();
         Circular::where('id',$id)->delete();
 
         return redirect('advanzer-admin/historial_de_eventos');        
