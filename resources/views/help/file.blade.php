@@ -37,7 +37,7 @@
         <script>
             
             $(document).ready(function(){
-                
+                $("#graphics").addClass("active");
             });
                 
         </script>

@@ -5,18 +5,18 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class BirthdayHistory extends Model
+class TypeCircular extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = array('title', 'summary', 'content', 'date');
+    protected $fillable = array('name', 'description');
 
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'birthday_history';
+    protected $table = 'type_circular';
 
     /**
      * The attributes that should be mutated to dates.
@@ -25,8 +25,8 @@ class BirthdayHistory extends Model
      */
     protected $dates = ['deleted_at'];
 
-    // Find a get all pictures 
-    public function getImages(){
-        return $this->hasMany('App\ImageBirthdayHistory','id_birthday_history');
+    // Find a get all circulares
+    public function getCirculares(){
+        return $this->hasMany('App\Circular','type');
     }
 }

@@ -18,8 +18,8 @@
                       <ul>
                         @foreach($elements as $e)
                         <li class="list-item">
-                            <a class="removeItem" id="{{ $e->circular->id }}"><img width="30px" src="{{ URL::to('img/elementos/remove.png') }}"></a>
-                            {{ $e->circular->title }}
+                            <a class="removeItem" id="{{ $e->circular()->first()->id }}"><img width="30px" src="{{ URL::to('img/elementos/remove.png') }}"></a>
+                            {{ $e->circular()->first()->getType()->first()->name ." - ". $e->circular()->first()->title }}
                         </li>
                         @endforeach
                       </ul>

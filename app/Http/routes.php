@@ -73,7 +73,16 @@ Route::group(['middleware' => 'advanzer'], function() {
 
     });
 
-     // Mi Desempeño
+    // Noticias
+    Route::group(['prefix' => 'noticias'], function() {
+        
+        Route::get('/ver_noticia/{id}', ['as' => 'showCircular', 'uses' => 'MainController@pia_getCircular']);
+
+        Route::get('/{month?}/{year?}/{page?}', ['as' => 'news', 'uses' => 'MainController@pia_getNews']);
+
+    });
+
+    // Mi Desempeño
     Route::get('mi_desempeño', ['as' => 'performance', 'uses' => 'MainController@pia_getMyPerformance']);
 
     Route::group(['prefix' => 'beneficios'], function() {
@@ -104,15 +113,7 @@ Route::group(['middleware' => 'advanzer'], function() {
         Route::get('advanzer', ['as' => 'companyA', 'uses' => 'MainController@pia_getAboutUsAdvanzer']);
         Route::get('entuizer', ['as' => 'companyE', 'uses' => 'MainController@pia_getAboutUsEntuizer']);
     });
-    
-    // Noticias
-    Route::group(['prefix' => 'noticias'], function() {
-
-        Route::get('/{page?}', ['as' => 'news', 'uses' => 'MainController@pia_getNews']);
-        Route::get('/ver_noticia/{id}', ['as' => 'showCircular', 'uses' => 'MainController@pia_getCircular']);
-
-    });
-
+   
 });
 
 // Access to Dashboard

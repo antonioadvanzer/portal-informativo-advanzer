@@ -32,6 +32,15 @@
                             <textarea id="content" name="content" class="form-control" placeholder="" rows="5" required></textarea>
                         </div>
                         <div class="form-group">
+                            <div class="">
+                              <div class="checkbox">
+                                <label>
+                                  <input id="public" name="public" type="checkbox"> <h5>Publicar en Carrusel</h5>
+                                </label>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label>Fecha</label><br>
                             <input id="date" name="date" class="datepicker form-control" data-date-format="yyyy/dd/mm">
                         </div>

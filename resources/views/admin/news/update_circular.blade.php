@@ -60,6 +60,26 @@
                                 </div>
                             </div>
                         </div>
+                        <div id="urls" class="form-group">
+                            <label>URL</label><br>
+                            <a id="addUrl" href="#urls" class="btn btn-default" role="button">Agregar</a>
+                            <div id="links" class="col-sm-10">
+                                <?php $lk = 1; ?>
+                                @foreach($links as $l)
+                                <div id="{{ 'link'.$lk }}" class="alert bg-info">
+                                    <button id="{{ 'remove-link'.$lk }}" type="button" class="exit-link" aria-label="Close" value="{{ 'link'.$lk }}">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <label>Direcci&oacute;n</label>
+                                    <input id="{{ 'url'.$lk }}" name="{{ 'url'.$lk }}" class="form-control" type="url" value="{{$l->url}}">
+                                    <label>Descripci&oacute;n</label>
+                                    <input id="{{ 'url-description'.$lk }}" name="{{ 'url-description'.$lk }}" class="form-control" placeholder="" type="text" value="{{$l->description}}" required>
+                                </div>
+                                <?php $lk++; ?>
+                                @endforeach
+                            </div>
+                            <input id="cant-links" name="cant-links" type="hidden" value="{{ $lk }}">
+                        </div>
                     </fieldset><br><br><br>
                     <div>
                         <input id="imgurl" type="hidden" value="{{ URL::to('img/admin/windows/x.png') }}"/>
@@ -121,6 +141,39 @@
             function deleteImage(idimg){
                 $("#acpic"+idimg).remove();
             }
+            
+            var urlcont = {{ $lk }};
+            $("#addUrl").click(function (){
+                //alert("asd");
+                div = '<div id="link'+urlcont+'" class="alert bg-info">'
+                            +'<button id="remove-link'+urlcont+'" type="button" class="exit-link" aria-label="Close" value="link'+urlcont+'">'
+                            +'<span aria-hidden="true">&times;</span>'
+                            +'</button>'
+                            +'<label>Direcci&oacute;n</label>'
+                            +'<input id="url'+urlcont+'" name="url'+urlcont+'" class="form-control" type="url">'
+                            +'<label>Descripci&oacute;n</label>'
+                            +'<input id="url-description'+urlcont+'" name="url-description'+urlcont+'" class="form-control" placeholder="" type="text" required>'
+                        +'</div>';
+                
+                $("#links").append(div);
+                
+                $("#remove-link"+urlcont).click(function(){
+                    //$("#link"+urlcont).remove();alert("a");
+                    
+                    $("#"+$(this).attr("value")).remove();
+                    
+                });
+                
+                $("#cant-links").val(urlcont);
+                
+                urlcont++;
+            });
+            
+            $(".exit-link").each(function(){
+                $(this).click(function(){
+                    $("#"+$(this).attr("value")).remove();
+                });
+            });
 
         </script>
 @endsection

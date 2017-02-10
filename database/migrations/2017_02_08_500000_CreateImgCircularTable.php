@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImgBirthdayHistoryTable extends Migration
+class CreateImgCircularTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,14 @@ class CreateImgBirthdayHistoryTable extends Migration
      */
     public function up()
     {
-        // Photos for albums
-        Schema::create('img_birthday_history', function (Blueprint $table){
+        // Images of circular
+        Schema::create('img_circular', function (Blueprint $table){
             $table->increments('id');
-            $table->string('path',100);
-            $table->integer('id_birthday_history')->unsigned();
+            $table->string('path',200);
+            $table->integer('id_circular')->unsigned();
             $table->timestamps();
             $table->softDeletes();
-            $table->foreign('id_birthday_history')->references('id')->on('birthday_history');
+            $table->foreign('id_circular')->references('id')->on('circular');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateImgBirthdayHistoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('img_birthday_history');
+        Schema::dropIfExists('img_circular');
     }
 }

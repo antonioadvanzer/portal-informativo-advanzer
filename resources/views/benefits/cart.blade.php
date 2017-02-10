@@ -7,8 +7,8 @@
                 <div class="row">
                     <div class="col-sm-12 wow fadeIn">
                         <i class="fa fa-shopping-cart"></i>
-                        <h1>Despensa </h1>
-                        <p>En Advanzer y Entuizer, todos los colaboradores cuentan con el beneficio de Vales de Despensa.</p>
+                        <h1>Vales de Despensa </h1>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -24,6 +24,12 @@
                     </a>
                 </div>
             	
+                <div class="row">
+                    <div class="col-sm-12 portfolio-filters wow fadeInLeft">
+                        <h3>En Advanzer y Entuizer, todos los colaboradores cuentan con el beneficio de Vales de Despensa.</h3>
+                    </div>
+                </div>
+                
                 <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
 	                    

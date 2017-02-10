@@ -38,6 +38,19 @@
 	                	</p>
 	                </div>
 	            </div>
+                
+                <div class="row">
+	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
+	                    <h3><i>Enlaces</i></h3><br>
+	                    @if($links = $circular->getLinks()->get())
+                            @foreach($links as $l)
+                                <h4>{{ $l->description }}</h4>
+                                <p><a href="{{ $l->url}}" target="_blank">{{ $l->url}}</a></p>
+                                <br>
+                            @endforeach
+                        @endif
+	                </div>
+	            </div>
 
 	            <div class="row">
 	            	<div id="" class="">

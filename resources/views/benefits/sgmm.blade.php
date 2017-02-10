@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-sm-12 wow fadeIn">
                         <i class="fa fa-life-ring"></i>
-                        <h1>SGMM</h1>
+                        <h1>Seguro de Gastos Médicos Mayores</h1>
                         <p></p>
                     </div>
                 </div>
@@ -22,6 +22,12 @@
                     <a onclick="window.history.back();">
                         <img width="5%" style="min-width: 50px" src="{{ URL::to('img/elementos/back.png') }}" alt="" >
                     </a>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-12 portfolio-filters wow fadeInLeft">
+                        <h3>En Advanzer y Entuizer, todos los colaboradores cuentan con el beneficio de un Seguro de Gastos Médicos Mayores.</h3>
+                    </div>
                 </div>
                 
 	            <div class="row">

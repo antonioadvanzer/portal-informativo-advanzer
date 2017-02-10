@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBirthdayHistoryTable extends Migration
+class CreateTypeCircularTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,11 @@ class CreateBirthdayHistoryTable extends Migration
      */
     public function up()
     {
-        //Create table to save albums with some photos about birthdays
-        Schema::create('birthday_history', function (Blueprint $table){
+        // types of circular
+        Schema::create('type_circular', function (Blueprint $table){
             $table->increments('id');
-            $table->string('title',100);
-            $table->string('summary',250);
-            $table->string('content',950);
-            $table->date('date');
+            $table->string('name',100);
+            $table->string('description',200);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -31,6 +29,6 @@ class CreateBirthdayHistoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('birthday_history');
+        Schema::dropIfExists('type_circular');
     }
 }

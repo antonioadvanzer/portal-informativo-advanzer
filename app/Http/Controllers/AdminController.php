@@ -19,10 +19,12 @@ use App\Circular;
 use App\ImageCircular;
 use App\ElementCarrusel;
 use App\Birthday;
-use App\BirthdayHistory;
+use App\LinkCircular;
+use App\TypeCircular;
+/*use App\BirthdayHistory;
 use App\ImageBirthdayHistory;
 use App\EventHistory;
-use App\ImageEventHistory;
+use App\ImageEventHistory;*/
 
 class AdminController extends Controller
 {
@@ -105,7 +107,7 @@ class AdminController extends Controller
      */
     public function adminGetNews()
     {   
-        $news = Circular::all();
+        $news = Circular::where('type',1)->get();
         return View::make('admin.news.news', ['news' => $news]);
     }
 
@@ -141,7 +143,7 @@ class AdminController extends Controller
      */
     public function adminGetBirthdays()
     {   
-        $birthdays = BirthdayHistory::all();
+        $birthdays = Circular::where('type',2)->get();
         return View::make('admin.calendar.birthdays_history', ['birthdays' => $birthdays]);
     }
 
@@ -153,7 +155,7 @@ class AdminController extends Controller
      */
     public function adminGetEvents()
     {   
-        $events = EventHistory::all();
+        $events = Circular::where('type',3)->get();
         return View::make('admin.events.events_history', ['events' => $events]);
     }
 
@@ -260,6 +262,8 @@ class AdminController extends Controller
                             'title' => $request->get('title'),
                             'summary' => $request->get('summary'),
                             'content' => $request->get('content'),
+                            'date' => date('Y-m-d',strtotime($request->get('date'))),
+                            'type' => 1
                         ]);
         }catch(\Exception $e){
             echo $e;
@@ -339,6 +343,23 @@ class AdminController extends Controller
             exit;
         }
 
+        try{
+            // getting link
+            $cont = 0;
+            while(($link = $request->get('url'.$cont)) != null){
+                LinkCircular::create([
+                    'url' =>$link,
+                    'description' => $request->get('url-description'.$cont),
+                    'id_circular' => $circular->id
+                ]);
+                $cont++;
+            }
+        }catch(\Exception $e){
+            echo $e;
+            DB::rollBack();
+            exit;
+        }
+
         DB::commit();
 
         echo "success"; 
@@ -363,13 +384,14 @@ class AdminController extends Controller
 
         // Store circular saved
         try{
-            $birthday = BirthdayHistory::create([
+            $birthday = Circular::create([
                             'title' => $request->get('title'),
                             'summary' => $request->get('summary'),
                             'content' => $request->get('content'),
                             //'date' => $request->get('date')
                             //'date' => str_replace('/', '-', $request->get('date'))
-                            'date' => date('Y-m-d',strtotime($request->get('date')))
+                            'date' => date('Y-m-d',strtotime($request->get('date'))),
+                            'type' => 2
                         ]);
         }catch(\Exception $e){
             DB::rollBack();
@@ -398,9 +420,9 @@ class AdminController extends Controller
                     $upload_success = $file->move($destinationPath, $filename);
                     $uploadcount ++;
 
-                    ImageBirthdayHistory::create([
+                    ImageCircular::create([
                         'path' => $destinationPath."/".$filename,
-                        'id_birthday_history' => $birthday->id
+                        'id_circular' => $birthday->id
                     ]); 
                 }
                
@@ -409,6 +431,22 @@ class AdminController extends Controller
                     dd($e);
             }
             
+        }
+
+        try{
+
+            $ic = ImageCircular::where('id_circular',$birthday->id)->get()->first();
+
+            ElementCarrusel::create([
+                'id_circular' => $birthday->id,
+                'id_img_circular' => $ic->id,
+                'used' => ($request->get('public') ? 1 : 0 )
+            ]);
+
+        }catch(\Exception $e){
+            echo $e;
+            DB::rollBack();
+            exit;
         }
 
         DB::commit();
@@ -428,11 +466,12 @@ class AdminController extends Controller
 
         // Store circular saved
         try{
-            $birthday = EventHistory::create([
+            $event = Circular::create([
                             'title' => $request->get('title'),
                             'summary' => $request->get('summary'),
                             'content' => $request->get('content'),
-                            'date' => date('Y-m-d',strtotime($request->get('date')))
+                            'date' => date('Y-m-d',strtotime($request->get('date'))),
+                            'type' => 3
                         ]);
         }catch(\Exception $e){
             DB::rollBack();
@@ -461,9 +500,9 @@ class AdminController extends Controller
                     $upload_success = $file->move($destinationPath, $filename);
                     $uploadcount ++;
 
-                    ImageEventHistory::create([
+                    ImageCircular::create([
                         'path' => $destinationPath."/".$filename,
-                        'id_event_history' => $birthday->id
+                        'id_circular' => $event->id
                     ]); 
                 }
                
@@ -472,6 +511,22 @@ class AdminController extends Controller
                     dd($e);
             }
             
+        }
+
+        try{
+
+            $ic = ImageCircular::where('id_circular',$event->id)->get()->first();
+
+            ElementCarrusel::create([
+                'id_circular' => $event->id,
+                'id_img_circular' => $ic->id,
+                'used' => ($request->get('public') ? 1 : 0 )
+            ]);
+
+        }catch(\Exception $e){
+            echo $e;
+            DB::rollBack();
+            exit;
         }
 
         DB::commit();
@@ -514,8 +569,9 @@ class AdminController extends Controller
         if(!empty($circular)){
             
             $pictures = ImageCircular::where('id_circular',$id)->get();
+            $links = LinkCircular::where('id_circular',$id)->get();
 
-            return View::make('admin.news.update_circular', ['circular' => $circular, 'pictures' => $pictures]);
+            return View::make('admin.news.update_circular', ['circular' => $circular, 'pictures' => $pictures, 'links' => $links]);
         }else{
             return redirect('advanzer-admin/noticias');
         }
@@ -529,11 +585,11 @@ class AdminController extends Controller
      */
     public function adminEditAlbum($id)
     {
-        $album = BirthdayHistory::find($id);
+        $album = Circular::find($id);
 
         if(!empty($album)){
             
-            $pictures = ImageBirthdayHistory::where('id_birthday_history',$id)->get();
+            $pictures = ImageCircular::where('id_circular',$id)->get();
 
             return View::make('admin.calendar.update_album', ['album' => $album, 'pictures' => $pictures]);
         }else{
@@ -549,11 +605,11 @@ class AdminController extends Controller
      */
     public function adminEditAlbumEvent($id)
     {
-        $album = EventHistory::find($id);
+        $album = Circular::find($id);
 
         if(!empty($album)){
             
-            $pictures = ImageEventHistory::where('id_event_history',$id)->get();
+            $pictures = ImageCircular::where('id_circular',$id)->get();
 
             return View::make('admin.events.update_album', ['album' => $album, 'pictures' => $pictures]);
         }else{
@@ -591,6 +647,7 @@ class AdminController extends Controller
                     'title' => $request->get('title'),
                     'summary' => $request->get('summary'),
                     'content' => $request->get('content'),
+                    'date' => date('Y-m-d',strtotime($request->get('date')))
                 ]);
             
             if($imgs = $request->get('imgs')){
@@ -645,6 +702,41 @@ class AdminController extends Controller
             DB::rollBack();
             exit;
         }
+
+        try{
+            
+            // getting link
+            $cont = $request->get('cant-links');
+
+            LinkCircular::where('id_circular', $request->get('id'))->delete();
+
+            /*while(($link = $request->get('url'.$cont)) != null){
+                LinkCircular::create([
+                    'url' =>$link,
+                    'description' => $request->get('url-description'.$cont),
+                    'id_circular' => $request->get('id')
+                ]);
+                $cont--;
+            }*/
+
+            for($i = intval($cont); $i>0; $i--){
+                $link = $request->get('url'.$i);
+                //dd("aaa");
+                if($link != null){//
+                    //dd("bbb");
+                    LinkCircular::create([
+                        'url' =>$link,
+                        'description' => $request->get('url-description'.$i),
+                        'id_circular' => $request->get('id')
+                    ]);
+                }
+            }
+
+        }catch(\Exception $e){
+            echo $e;
+            DB::rollBack();
+            exit;
+        }
         
         DB::commit();
 
@@ -664,7 +756,7 @@ class AdminController extends Controller
 
         try{
 
-            BirthdayHistory::where('id', $request->get('id'))
+            Circular::where('id', $request->get('id'))
                 ->update([
                     'title' => $request->get('title'),
                     'summary' => $request->get('summary'),
@@ -682,7 +774,7 @@ class AdminController extends Controller
                 }
 
                 // if user deleted any pictures
-                ImageBirthdayHistory::where('id_birthday_history', $request->get('id'))
+                ImageCircular::where('id_circular', $request->get('id'))
                     ->where($ifimg)
                     ->delete();
             
@@ -712,9 +804,9 @@ class AdminController extends Controller
                         $upload_success = $file->move($destinationPath, $filename);
                         $uploadcount ++;
 
-                        ImageBirthdayHistory::create([
+                        ImageCircular::create([
                             'path' => $destinationPath."/".$filename,
-                            'id_birthday_history' => $request->get('id')
+                            'id_circular' => $request->get('id')
                         ]); 
                     }
             }
@@ -743,7 +835,7 @@ class AdminController extends Controller
 
         try{
 
-            EventHistory::where('id', $request->get('id'))
+            Circular::where('id', $request->get('id'))
                 ->update([
                     'title' => $request->get('title'),
                     'summary' => $request->get('summary'),
@@ -761,7 +853,7 @@ class AdminController extends Controller
                 }
 
                 // if user deleted any pictures
-                ImageEventHistory::where('id_event_history', $request->get('id'))
+                ImageCircular::where('id_event_history', $request->get('id'))
                     ->where($ifimg)
                     ->delete();
             
@@ -791,7 +883,7 @@ class AdminController extends Controller
                         $upload_success = $file->move($destinationPath, $filename);
                         $uploadcount ++;
 
-                        ImageEventHistory::create([
+                        ImageCircular::create([
                             'path' => $destinationPath."/".$filename,
                             'id_event_history' => $request->get('id')
                         ]); 
@@ -821,7 +913,7 @@ class AdminController extends Controller
         
         ElementCarrusel::where('id_circular',$id)->update(["used" => ( $ec->used ? 0 : 1 )]);
 
-        return redirect('advanzer-admin/noticias');
+        return redirect('advanzer-admin/');
     }
 
     /**
@@ -876,6 +968,7 @@ class AdminController extends Controller
     {   
         ElementCarrusel::where('id_circular',$id)->delete();
         ImageCircular::where('id_circular',$id)->delete();
+        LinkCircular::where('id_circular',$id)->delete();
         Circular::where('id',$id)->delete();
 
         return redirect('advanzer-admin/noticias');        
@@ -889,8 +982,9 @@ class AdminController extends Controller
      */
     public function adminDeleteAlbum($id)
     {   
-        ImageBirthdayHistory::where('id_birthday_history',$id)->delete();
-        BirthdayHistory::where('id',$id)->delete();
+        ElementCarrusel::where('id_circular',$id)->delete();
+        ImageCircular::where('id_birthday_history',$id)->delete();
+        Circular::where('id',$id)->delete();
 
         return redirect('advanzer-admin/historial_de_cumpleaños');        
     }
@@ -903,8 +997,9 @@ class AdminController extends Controller
      */
     public function adminDeleteAlbumEvent($id)
     {   
-        ImageEventHistory::where('id_event_history',$id)->delete();
-        EventHistory::where('id',$id)->delete();
+        ElementCarrusel::where('id_circular',$id)->delete();
+        ImageCircular::where('id_event_history',$id)->delete();
+        Circular::where('id',$id)->delete();
 
         return redirect('advanzer-admin/historial_de_eventos');        
     }

@@ -15,16 +15,19 @@ use URL;
 use Session;
 use Socialite;
 use Exception;
+use Mail;
+use Carbon\Carbon;
 use App\Circular;
 use App\ImageCircular;
 use App\ElementCarrusel;
 use App\Birthday;
-use App\BirthdayHistory;
+use App\LinkCircular;
+use App\TypeCircular;
+/*use App\BirthdayHistory;
 use App\ImageBirthdayHistory;
 use App\EventHistory;
-use App\ImageEventHistory;
-use Mail;
-use Carbon\Carbon;
+use App\ImageEventHistory;*/
+
 
 class MainController extends Controller
 {   
@@ -384,9 +387,20 @@ class MainController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function pia_getNews()
+    public function pia_getNews($month=null, $year=null)
     {   
-        $news = Circular::orderBy('created_at', 'DESC')->paginate(9);
+        $news = null;
+
+        if($month != null and $year != null){
+            
+            $date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
+            $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
+
+            $news = Circular::where('type', 1)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
+
+        }else{
+            $news = Circular::where('type', 1)->orderBy('created_at', 'DESC')->paginate(9);
+        }
         
         return View::make('news.news', ['news' => $news]);
     }
@@ -444,11 +458,11 @@ class MainController extends Controller
             $date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
             $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
             //dd($date1." ".$date2);
-            $birthdays = BirthdayHistory::where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
+            $birthdays = Circular::where('type', 2)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
 
             //exit;
         }else{
-            $birthdays = BirthdayHistory::orderBy('date', 'DESC')->paginate(12);
+            $birthdays = Circular::where('type', 2)->orderBy('date', 'DESC')->paginate(12);
         }
 
             
@@ -463,11 +477,11 @@ class MainController extends Controller
      */
     public function pia_getBirthdayAlbum($id)
     {
-        $album = BirthdayHistory::find($id);
+        $album = Circular::find($id);
 
         if(!empty($album)){
             
-            $pictures = ImageBirthdayHistory::where('id_birthday_history',$id)->get();
+            $pictures = ImageCircular::where('id_circular',$id)->get();
 
             return View::make('birthdays.album', ['album' => $album, 'images' => $pictures]);
         }else{
@@ -489,10 +503,10 @@ class MainController extends Controller
             $date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
             $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
             
-            $events = EventHistory::where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
+            $events = Circular::where('type', 3)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
 
         }else{
-            $events = EventHistory::orderBy('date', 'DESC')->paginate(12);
+            $events = Circular::where('type', 3)->orderBy('date', 'DESC')->paginate(12);
         }
 
         return View::make('events.events', ['events' => $events]);
@@ -506,11 +520,11 @@ class MainController extends Controller
      */
     public function pia_getEventAlbum($id)
     {
-        $album = EventHistory::find($id);
+        $album = Circular::find($id);
 
         if(!empty($album)){
             
-            $pictures = ImageEventHistory::where('id_event_history',$id)->get();
+            $pictures = ImageCircular::where('id_circular',$id)->get();
 
             return View::make('events.album', ['album' => $album, 'images' => $pictures]);
         }else{

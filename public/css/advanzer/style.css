@@ -28,7 +28,7 @@ strong { font-weight: bold; }
 img { max-width: 100%; }
 
 h1, h2 { line-height: 40px; }
-h3, h4 { line-height: 20px; }
+h3, h4 { line-height: 25px; }
 
 ::-moz-selection { background: #c0d339; color: #fff; text-shadow: none; }
 ::selection { background: #c0d339; color: #fff; text-shadow: none; }
@@ -778,7 +778,7 @@ footer {
 
 .services-half-width-text p {
     line-height: 18px;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 /***** Call to action *****/

@@ -9,7 +9,7 @@ class Circular extends Model
 {   
     use SoftDeletes;
     
-    protected $fillable = array('title', 'summary', 'content');
+    protected $fillable = array('title', 'summary', 'content', 'date', 'type');
 
     /**
      * The table associated with the model.
@@ -33,5 +33,15 @@ class Circular extends Model
     // Find a get one element by circular
     public function getElementsCarrusel(){
         return $this->hasMany('App\ElementCarrusel','id_circular');
+    }
+
+    // Find a get links by circular
+    public function getLinks(){
+        return $this->hasMany('App\LinkCircular','id_circular');
+    }
+
+    // Find a type of circular
+    public function getType(){
+        return $this->belongsTo('App\TypeCircular','type');
     }
 }

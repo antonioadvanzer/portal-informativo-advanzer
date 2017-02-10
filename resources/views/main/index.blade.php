@@ -38,10 +38,24 @@
                                     <div class="flex-caption">
                                     	{{ $new->circular->summary }}
                                         <br>
+                                        
+                                        @if($new->circular->type==1)
                                         <a class="btn btn-success" href="{{ URL::to('noticias/ver_noticia/'.$new->image->id_circular) }}" aria-label="Settings">
                                           <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                                             Ir a la Noticia
                                         </a>
+                                        @elseif($new->circular->type==2)
+                                        <a class="btn btn-success" href="{{ URL::to('historial_de_cumpleanos/ver_album/'.$new->image->id_circular) }}" aria-label="Settings">
+                                          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                            Ir al Cumpleaños
+                                        </a>
+                                        @elseif($new->circular->type==3)
+                                        <a class="btn btn-success" href="{{ URL::to('historial_de_eventos/ver_album/'.$new->image->id_circular) }}" aria-label="Settings">
+                                          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                            Ir al Evento
+                                        </a>
+                                        @endif
+                                        
                                     </div>
                                 </li>
                                 @endforeach

@@ -41,6 +41,10 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label>Fecha</label><br>
+                            <input id="date" name="date" class="datepicker form-control" data-date-format="yyyy/dd/mm">
+                        </div>
+                        <div class="form-group">
                             <label>Imagenes</label>
                             <div id="maindiv">
                                 <div id="formdiv">
@@ -57,6 +61,18 @@
                                 </div>
                             </div>
                             
+                        </div>
+                        <div id="urls" class="form-group">
+                            <label>URL</label><br>
+                            <a id="addUrl" href="#urls" class="btn btn-default" role="button">Agregar</a>
+                            <div id="links" class="col-sm-10">
+                                <!--<div class="alert bg-info">
+                                    <label>Direcci&oacute;n</label>
+                                    <input id="url" name="url" class="form-control" type="url">
+                                    <label>Descripci&oacute;n</label>
+                                    <input id="url-description" name="url-description" class="form-control" placeholder="" type="text" required>
+                                </div>-->
+                            </div>
                         </div>
                     </fieldset><br><br><br>
                     <div>
@@ -78,6 +94,10 @@
         <script src="{{ URL::to('js/admin/own/addImages.js') }}"></script>
         <script>
             $("#news").addClass("current");
+            
+            $('.datepicker').datepicker({
+                format: 'yyyy/mm/dd'
+            });
             
             /*$("#news").addClass("current");
             
@@ -156,6 +176,19 @@
                 });
                      
             }));
-
+            
+            var urlcont = 0;
+            $("#addUrl").click(function (){
+                //alert("asd");
+                div = '<div class="alert bg-info">'
+                            +'<label>Direcci&oacute;n</label>'
+                            +'<input id="url'+urlcont+'" name="url'+urlcont+'" class="form-control" type="url">'
+                            +'<label>Descripci&oacute;n</label>'
+                            +'<input id="url-description'+urlcont+'" name="url-description'+urlcont+'" class="form-control" placeholder="" type="text" required>'
+                        +'</div>';
+                
+                $("#links").append(div);
+                urlcont++;
+            });
         </script>
 @endsection
