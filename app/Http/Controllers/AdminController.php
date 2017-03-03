@@ -829,6 +829,19 @@ class AdminController extends Controller
             DB::rollBack();
             exit;
         }
+
+        try{
+
+            $ic = ImageCircular::where('id_circular',$request->get('id'))->get()->first();
+
+            ElementCarrusel::where('id_circular', $request->get('id'))
+                    ->update(['id_img_circular' => $ic->id]);
+
+        }catch(\Exception $e){
+            echo $e;
+            DB::rollBack();
+            exit;
+        }
         
         DB::commit();
 
@@ -902,6 +915,19 @@ class AdminController extends Controller
                         ]); 
                     }
             }
+
+        }catch(\Exception $e){
+            echo $e;
+            DB::rollBack();
+            exit;
+        }
+
+        try{
+
+            $ic = ImageCircular::where('id_circular',$request->get('id'))->get()->first();
+
+            ElementCarrusel::where('id_circular', $request->get('id'))
+                    ->update(['id_img_circular' => $ic->id]);
 
         }catch(\Exception $e){
             echo $e;
