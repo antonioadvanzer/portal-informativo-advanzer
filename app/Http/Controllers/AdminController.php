@@ -649,7 +649,7 @@ class AdminController extends Controller
                     'content' => $request->get('content'),
                     'date' => date('Y-m-d',strtotime($request->get('date')))
                 ]);
-            
+         
             if($imgs = $request->get('imgs')){
 
                 // creating variable to store conditions
@@ -696,6 +696,19 @@ class AdminController extends Controller
                         ]); 
                     }
             }
+
+        }catch(\Exception $e){
+            echo $e;
+            DB::rollBack();
+            exit;
+        }
+
+        try{
+
+            $ic = ImageCircular::where('id_circular',$request->get('id'))->get()->first();
+
+            ElementCarrusel::where('id_circular', $request->get('id'))
+                    ->update(['id_img_circular' => $ic->id]);
 
         }catch(\Exception $e){
             echo $e;
@@ -885,7 +898,7 @@ class AdminController extends Controller
 
                         ImageCircular::create([
                             'path' => $destinationPath."/".$filename,
-                            'id_event_history' => $request->get('id')
+                            'id_circular' => $request->get('id')
                         ]); 
                     }
             }

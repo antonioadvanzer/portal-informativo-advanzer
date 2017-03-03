@@ -141,7 +141,7 @@
                         <img src="{{ URL::to('img/contacto/anaid1.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
                         <h4>Anaid Montoya</h4>
-	                    <h3>Recepción Monterrey</h3>
+	                    <h3>Asistente Direcci&oacute;n</h3>
                         <!--<p>anaid.montoya@advanzer.com</p>-->
                         
                         <a id="m8" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -157,18 +157,6 @@
                         <!--<p>awendy.uribe@advanzer.com</p>-->
                         
                         <a id="m9" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
-                    
-	                </div>
-                    
-                    <div class="col-sm-6 services-half-width-text wow fadeInUp card">
-                        
-                        <img src="{{ URL::to('img/contacto/alejandra1.jpg') }}" class="img-fluid img-thumbnail image-card">
-                        
-                        <h4>Alejandra Torres</h4>
-	                    <h3>Asistente Direcci&oacute;n</h3>
-                        <!--<p>alejandra.torres@advanzer.com</p>-->
-                        
-                        <a id="m10" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
 	                </div>
                     
@@ -207,7 +195,19 @@
                         <a id="m12" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
                     </div>
-
+                    
+                    <div class="col-sm-6 services-half-width-text wow fadeInUp card">
+                        
+                        <img src="{{ URL::to('img/contacto/alejandra1.jpg') }}" class="img-fluid img-thumbnail image-card">
+                        
+                        <h4>Alejandra Torres</h4>
+	                    <h3>Arquitectura de Soluciones</h3>
+                        <!--<p>alejandra.torres@advanzer.com</p>-->
+                        
+                        <a id="m10" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
+                    
+	                </div>
+                    
                     <div class="col-sm-6 services-half-width-text wow fadeInUp card">
                         
                         <img src="{{ URL::to('img/contacto/39.jpg') }}" class="img-fluid img-thumbnail image-card">

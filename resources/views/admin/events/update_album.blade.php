@@ -41,6 +41,7 @@
                             <label>Imagenes Actuales</label>
                             <div>
                                 <div style="display: block;" id="formdiv">
+                                    <input name="imgs[]" value="-1" type="hidden">
                                 @foreach($pictures as $pic)
                                 <div id="{{ 'acpic'.$pic->id }}" name="{{ 'acpic'.$pic->id }}" class="abcd">
                                     <input type="hidden" name="imgs[]" value="{{ $pic->id }}">
