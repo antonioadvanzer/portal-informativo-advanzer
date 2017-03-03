@@ -879,7 +879,7 @@ class AdminController extends Controller
                 }
 
                 // if user deleted any pictures
-                ImageCircular::where('id_event_history', $request->get('id'))
+                ImageCircular::where('id_circular', $request->get('id'))
                     ->where($ifimg)
                     ->delete();
             
