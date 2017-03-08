@@ -52,7 +52,7 @@
 			                	<!--<img src="{{ URL::to('img/politicas/Talento.png') }}" alt="" data-at2x="{{ URL::to('img/politicas/Talento.png') }}">-->
                                 <span class="icon-education"></span>
 			                	<div class="portfolio-box-text">
-			                		<h3><a href="{{ URL::to('beneficios/educacion') }}">Tec Milenio  - Educaci&oacute;n</a></h3>
+			                		<h3><a href="{{ URL::to('beneficios/educacion/tecmilenio') }}">Tec Milenio  - Educaci&oacute;n</a></h3>
 			                		<p></p>
 			                	</div>
 			                </div>
@@ -71,6 +71,24 @@
                         
 	                </div>
 	            </div>
+                
+                <div class="row">
+	            	<div class="col-sm-12 portfolio-masonry">
+                        
+                        <div class="portfolio-box web-design">
+		                	<div class="portfolio-box-container">
+			                	<!--<img src="{{ URL::to('img/politicas/Talento.png') }}" alt="" data-at2x="{{ URL::to('img/politicas/Talento.png') }}">-->
+                                <span class="icon-education-2"></span>
+			                	<div class="portfolio-box-text">
+			                		<h3><a href="{{ URL::to('beneficios/educacion/udem') }}">UDEM -Educación</a></h3>
+			                		<p></p>
+			                	</div>
+			                </div>
+		                </div>
+                        
+                    </div>
+	            </div>
+                
 	        </div>
         </div>
 @endsection

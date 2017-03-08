@@ -112,7 +112,7 @@
 					</li>
                     <li id="about" class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
-							<i class="fa fa-bookmark"></i><br>Quienes Somos <span class="caret"></span>
+							<i class="fa fa-bookmark"></i><br>¿Qui&eacute;nes Somos? <span class="caret"></span>
 						</a>
                         <ul class="dropdown-menu dropdown-menu-left" role="menu">
                             <li id="birthday">
@@ -162,7 +162,7 @@
 						<a href="{{ URL::to('sgmm') }}"><i class="fa fa-info"></i><br>SGMM</a>
 					</li>-->
                     <li id="benefits">
-						<a href="{{ URL::to('beneficios') }}"><i class="fa fa-thumbs-up"></i><br>Benficios</a>
+						<a href="{{ URL::to('beneficios') }}"><i class="fa fa-thumbs-up"></i><br>Beneficios</a>
 					</li>
                     <li id="contact" >
                         <a href="{{ URL::to('contacto') }}"><i class="glyphicon glyphicon-phone-alt"></i><br>Contacto</a>
