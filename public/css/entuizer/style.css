@@ -1977,6 +1977,16 @@ transform: skew(15deg) rotate(6deg); }
     background-size: 100%;
 }
 
+.icon-education-2::before{
+    display: inline-block;
+    width: 255px;
+    height: 211px;
+    margin-right: 5px;
+    content: "";
+    background: url(../../img/beneficios/udem.png) no-repeat 0 0;
+    background-size: 100%;
+}
+
 /* Another Gallery*/
 
 .wrapper {
