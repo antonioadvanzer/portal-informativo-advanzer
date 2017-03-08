@@ -347,11 +347,21 @@ class MainController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function pia_getStudy()
+    public function pia_getStudyTec()
     { 
-       return View::make('benefits.study');
+       return View::make('benefits.study1');
     }
     
+    /**
+     * Display a view with specified rules.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pia_getStudyUdem()
+    { 
+       return View::make('benefits.study2');
+    }
+
     /**
      * Display a view with contacts.
      *

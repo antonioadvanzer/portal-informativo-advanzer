@@ -99,7 +99,11 @@ Route::group(['middleware' => 'advanzer'], function() {
         Route::get('/seguro_de_vida', ['as' => 'tdu', 'uses' => 'MainController@pia_getTDU']);
 
         // Educación
-        Route::get('/educacion', ['as' => 'tdu', 'uses' => 'MainController@pia_getStudy']);
+        Route::group(['prefix' => 'educacion'], function() {
+            Route::get('/tecmilenio', ['as' => 'tdu', 'uses' => 'MainController@pia_getStudyTec']);
+            Route::get('/udem', ['as' => 'tdu', 'uses' => 'MainController@pia_getStudyUdem']);
+        });
+        
     });
     
     // Contactos
