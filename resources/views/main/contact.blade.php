@@ -68,7 +68,7 @@
                         
                         <img src="{{ URL::to('img/contacto/amira1.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
-                        <h4>Amira Chavez</h4>
+                        <h4>Amira Ch&aacute;vez</h4>
 	                    <h3>Capital Humano</h3>
                         <!--<p>amira.chavez@advanzer.com</p>-->
                         
@@ -80,7 +80,7 @@
                         
                         <img src="{{ URL::to('img/contacto/melissa 1.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
-                        <h4>Melissa Perez</h4>
+                        <h4>Melissa P&eacute;rez</h4>
 	                    <h3>Capital Humano</h3>
                         <!--<p>melissa.perez@advanzer.com</p>-->
                         
