@@ -70,10 +70,11 @@
         </div>
 
         <div class="services-half-width-container">
-        	<div class="container">
+        	<div class="container" align="center">
                 
-                <div class="row">
-	                <div class="col-sm-6 services-full-width-text wow fadeInLeft">
+                <div style="width: 962px" align="center">
+                    <div class="row" align="center">
+	                <div class="col-sm-6 services-full-width-text wow fadeInLeft" align="center">
 	                    <h3>Advanzer</h3>
 	                    
                         <p>
@@ -84,7 +85,7 @@
 	                    </p>
                         
 	                </div>
-	                <div class="col-sm-6 services-full-width-text wow fadeInUp">
+	                <div class="col-sm-6 services-full-width-text wow fadeInUp" align="center">
 	                    <h3>Entuizer</h3>
 	                    
                         <p>Ave. Miguel de Cervantes Saavedra <br>
@@ -94,7 +95,7 @@
                         
 	                </div>
 	            </div>
-                
+                </div>
             </div>
         </div>
 @endsection

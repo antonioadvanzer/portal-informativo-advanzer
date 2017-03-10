@@ -117,7 +117,7 @@
                         <img src="{{ URL::to('img/contacto/167.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
                         <h4>Rom&aacute;n Uranga</h4>
-	                    <h3>Finanzas</h3>
+	                    <h3>Contabilidad</h3>
                         <!--<p>roman.uranga@advanzer.com</p>-->
                         
                         <a id="m6" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -129,8 +129,20 @@
                         <img src="{{ URL::to('img/contacto/carlos1.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
                         <h4>Adri&aacute;n Dom&iacute;guez</h4>
-	                    <h3>Finanzas</h3>
+	                    <h3>Contabilidad</h3>
                         <!--<p>carlos.dominguez@advanzer.com</p>-->
+                        
+                        <a id="m7" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
+                    
+	                </div>
+                    
+                    <div class="col-sm-6 services-half-width-text wow fadeInUp card">
+                        
+                        <img src="{{ URL::to('img/contacto/keren.jpg') }}" class="img-fluid img-thumbnail image-card">
+                        
+                        <h4>Keren Lozano</h4>
+	                    <h3>Vi&aacute;ticos</h3>
+                        <!--<p>keren.lozano@advanzer.com</p>-->
                         
                         <a id="m7" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
@@ -198,18 +210,6 @@
                     
                     <div class="col-sm-6 services-half-width-text wow fadeInUp card">
                         
-                        <img src="{{ URL::to('img/contacto/alejandra1.jpg') }}" class="img-fluid img-thumbnail image-card">
-                        
-                        <h4>Alejandra Torres</h4>
-	                    <h3>Arquitectura de Soluciones</h3>
-                        <!--<p>alejandra.torres@advanzer.com</p>-->
-                        
-                        <a id="m10" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
-                    
-	                </div>
-                    
-                    <div class="col-sm-6 services-half-width-text wow fadeInUp card">
-                        
                         <img src="{{ URL::to('img/contacto/39.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
                         <h4>Rodolfo Cort&eacute;s</h4>
@@ -219,6 +219,18 @@
                         <a id="m13" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
                     </div>
+                    
+                    <div class="col-sm-6 services-half-width-text wow fadeInUp card">
+                        
+                        <img src="{{ URL::to('img/contacto/alejandra1.jpg') }}" class="img-fluid img-thumbnail image-card">
+                        
+                        <h4>Alejandra Torres</h4>
+	                    <h3>Arquitectura de Soluciones</h3>
+                        <!--<p>alejandra.torres@advanzer.com</p>-->
+                        
+                        <a id="m10" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
+                    
+	                </div>
                     
                     <div class="col-sm-6 services-half-width-text wow fadeInUp card">
                         

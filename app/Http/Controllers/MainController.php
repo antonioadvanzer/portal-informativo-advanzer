@@ -585,13 +585,14 @@ class MainController extends Controller
         "m5" => 'martin.garza@advanzer.com',
         "m6" => 'roman.uranga@advanzer.com',
         "m7" => 'carlos.dominguez@advanzer.com',
-        "m8" => 'anaid.montoya@advanzer.com',
-        "m9" => 'awendy.uribe@advanzer.com',
-        "m10" => 'alejandra.torres@advanzer.com',
-        "m11" => 'belinda.lopez@advanzer.com',
-        "m12" => 'gabriela.rodriguez@advanzer.com',
-        "m13" => 'rodolfo.cortes@advanzer.com',
-        "m14" => 'juancarlos.zamarron@advanzer.com'
+        "m8" => 'keren.lozano@advanzer.com',
+        "m9" => 'anaid.montoya@advanzer.com',
+        "m10" => 'awendy.uribe@advanzer.com',
+        "m11" => 'alejandra.torres@advanzer.com',
+        "m12" => 'belinda.lopez@advanzer.com',
+        "m13" => 'gabriela.rodriguez@advanzer.com',
+        "m14" => 'rodolfo.cortes@advanzer.com',
+        "m15" => 'juancarlos.zamarron@advanzer.com'
     );
 
     /**
