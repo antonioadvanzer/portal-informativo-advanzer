@@ -198,7 +198,7 @@
 	    <div class="row">
 	        <!--<div class=" fe col-sm-7 footer-copyright wow fadeIn">-->
             <div class=" fe col-sm-7 footer-copyright">
-	            <p>Advanzer/Entuizer 2016</p>
+	            <p>Advanzer/Entuizer 2017</p>
 	        </div>
 	        <!--<div class="col-sm-5 footer-social wow fadeIn">
 	            <a href="#"><i class="fa fa-facebook"></i></a>

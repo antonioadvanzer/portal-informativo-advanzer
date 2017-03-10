@@ -35,7 +35,7 @@
 			                	</div>
 			                </div>
 		                </div>
-                        
+                        @if(session('empresa') == "advanzer.com")
                         <div class="portfolio-box web-design">
 		                	<div class="portfolio-box-container">
 			                	<!--<img src="{{ URL::to('img/politicas/grafico-signo-dolar-tantoporciento.jpg') }}" alt="" data-at2x="{{ URL::to('img/politicas/grafico-signo-dolar-tantoporciento.jpg') }}">-->
@@ -46,6 +46,7 @@
 			                	</div>
 			                </div>
 		                </div>
+                        @endif
                         
                         <div class="portfolio-box web-design">
 		                	<div class="portfolio-box-container">

@@ -4,6 +4,7 @@
 <!-- Slider -->
         <div class="slider-container">
             <div class="container">
+                
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1 slider">
                         <div class="flexslider">
@@ -33,7 +34,8 @@
                                 </li>-->
                                 
                                 @foreach($news as $new)
-                                <li data-thumb="{{ URL::to($new->image->path) }}">
+                                <!--<li data-thumb="{{ URL::to($new->image->path) }}">-->
+                                <li data-thumb="">
                                         <img src="{{ URL::to($new->image->path) }}">
                                     <div class="flex-caption">
                                     	{{ $new->circular->summary }}
@@ -63,6 +65,36 @@
                         </div>
                     </div>
                 </div>
+                
+            </div>
+        </div>
+
+        <div class="services-half-width-container">
+        	<div class="container">
+                
+                <div class="row">
+	                <div class="col-sm-6 services-full-width-text wow fadeInLeft">
+	                    <h3>Advanzer</h3>
+	                    
+                        <p>
+	                    	Av. El Roble 660-2, Edificio Vitro, Nivel 6<br>
+                            Col. Valle del Campestre<br>
+                            San Pedro Garza García, Nuevo León 66265<br>
+                            México
+	                    </p>
+                        
+	                </div>
+	                <div class="col-sm-6 services-full-width-text wow fadeInUp">
+	                    <h3>Entuizer</h3>
+	                    
+                        <p>Ave. Miguel de Cervantes Saavedra <br>
+                            #301 Torre Norte, Piso 12<br>
+                            Miguel Hidalgo, C.P. 11560
+                        </p>
+                        
+	                </div>
+	            </div>
+                
             </div>
         </div>
 @endsection
