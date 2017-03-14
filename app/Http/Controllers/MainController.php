@@ -472,7 +472,16 @@ class MainController extends Controller
 
             //exit;
         }else{
-            $birthdays = Circular::where('type', 2)->orderBy('date', 'DESC')->paginate(12);
+
+            $month = date("m");
+			$year = date("Y");
+			
+			$date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
+            $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
+			
+			$birthdays = Circular::where('type', 2)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
+
+            //$birthdays = Circular::where('type', 2)->orderBy('date', 'DESC')->paginate(12);
         }
 
             
