@@ -15,9 +15,9 @@ class CreateCircularTable extends Migration
         //Create table to save news and other things
         Schema::create('circular', function (Blueprint $table){
             $table->increments('id');
-            $table->string('title',90);
-            $table->string('summary',250);
-            $table->string('content',950);
+            $table->string('title',100);
+            $table->string('summary',350);
+            $table->string('content',1100);
             $table->date('date');
             $table->integer('type')->unsigned();
             $table->timestamps();

@@ -15,8 +15,8 @@ class CreateLinkCircularTable extends Migration
         // Images of circular
         Schema::create('link_circular', function (Blueprint $table){
             $table->increments('id');
-            $table->string('url',100);
-            $table->string('description',200);
+            $table->string('url',150);
+            $table->string('description',300);
             $table->integer('id_circular')->unsigned();
             $table->timestamps();
             $table->softDeletes();

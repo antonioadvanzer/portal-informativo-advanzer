@@ -41,7 +41,7 @@ class MainController extends Controller
     public function index()
     {   
         // Get all new activate to show on carrusel
-        $carrusel = ElementCarrusel::where('used',1)->get();
+        $carrusel = ElementCarrusel::where('used',1)->orderBy('created_at', 'ASC')->get();
 
        /*foreach($carrusel as $c){
            var_dump($c->circular); 

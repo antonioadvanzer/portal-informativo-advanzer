@@ -15,7 +15,7 @@ class CreateImgCircularTable extends Migration
         // Images of circular
         Schema::create('img_circular', function (Blueprint $table){
             $table->increments('id');
-            $table->string('path',200);
+            $table->string('path',300);
             $table->integer('id_circular')->unsigned();
             $table->timestamps();
             $table->softDeletes();
