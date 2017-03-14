@@ -75,7 +75,7 @@
                 <div style="width: 962px" align="center">
                     <div class="row" align="center">
 	                <div class="col-sm-6 services-full-width-text wow fadeInLeft" align="center">
-	                    <h3>Advanzer</h3>
+	                    <h3>Advanzer MTY</h3>
 	                    
                         <p>
 	                    	Av. El Roble 660-2, Edificio Vitro, Nivel 6<br>
@@ -86,7 +86,7 @@
                         
 	                </div>
 	                <div class="col-sm-6 services-full-width-text wow fadeInUp" align="center">
-	                    <h3>Entuizer</h3>
+	                    <h3>Advanzer/Entuizer CDMX</h3>
 	                    
                         <p>Ave. Miguel de Cervantes Saavedra <br>
                             #301 Torre Norte, Piso 12<br>
