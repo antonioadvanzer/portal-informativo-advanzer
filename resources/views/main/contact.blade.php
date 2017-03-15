@@ -144,7 +144,7 @@
 	                    <h3>Vi&aacute;ticos</h3>
                         <!--<p>keren.lozano@advanzer.com</p>-->
                         
-                        <a id="m7" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
+                        <a id="m8" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
 	                </div>
                     
@@ -156,7 +156,7 @@
 	                    <h3>Asistente Direcci&oacute;n</h3>
                         <!--<p>anaid.montoya@advanzer.com</p>-->
                         
-                        <a id="m8" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
+                        <a id="m9" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
 	                </div>
                     
@@ -168,7 +168,7 @@
 	                    <h3>Recepci&oacute;n Ciudad de M&eacute;xico</h3>
                         <!--<p>awendy.uribe@advanzer.com</p>-->
                         
-                        <a id="m9" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
+                        <a id="m10" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
 	                </div>
                     
@@ -228,7 +228,7 @@
 	                    <h3>Arquitectura de Soluciones</h3>
                         <!--<p>alejandra.torres@advanzer.com</p>-->
                         
-                        <a id="m10" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
+                        <a id="m14" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
 	                </div>
                     
@@ -240,7 +240,7 @@
                         <h3>Arquitectura de Soluciones</h3>
                         <!--<p>juancarlos.zamarron@advanzer.com</p>-->
                         
-                        <a id="m14" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
+                        <a id="m15" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
                     </div>
                     
