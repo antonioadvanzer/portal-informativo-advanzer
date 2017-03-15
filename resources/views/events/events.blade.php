@@ -37,7 +37,7 @@
                         <option value="09">Septiembre</option>
                         <option value="10">Octubre</option>
                         <option value="11">Noviembre</option>
-                        <option value="12">Deciembre</option>
+                        <option value="12">Diciembre</option>
                     </select> 
 
                     <select id="year">

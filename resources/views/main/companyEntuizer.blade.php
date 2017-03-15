@@ -175,7 +175,7 @@
 
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
-	                    <h3>Misi&oacute;n?</h3>
+	                    <h3>Misi&oacute;n</h3>
 	                    <p>
 	                    	Generar valor y confianza para nuestros clientes y colaboradores.
 	                </div>
