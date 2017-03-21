@@ -48,7 +48,7 @@
                                             Chofer/Intendencia
                                         </td>
                                         <td>
-                                            $526.00
+                                            $576.00
                                         </td>
                                     </tr>
                                     <tr>
@@ -56,7 +56,7 @@
                                             Analista/Entrenamiento/Asistente
                                         </td>
                                         <td>
-                                            $657.00
+                                            $720.00
                                         </td>
                                     </tr>
                                     <tr>
@@ -64,7 +64,7 @@
                                             Consulto/Especialista/Ing. Telecom
                                         </td>
                                         <td>
-                                            $789.00
+                                            $864.00
                                         </td>
                                     </tr>
                                     <tr>
@@ -72,7 +72,7 @@
                                             Consulto Sr./Especialista Sr./Ing. Telecom Sr.
                                         </td>
                                         <td>
-                                            $920.00
+                                            $1,009.00
                                         </td>
                                     </tr>
                                     <tr>
@@ -80,7 +80,7 @@
                                             Gerente/SAP Master
                                         </td>
                                         <td>
-                                            $1,052.00
+                                            $1,153.00
                                         </td>
                                     </tr>
                                     <tr>
@@ -88,7 +88,7 @@
                                             Gerente Sr./SAP Expert
                                         </td>
                                         <td>
-                                            $1,183.00
+                                            $1,297.00
                                         </td>
                                     </tr>
                                     <tr>
