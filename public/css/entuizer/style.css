@@ -767,7 +767,8 @@ footer {
 }
 
 .services-half-width-text h3 {
-    margin-top: 25px;
+    /*margin-top: 25px;*/
+    margin-top: 10px;
     font-family: 'Droid Sans', sans-serif;
     font-size: 16px;
     color: #5d5d5d;

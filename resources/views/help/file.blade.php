@@ -21,7 +21,11 @@
         	<div class="container">
 	            <div class="row">
                     
-                    
+                    <div class=row align="center">
+                        <a onclick="window.history.back();">
+                            <img width="5%" style="min-width: 50px" src="{{ URL::to('img/elementos/back.png') }}" alt="" >
+                        </a>
+                    </div>
                     
                     <br>
 	                <h1></h1>

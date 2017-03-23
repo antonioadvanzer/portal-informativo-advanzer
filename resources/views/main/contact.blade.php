@@ -59,6 +59,7 @@
                         
                         <h4>Micaela Llano</h4>
                         <h3>Capital Humano</h3>
+                        <h5>Ext. 1005</h5>
                         <!--<p>micaela.llano@advanzer.com</p>-->
                         
                         <a id="m1" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -70,6 +71,7 @@
                         
                         <h4>Amira Ch&aacute;vez</h4>
 	                    <h3>Capital Humano</h3>
+                        <h5>Ext. 1004</h5>
                         <!--<p>amira.chavez@advanzer.com</p>-->
                         
                         <a id="m2" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -82,6 +84,7 @@
                         
                         <h4>Melissa P&eacute;rez</h4>
 	                    <h3>Capital Humano</h3>
+                        <h5>Ext. 1001</h5>
                         <!--<p>melissa.perez@advanzer.com</p>-->
                         
                         <a id="m3" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -94,6 +97,7 @@
                         
                         <h4>Karla Navarro</h4>
 	                    <h3>Capital Humano</h3>
+                        <h5>Ext. 1004</h5>
                         <!--<p>karla.navarro@advanzer.com</p>-->
                         
                         <a id="m4" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -106,6 +110,7 @@
                         
                         <h4>Mart&iacute;n Garza</h4>
 	                    <h3>Finanzas</h3>
+                        <h5>Ext. 1002</h5>
                         <!--<p>martin.garza@advanzer.com</p>-->
                         
                         <a id="m5" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -118,6 +123,7 @@
                         
                         <h4>Rom&aacute;n Uranga</h4>
 	                    <h3>Contabilidad</h3>
+                        <h5>Ext. 1003</h5>
                         <!--<p>roman.uranga@advanzer.com</p>-->
                         
                         <a id="m6" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -130,6 +136,7 @@
                         
                         <h4>Adri&aacute;n Dom&iacute;guez</h4>
 	                    <h3>Contabilidad</h3>
+                        <h5>Ext. 1002</h5>
                         <!--<p>carlos.dominguez@advanzer.com</p>-->
                         
                         <a id="m7" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -142,6 +149,7 @@
                         
                         <h4>Keren Lozano</h4>
 	                    <h3>Vi&aacute;ticos</h3>
+                        <h5>Ext. 1012</h5>
                         <!--<p>keren.lozano@advanzer.com</p>-->
                         
                         <a id="m8" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -154,6 +162,7 @@
                         
                         <h4>Anaid Montoya</h4>
 	                    <h3>Asistente Direcci&oacute;n</h3>
+                        <h5>Ext. 1000</h5>
                         <!--<p>anaid.montoya@advanzer.com</p>-->
                         
                         <a id="m9" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -166,6 +175,7 @@
                         
                         <h4>Wendy Uribe</h4>
 	                    <h3>Recepci&oacute;n Ciudad de M&eacute;xico</h3>
+                        <h5>Ext. 2001/2010</h5>
                         <!--<p>awendy.uribe@advanzer.com</p>-->
                         
                         <a id="m10" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -178,6 +188,7 @@
                         
                         <h4>Belinda L&oacute;pez</h4>
 	                    <h3>Project Controlling</h3>
+                        <h5>Ext. 2002</h5>
                         <!--<p>belinda.lopez@advanzer.com</p>-->
                         
                         <a id="m11" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -202,6 +213,7 @@
                         
                         <h4>Gabriela Rodr&iacute;guez</h4>
                         <h3>Mercadotecnia</h3>
+                        <h5>Ext. 1014</h5>
                         <!--<p>gabriela.rodriguez@advanzer.com</p>-->
                         
                         <a id="m12" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -214,6 +226,7 @@
                         
                         <h4>Rodolfo Cort&eacute;s</h4>
                         <h3>Arquitectura de Soluciones</h3>
+                        <h5>Ext. 1015</h5>
                         <!--<p>rodolfo.cortes@advanzer.com</p>-->
                         
                         <a id="m13" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -226,6 +239,7 @@
                         
                         <h4>Alejandra Torres</h4>
 	                    <h3>Arquitectura de Soluciones</h3>
+                        <h5>Ext. 1015</h5>
                         <!--<p>alejandra.torres@advanzer.com</p>-->
                         
                         <a id="m14" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
@@ -238,6 +252,7 @@
                         
                         <h4>Juan Carlos Zamarr&oacute;n</h4>
                         <h3>Arquitectura de Soluciones</h3>
+                        <h5>Ext. 1015</h5>
                         <!--<p>juancarlos.zamarron@advanzer.com</p>-->
                         
                         <a id="m15" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>

@@ -58,6 +58,12 @@
                         
                         <p>Si tienes alguna duda o estás interesado en disfrutar de este beneficio para ti o algún familiar directo contacta a Capital Humano para orientarte.</p>
                         
+                        <h3>¿Dónde puedo consultar los cursos y posgrados disponibles?</h3>
+                        
+                        <p>Visita la página <a href="http://www.udem.edu.mx" target="_blank">www.udem.edu.mx</a> para consultar la oferta educativa para Posgrados y Educación Continua.</p>
+                        
+                        <p><b>Si tienes alguna duda o estás interesado en disfrutar de este beneficio para ti o algún familiar directo contacta a Capital Humano para orientarte.</b></p>
+                        
 	                </div>
 	            </div>
 

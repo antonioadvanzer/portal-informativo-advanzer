@@ -409,10 +409,18 @@ class MainController extends Controller
             $news = Circular::where('type', 1)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
 
         }else{
-            $news = Circular::where('type', 1)->orderBy('created_at', 'DESC')->paginate(9);
+
+            $month = date("m");
+			$year = date("Y");
+			
+			$date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
+            $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
+
+            //$news = Circular::where('type', 1)->orderBy('created_at', 'DESC')->paginate(9);
+            $news = Circular::where('type', 1)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(9);
         }
         
-        return View::make('news.news', ['news' => $news]);
+        return View::make('news.news', ['news' => $news, 'months' => $this->months, 'years' => $this->years, 'month' => $this->months[$month], 'year' => $year]);
     }
 
     /**
@@ -483,9 +491,8 @@ class MainController extends Controller
 
             //$birthdays = Circular::where('type', 2)->orderBy('date', 'DESC')->paginate(12);
         }
-
-            
-        return View::make('birthdays.birthdays', ['birthdays' => $birthdays]);
+    
+        return View::make('birthdays.birthdays', ['birthdays' => $birthdays, 'months' => $this->months, 'years' => $this->years, 'month' => $this->months[$month], 'year' => $year]);
     }
 
     /**
@@ -525,10 +532,17 @@ class MainController extends Controller
             $events = Circular::where('type', 3)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
 
         }else{
-            $events = Circular::where('type', 3)->orderBy('date', 'DESC')->paginate(12);
+            $month = date("m");
+			$year = date("Y");
+			
+			$date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
+            $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
+            //$events = Circular::where('type', 3)->orderBy('date', 'DESC')->paginate(12);
+            $events = Circular::where('type', 3)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
+            
         }
 
-        return View::make('events.events', ['events' => $events]);
+        return View::make('events.events', ['events' => $events, 'months' => $this->months, 'years' => $this->years, 'month' => $this->months[$month], 'year' => $year]);
     }
 
     /**
@@ -602,6 +616,25 @@ class MainController extends Controller
         "m13" => 'rodolfo.cortes@advanzer.com',
         "m14" => 'alejandra.torres@advanzer.com',        
         "m15" => 'juancarlos.zamarron@advanzer.com'
+    );
+
+    private $months = array(
+        "01" => "Enero",
+        "02" => "Febrero",
+        "03" => "Marzo",
+        "04" => "Abril",
+        "05" => "Mayo",
+        "06" => "Junio",
+        "07" => "Julio",
+        "08" => "Agosto",
+        "09" => "Septiembre",
+        "10" => "Octubre",
+        "11" => "Noviembre",
+        "12" => "Diciembre"
+    );
+
+    private $years = array(
+        "2017" => "2017"
     );
 
     /**

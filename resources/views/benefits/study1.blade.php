@@ -69,6 +69,10 @@
                         
                         <p>Si tienes alguna duda o estás interesado en disfrutar de este beneficio para ti o algún familiar directo contacta a Capital Humano para orientarte.</p>
                         
+                        <h3>¿Dónde puedo consultar los cursos y posgrados disponibles?</h3>
+                        
+                        <p>Visita la página <a href="http://www.tecmilenio.mx" target="_blank">www.tecmilenio.mx</a> para consultar la ubicación de los Campus dentro de la República, así como la oferta educativa en cada uno.</p>
+                        
 	                </div>
 	            </div>
 

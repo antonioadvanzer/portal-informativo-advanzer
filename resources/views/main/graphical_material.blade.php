@@ -87,7 +87,7 @@
                 
                 <div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>Manual de Indentidad:</p>
+	            		<p>Manual de Identidad:</p>
 	            	</div>
 	            </div>
                 

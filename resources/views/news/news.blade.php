@@ -23,26 +23,22 @@
 	            	</div>
 	            </div>
                 
+                <input id="m" type="hidden" value="{{$month}}">
+                <input id="y" type="hidden" value="{{$year}}">
+                
                 <div class="row">
-                    <select id="mounth">
-                        <option value="hide">-- Mes --</option>
-                        <option value="01" rel="icon-temperature">Enero</option>
-                        <option value="02">Febrero</option>
-                        <option value="03">Marzo</option>
-                        <option value="04">Abril</option>
-                        <option value="05">Mayo</option>
-                        <option value="06">Junio</option>
-                        <option value="07">Julio</option>
-                        <option value="08">Agosto</option>
-                        <option value="09">Septiembre</option>
-                        <option value="10">Octubre</option>
-                        <option value="11">Noviembre</option>
-                        <option value="12">Diciembre</option>
+                    <select id="month">
+                        <option value="hide" rel="icon-temperature">-- Mes --</option>
+                        @foreach($months as $mo => $m)
+                            <option value="{{$mo}}">{{$m}}</option>
+                        @endforeach
                     </select> 
 
                     <select id="year">
                         <option value="hide">-- Año --</option>
-                        <option value="2017">2017</option>
+                        @foreach($years as $ye => $y)
+                            <option value="{{$ye}}">{{$y}}</option>
+                        @endforeach
                     </select>
                     
                     <!--<a class="btn btn-default" href="#">
@@ -264,6 +260,16 @@
 
             });
             
+            var cont = 1;
+            
+            $('.select-styled').each(function(){
+                $(this).attr('id',"sl"+cont);
+                cont++;
+            });
+            
+            $('#sl1').text($('#m').val());
+            $('#sl2').text($('#y').val());
+            
             var anio = false;
             var mes = false;
             var ea = "";
@@ -271,7 +277,7 @@
             
             function searchEvent(element, value){
                 
-                if(element == "mounth"){
+                if(element == "month"){
                     mes = true;
                     em = value;
                 }else if(element == "year"){
