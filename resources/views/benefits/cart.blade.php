@@ -61,7 +61,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            Consulto/Especialista/Ing. Telecom
+                                            Consultor/Especialista/Ing. Telecom
                                         </td>
                                         <td>
                                             $864.00
@@ -69,7 +69,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            Consulto Sr./Especialista Sr./Ing. Telecom Sr.
+                                            Consultor Sr./Especialista Sr./Ing. Telecom Sr.
                                         </td>
                                         <td>
                                             $1,009.00
