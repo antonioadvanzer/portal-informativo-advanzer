@@ -606,7 +606,7 @@ class MainController extends Controller
         "m3" => 'melissa.perez@advanzer.com',
         "m4" => 'karla.navarro@advanzer.com',
         "m5" => 'martin.garza@advanzer.com',
-        "m6" => 'roman.uranga@advanzer.com',
+        "m6" => 'juanpaulo.rodriguez@advanzer.com',
         "m7" => 'carlos.dominguez@advanzer.com',
         "m8" => 'keren.lozano@advanzer.com',
         "m9" => 'anaid.montoya@advanzer.com',

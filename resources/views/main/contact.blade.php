@@ -119,16 +119,29 @@
                     
                     <div class="col-sm-6 services-half-width-text wow fadeInUp card">
                         
+                        <img src="{{ URL::to('img/contacto/juan 1.jpg') }}" class="img-fluid img-thumbnail image-card">
+                        
+                        <h4>Juan Rodr&iacute;guez</h4>
+	                    <h3>Contabilidad</h3>
+                        <h5>Ext. 1003</h5>
+                        <!--<p>'juanpaulo.rodriguez@advanzer.com'</p>-->
+                        
+                        <a id="m6" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
+                    
+	                </div>
+                    
+                    <!--<div class="col-sm-6 services-half-width-text wow fadeInUp card">
+                        
                         <img src="{{ URL::to('img/contacto/167.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
                         <h4>Rom&aacute;n Uranga</h4>
 	                    <h3>Contabilidad</h3>
                         <h5>Ext. 1003</h5>
-                        <!--<p>roman.uranga@advanzer.com</p>-->
+                        <p>roman.uranga@advanzer.com</p>
                         
                         <a id="m6" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
-	                </div>
+	                </div>-->
                     
                     <div class="col-sm-6 services-half-width-text wow fadeInUp card">
                         
