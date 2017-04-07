@@ -9,7 +9,7 @@ class ElementCarrusel extends Model
 {   
     use SoftDeletes;
 
-    protected $fillable = array('id_circular', 'id_img_circular','used');
+    protected $fillable = array('id_circular', 'id_img_circular', 'location', 'used');
 
     /**
      * The table associated with the model.

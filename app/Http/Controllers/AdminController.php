@@ -119,8 +119,28 @@ class AdminController extends Controller
      */
     public function adminGetElementsCarrusel()
     {   
-        $carrusel = ElementCarrusel::where('used',1)->get();
-        return View::make('admin.carrusel.elements', ['elements' => $carrusel]);
+        //$carrusel = ElementCarrusel::where('used',1)->orderBy('location', 'ASC')->get();
+        //return View::make('admin.carrusel.elements', ['elements' => $carrusel]);
+        return View::make('admin.carrusel.elements');
+    }
+
+    /**
+     * Get elements of carrusel table.
+     *
+     * @param  
+     * @return \Illuminate\Http\Response
+     */
+    public function adminGetElementsCarruselArray()
+    {   
+        $carrusel = ElementCarrusel::where('used',1)->orderBy('location', 'ASC')->get();
+        
+        $elements = array();
+
+        foreach($carrusel as $c){
+            array_push($elements, ['id' => $c->id, 'location' => $c->location, 'name' => $c->circular()->first()->getType()->first()->name, 'title' => $c->circular()->first()->title]);
+        }
+
+        return json_encode($elements);
     }
 
     /**
@@ -331,9 +351,12 @@ class AdminController extends Controller
 
             $ic = ImageCircular::where('id_circular',$circular->id)->get()->first();
 
+            $carsl = ElementCarrusel::where('used',1)->count();
+
             ElementCarrusel::create([
                 'id_circular' => $circular->id,
                 'id_img_circular' => $ic->id,
+                'location' => $carsl+1,
                 'used' => ($request->get('public') ? 1 : 0 )
             ]);
 
@@ -437,9 +460,12 @@ class AdminController extends Controller
 
             $ic = ImageCircular::where('id_circular',$birthday->id)->get()->first();
 
+            $carsl = ElementCarrusel::where('used',1)->count();
+
             ElementCarrusel::create([
                 'id_circular' => $birthday->id,
                 'id_img_circular' => $ic->id,
+                'location' => $carsl+1,
                 'used' => ($request->get('public') ? 1 : 0 )
             ]);
 
@@ -469,7 +495,7 @@ class AdminController extends Controller
             $event = Circular::create([
                             'title' => $request->get('title'),
                             'summary' => $request->get('summary'),
-                            'content' => $request->get('content'),
+                            'content' => ($request->get('content')),
                             'date' => date('Y-m-d',strtotime($request->get('date'))),
                             'type' => 3
                         ]);
@@ -516,10 +542,13 @@ class AdminController extends Controller
         try{
 
             $ic = ImageCircular::where('id_circular',$event->id)->get()->first();
-
+            
+            $carsl = ElementCarrusel::where('used',1)->count();
+            
             ElementCarrusel::create([
                 'id_circular' => $event->id,
                 'id_img_circular' => $ic->id,
+                'location' => $carsl+1,
                 'used' => ($request->get('public') ? 1 : 0 )
             ]);
 
@@ -948,9 +977,34 @@ class AdminController extends Controller
      */
     public function adminChangeCircular($id)
     { 
+        $carsl = ElementCarrusel::where('used',1)->count();
+
+        //dd(count($carrusel)+1);
+
         $ec = ElementCarrusel::where('id_circular',$id)->get()->first();
         
-        ElementCarrusel::where('id_circular',$id)->update(["used" => ( $ec->used ? 0 : 1 )]);
+        //ElementCarrusel::where('id_circular',$id)->update(["used" => ( $ec->used ? 0 : 1 ), "location" => ($ec->used ? 0 : count($carrusel)+1) ]);
+//dd($ec);
+        $use = array();
+
+        if($ec->used){
+             $use = ["used" => 0, "location" => 0];
+        }else{
+             $use = ["used" => 1, "location" => $carsl+1];
+        }
+
+        ElementCarrusel::where('id_circular',$id)->update($use);
+
+        $carrusel = ElementCarrusel::where('used',1)->orderBy('location', 'ASC')->get();
+//dd($carrusel);
+        
+        if($ec->used){
+            $num = 1;
+            foreach($carrusel as $ca){
+                ElementCarrusel::where('id',$ca->id)->update(["location" => $num]);
+                $num++;
+            }
+        }
 
         return redirect('advanzer-admin/');
     }
@@ -971,6 +1025,30 @@ class AdminController extends Controller
         Birthday::where('id',1)->update(["path" => $filename]);
 
         return redirect('advanzer-admin/cumpleanos_del_mes');
+    }
+
+    /**
+     * Update carrusel.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function adminUpdateElementsCarruselArray(Request $request)
+    {
+        //ElementCarrusel::all()->update(["used" => 0 , "location" => 0 ]);
+        DB::table('carrusel')->update(["used" => 0 , "location" => 0 ]);
+        
+        $carrusel = json_decode($request->get("array"));
+        
+        $num = 1;
+        
+        foreach($carrusel as $ca){
+            ElementCarrusel::where('id',$ca)->update(["used" => 1, "location" => $num]);
+            $num++;
+        }
+
+        //return $request->get("array");
+        return "success";
     }
 
     /**

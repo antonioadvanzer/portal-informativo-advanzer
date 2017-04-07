@@ -26,15 +26,15 @@
                 
         		<div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>{{ $album->title }}</p>
+	            		{{--<p>{{ $album->title }}</p>--}}
 	            	</div>
 	            </div>
 
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
-	                    <h3><i>{{ $album->summary }}</i></h3><br>
+	                    {{--<h3><i>{{ $album->summary }}</i></h3><br>--}}
 	                    <p>
-	                    	{{ $album->content }}
+                            {!! ($album->content) !!}
 	                	</p>
 	                </div>
 	            </div>

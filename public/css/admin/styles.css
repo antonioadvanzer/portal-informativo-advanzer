@@ -860,8 +860,7 @@ b{
   font-family: "Helvetica Naue", Ubuntu, sans-serif;
 }
 
-.section-container {
-  /*width: 600px;*/
+/*.section-container {
     width: auto;
     margin: auto;
 }
@@ -887,4 +886,49 @@ b{
 .list-item:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+}*/
+
+/* carrusel */
+
+.cc {
+  height: 100%;
+  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106114/cursor.png) 32 32, move;
+  background: #eeeeee;
+  overflow: scroll;
+}
+
+.section-container {
+  position: relative;
+  /*top: 50%;*/
+  top: 180px;
+  left: 50%;
+  width: 320px;
+  height: 400px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106114/cursor.png), move;
+  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106114/cursor.png) 32 32, move;
+}
+
+.list-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 170%;
+}
+
+.item-content {
+  height: 100%;
+  border: 0px solid rgba(123, 123, 123, 0.49804);
+  border-radius: 4px;
+  color: #999999;
+  line-height: 90px;
+  padding-left: 32px;
+  font-size: 17px;
+  font-weight: 400;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
 }

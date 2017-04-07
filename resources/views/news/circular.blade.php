@@ -26,15 +26,15 @@
                 
         		<div class="row">
 	            	<div class="col-sm-12 portfolio-filters wow fadeInLeft">
-	            		<p>{{ $circular->title }}</p>
+	            		{{--<p>{{ $circular->title }}</p>--}}
 	            	</div>
 	            </div>
 
 	            <div class="row">
 	                <div class="col-sm-12 services-full-width-text wow fadeInLeft">
-	                    <h3><i>{{ $circular->summary }}</i></h3><br>
+	                    {{--<h3><i>{{ $circular->summary }}</i></h3><br>--}}
 	                    <p>
-	                    	{{ $circular->content }}
+                            {!! ($circular->content) !!}
 	                	</p>
 	                </div>
 	            </div>

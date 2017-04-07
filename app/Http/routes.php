@@ -146,6 +146,8 @@ Route::group(['prefix' => 'advanzer-admin'], function() {
         
         Route::get('/cambiar_estado_elemento_carrusel/{id}', ['as' => 'updateElementCarrusel', 'uses' => 'AdminController@adminChangeCircular']);
         Route::get('/elementos_carrusel_activos', ['as' => 'elementsAvaible', 'uses' => 'AdminController@adminGetElementsCarrusel']);
+        Route::get('/get_elements_carrusel', ['as' => 'elementsAvaible', 'uses' => 'AdminController@adminGetElementsCarruselArray']);
+        Route::post('/update_carrusel', ['as' => 'elementsAvaible', 'uses' => 'AdminController@adminUpdateElementsCarruselArray']);
         
         Route::get('/cumpleanos_del_mes', ['as' => 'birthdays', 'uses' => 'AdminController@adminCalendarBirthday']);
         
