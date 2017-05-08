@@ -300,7 +300,7 @@ class AdminController extends Controller
         // start count how many uploaded
         $uploadcount = 0;
         
-        $destinationPath = $this->urlNews."/".AdminController::createPathFormat($request->get('title'));
+        $destinationPath = $this->urlNews."/".AdminController::createPathFormat($request->get('title')."-".date('Y-m-d H:i:s',strtotime($circular->created_at)));
         File::makeDirectory($destinationPath, 0777);
 
         foreach($files as $file) {
@@ -431,7 +431,8 @@ class AdminController extends Controller
         $uploadcount = 0;
         
         //$destinationPath = $this->urlBirthday."/".$request->get('title');
-        $destinationPath = $this->urlBirthday."/".AdminController::createPathFormat($request->get('title'));
+        //$destinationPath = $this->urlBirthday."/".AdminController::createPathFormat($request->get('title'));
+        $destinationPath = $this->urlBirthday."/".AdminController::createPathFormat($request->get('title')."-".date('Y-m-d H:i:s',strtotime($birthday->created_at)));
         File::makeDirectory($destinationPath, 0777);
 
         foreach($files as $file) {
@@ -515,7 +516,8 @@ class AdminController extends Controller
         $uploadcount = 0;
         
         //$destinationPath = $this->urlEvent."/".$request->get('title');
-        $destinationPath = $this->urlEvent."/".AdminController::createPathFormat($request->get('title'));
+        //$destinationPath = $this->urlEvent."/".AdminController::createPathFormat($request->get('title'));
+        $destinationPath = $this->urlEvent."/".AdminController::createPathFormat($request->get('title')."-".date('Y-m-d H:i:s',strtotime($event->created_at)));
         File::makeDirectory($destinationPath, 0777);
 
         foreach($files as $file) {
@@ -706,7 +708,9 @@ class AdminController extends Controller
             // start count how many uploaded
             $uploadcount = 0;
 
-            $destinationPath = $this->urlNews."/".$request->get('title');
+            //$destinationPath = $this->urlNews."/".$request->get('title');
+            //$destinationPath = $this->urlNews."/".AdminController::createPathFormat($request->get('title'));
+            $destinationPath = $this->urlNews."/".AdminController::createPathFormat($request->get('title')."-".date('Y-m-d H:i:s'));
             if(!is_dir($destinationPath)){
                 $directory = File::makeDirectory($destinationPath, 0777);
             }
@@ -833,7 +837,9 @@ class AdminController extends Controller
             // start count how many uploaded
             $uploadcount = 0;
 
-            $destinationPath = $this->urlBirthday."/".$request->get('title');
+            //$destinationPath = $this->urlBirthday."/".$request->get('title');
+            //$destinationPath = $this->urlBirthday."/".AdminController::createPathFormat($request->get('title'));
+            $destinationPath = $this->urlBirthday."/".AdminController::createPathFormat($request->get('title')."-".date('Y-m-d H:i:s'));
             if(!is_dir($destinationPath)){
                 $directory = File::makeDirectory($destinationPath, 0777);
             }
@@ -925,7 +931,9 @@ class AdminController extends Controller
             // start count how many uploaded
             $uploadcount = 0;
 
-            $destinationPath = $this->urlEvent."/".$request->get('title');
+            //$destinationPath = $this->urlEvent."/".$request->get('title');
+            //$destinationPath = $this->urlEvent."/".AdminController::createPathFormat($request->get('title'));
+            $destinationPath = $this->urlEvent."/".AdminController::createPathFormat($request->get('title')."-".date('Y-m-d H:i:s'));
             if(!is_dir($destinationPath)){
                 $directory = File::makeDirectory($destinationPath, 0777);
             }
@@ -1130,7 +1138,7 @@ class AdminController extends Controller
      */
     private static function createPathFormat($string)
     {
-        return str_replace(" ","-", AdminController::deleteSimbols($string));
+        return str_replace(array(" ",":"),array("-","-"), AdminController::deleteSimbols($string));
     }
 
     private static function deleteSimbols($text)
