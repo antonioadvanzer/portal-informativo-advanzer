@@ -37,9 +37,9 @@
 	                    <p>En esta sección se encuentran los lineamientos para solicitar Viáticos (procedimiento, formatos, tarifas y conceptos autorizados) así como las instrucciones para realizar la Comprobación de Gastos.<br>
                         Es muy importante que las descargues y tengas a la mano cada vez que vayas a realizar un trámite.<br>
                         Para cualquier duda relacionada a esta política, puedes contactar a:<br>
-                        Román Uranga<br>
-                        roman.uranga@advanzer.com<br>
-                        Tel. 81 4162 0003</p>
+                        Juan Paulo Rodriguez<br>
+                        juanpaulo.rodriguez@advanzer.com<br>
+                        Ext. 1003</p>
                         
                         <h5>NOTAS:</h5>
                         
@@ -55,27 +55,15 @@
                         <ul>
                             <li>
                                 <i class="fa fa-file-pdf-o"></i>
-                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo2YjM1Yzk4OWJhOTNkY2Q1">DAF-004 MPP para Viaticos y Gastos de Viaje (ADV)</a>
-                            </li>
-                            <li>
-                                <i class="fa fa-file-pdf-o"></i>
-                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo5MTgwYmExMzkzYjNmOGI">DAF-004 MPP para Viaticos y Gastos de Viaje (SER)</a>
+                                <a href="{{ URL::to('documentos/Politicas para gastos de Viaje.pdf') }} ">Pol&iacute;ticas para Viaticos y Gastos de Viaje</a>
                             </li>
                             <li>
                                 <i class="fa fa-file-excel-o"></i>
-                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo2MTQ2MGViZDk0MzE5ZGI2">F1. Solicitud de gastos de viaje ADV</a>
+                                <a href="{{ URL::to('documentos/F1. Solicitud para viaje.xlsx') }}">F1. Solicitud de gastos de viaje</a>
                             </li>
                             <li>
                                 <i class="fa fa-file-excel-o"></i>
-                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo0MTJlNDc2YjcxODc4ZjEz">F1. Solicitud de gastos de viaje SER</a>
-                            </li>
-                            <li>
-                                <i class="fa fa-file-excel-o"></i>
-                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDoxZDI5YmRkMTc5NWU5M2Iw">F2. Comprobacion de gastos de viaje ADV</a>
-                            </li>
-                            <li>
-                                <i class="fa fa-file-excel-o"></i>
-                                <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDoxZGU2NTU5Yjk3NzBhOGMz">F2. Comprobacion de gastos de viaje SER</a>
+                                <a href="{{ URL::to('documentos/F2. Comprobacion de gastos de viaje.xlsx') }}">F2. Comprobacion de gastos de viaje</a>
                             </li>
                         </ul>
                     </div>
