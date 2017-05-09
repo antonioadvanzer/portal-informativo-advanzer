@@ -25,7 +25,7 @@
                       </ul>
                     </section>-->
                     --}}
-                    <section id="sc" class="section-container">
+                    <section id="sc" class="section-container-carrusel">
                         
                         {{-- @foreach($elements as $e)
                         <div id="{{ 'itli'.$e->location }}" class="list-item">
@@ -106,8 +106,8 @@
             sc = "";
             
             for(i = 0; i < data.length; i++){
-                sc += '<div id="itli'+data[i]['id']+'" class="list-item">'
-                    + '<div class="item-content">'
+                sc += '<div id="itli'+data[i]['id']+'" class="list-item-c">'
+                    + '<div class="item-content-c">'
                     + '<a class="removeItem" id="'+data[i]['id']+'"><img width="30px" src="'+x+'"></a>'
                     + '<span class="order">'+data[i]['location']+'</span> '+data[i]['name']+' - '+data[i]['title']+''
                     + '</div>'
@@ -173,8 +173,8 @@
 
 function sortElements(){
     this.rowSize = 100; // => container height / number of items
-    this.container = document.querySelector(".section-container");
-    this.listItems = Array.from(document.querySelectorAll(".list-item")); // Array of elements
+    this.container = document.querySelector(".section-container-carrusel");
+    this.listItems = Array.from(document.querySelectorAll(".list-item-c")); // Array of elements
     this.sortables = listItems.map(Sortable); // Array of sortables
     this.total = sortables.length;
 
@@ -216,7 +216,7 @@ function changeIndex(item, to) {
 
 function Sortable(element, index) {
 
-  var content = element.querySelector(".item-content");
+  var content = element.querySelector(".item-content-c");
   var order = element.querySelector(".order");
 
   var animation = TweenLite.to(content, 0.3, {

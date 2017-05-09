@@ -860,7 +860,7 @@ b{
   font-family: "Helvetica Naue", Ubuntu, sans-serif;
 }
 
-/*.section-container {
+.section-container {
     width: auto;
     margin: auto;
 }
@@ -883,7 +883,7 @@ b{
   width: 100%;
   max-width: 500px;
 }
-.list-item:hover {
+/*.list-item:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }*/
@@ -897,7 +897,8 @@ b{
   overflow: scroll;
 }
 
-.section-container {
+/*.section-container {*/
+  .section-container-carrusel {
   position: relative;
   /*top: 50%;*/
   top: 180px;
@@ -912,7 +913,7 @@ b{
   cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106114/cursor.png) 32 32, move;
 }
 
-.list-item {
+.list-item-c {
   position: absolute;
   top: 0;
   left: 0;
@@ -920,7 +921,7 @@ b{
   width: 170%;
 }
 
-.item-content {
+.item-content-c {
   height: 100%;
   border: 0px solid rgba(123, 123, 123, 0.49804);
   border-radius: 4px;
