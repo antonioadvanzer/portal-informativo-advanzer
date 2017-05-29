@@ -134,10 +134,10 @@
         
         var elements = new Array();
         
-        $(".list-item").each( function() {
+        $(".list-item-c").each( function() {
                     
             ide = $(this).find(".removeItem").attr('id');
-            
+            //alert(ide);
             elements.push(ide);
             
         });
