@@ -603,10 +603,10 @@ class MainController extends Controller
     private $emails = array(
         "m1" => 'micaela.llano@advanzer.com',
         "m2" => 'amira.chavez@advanzer.com',
-        "m3" => 'melissa.perez@advanzer.com',
+        "m3" => 'argyris.reyna@advanzer.com',
         "m4" => 'karla.navarro@advanzer.com',
         "m5" => 'martin.garza@advanzer.com',
-        "m6" => 'juanpaulo.rodriguez@advanzer.com',
+        "m6" => '',
         "m7" => 'carlos.dominguez@advanzer.com',
         "m8" => 'keren.lozano@advanzer.com',
         "m9" => 'anaid.montoya@advanzer.com',
