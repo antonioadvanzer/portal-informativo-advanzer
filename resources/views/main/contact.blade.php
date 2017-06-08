@@ -80,16 +80,29 @@
                     
                     <div class="col-sm-6 services-half-width-text wow fadeInUp card">
                         
-                        <img src="{{ URL::to('img/contacto/melissa 1.jpg') }}" class="img-fluid img-thumbnail image-card">
+                        <img src="{{ URL::to('img/contacto/argyris.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
-                        <h4>Melissa P&eacute;rez</h4>
-	                    <h3>Capital Humano</h3>
+                        <h4>Argyris Reyna</h4>
+                        <h3>Capital Humano</h3>
                         <h5>Ext. 1001</h5>
                         <!--<p>melissa.perez@advanzer.com</p>-->
                         
                         <a id="m3" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
-	                </div>
+                    </div>
+
+                    <!--<div class="col-sm-6 services-half-width-text wow fadeInUp card">
+                        
+                        <img src="{{ URL::to('img/contacto/melissa 1.jpg') }}" class="img-fluid img-thumbnail image-card">
+                        
+                        <h4>Melissa P&eacute;rez</h4>
+	                    <h3>Capital Humano</h3>
+                        <h5>Ext. 1001</h5>
+                        <!--<p>melissa.perez@advanzer.com</p>--
+                        
+                        <a id="m3" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
+                    
+	                </div>-->
                     
                     <div class="col-sm-6 services-half-width-text wow fadeInUp card">
                         
@@ -117,18 +130,18 @@
                     
 	                </div>
                     
-                    <div class="col-sm-6 services-half-width-text wow fadeInUp card">
+                    <!--<div class="col-sm-6 services-half-width-text wow fadeInUp card">
                         
                         <img src="{{ URL::to('img/contacto/juan 1.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
                         <h4>Juan Rodr&iacute;guez</h4>
 	                    <h3>Contabilidad</h3>
                         <h5>Ext. 1003</h5>
-                        <!--<p>'juanpaulo.rodriguez@advanzer.com'</p>-->
+                        <!--<p>'juanpaulo.rodriguez@advanzer.com'</p>--
                         
                         <a id="m6" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
-	                </div>
+	                </div>-->
                     
                     <!--<div class="col-sm-6 services-half-width-text wow fadeInUp card">
                         
