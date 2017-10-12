@@ -613,9 +613,8 @@ class MainController extends Controller
         "m10" => 'awendy.uribe@advanzer.com',
         "m11" => 'belinda.lopez@advanzer.com',
         "m12" => 'gabriela.rodriguez@advanzer.com',
-        "m13" => 'rodolfo.cortes@advanzer.com',
-        "m14" => 'alejandra.torres@advanzer.com',        
-        "m15" => 'juancarlos.zamarron@advanzer.com'
+        "m13" => 'alejandra.torres@advanzer.com',        
+        "m14" => 'juancarlos.zamarron@advanzer.com'
     );
 
     private $months = array(

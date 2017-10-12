@@ -272,18 +272,18 @@
                     
                     </div>
                     
-                    <div class="col-sm-6 services-half-width-text wow fadeInUp card">
+                    <!--<div class="col-sm-6 services-half-width-text wow fadeInUp card">
                         
                         <img src="{{ URL::to('img/contacto/39.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
                         <h4>Rodolfo Cort&eacute;s</h4>
                         <h3>Arquitectura de Soluciones</h3>
                         <h5>Ext. 1015</h5>
-                        <!--<p>rodolfo.cortes@advanzer.com</p>-->
+                        <p>rodolfo.cortes@advanzer.com</p>
                         
                         <a id="m13" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
-                    </div>
+                    </div>-->
                     
                     <div class="col-sm-6 services-half-width-text wow fadeInUp card">
                         
@@ -294,7 +294,7 @@
                         <h5>Ext. 1015</h5>
                         <!--<p>alejandra.torres@advanzer.com</p>-->
                         
-                        <a id="m14" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
+                        <a id="m13" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
 	                </div>
                     
@@ -307,7 +307,7 @@
                         <h5>Ext. 1015</h5>
                         <!--<p>juancarlos.zamarron@advanzer.com</p>-->
                         
-                        <a id="m15" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
+                        <a id="m14" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
                     
                     </div>
                     

@@ -37,8 +37,8 @@
 	                    <p>En esta sección se encuentran los lineamientos para solicitar Viáticos (procedimiento, formatos, tarifas y conceptos autorizados) así como las instrucciones para realizar la Comprobación de Gastos.<br>
                         Es muy importante que las descargues y tengas a la mano cada vez que vayas a realizar un trámite.<br>
                         Para cualquier duda relacionada a esta política, puedes contactar a:<br>
-                        Keren Yanire Lozano Chapa<br>
-                        keren.lozano@advanzer.com<br>
+                        Liliana Carre&oacute;n<br>
+                        liliana.carreon@advanzer.com<br>
                         Ext. 1012</p>
                         
                         <h5>NOTAS:</h5>
