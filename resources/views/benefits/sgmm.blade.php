@@ -188,6 +188,10 @@
                         <ul>
                             <li>
                                 <i class="fa fa-file-pdf-o"></i>
+                                <a target="_blank" href="https://drive.google.com/a/advanzer.com/file/d/0B-23tZDCXaRHQXkxWmIyN0hOc1k/view?usp=sharing">Tutorial Gastos Médicos</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-pdf-o"></i>
                                 <a target="_blank" href="https://docs.google.com/a/advanzer.com/viewer?a=v&pid=sites&srcid=YWR2YW56ZXIuY29tfHBvbGl0aWNhcy1yaHxneDo1NjdmZDZhMmQ5YTEyYTAw">CONDICIONES GENERALES AXA (LINEA HOSP)</a>
                             </li>
                             <li>
