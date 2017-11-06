@@ -115,7 +115,7 @@
                                         <img class="img-thumbnail" src="{{ URL::to('img/politicas/indicador.png') }}">
                                         
                                         <br>
-                                        <h5><a href="http://intranet.advanzer.com:3000/evaluacion/perfil" target="_blank">
+                                        <h5><a href="http://intranet.advanzer.com:3000/#/evaluaciones/perfil_evaluacion" target="_blank">
                                             Haz clic Aquí para ingresar a tu Portal Personal</a> y conocer cuáles son tus competencias esperadas acorde a tu posición.</h5>
                                         
                                     </li>
@@ -134,7 +134,7 @@
                                             <li><p>Habilidades</p></li>
                                         </ul>
                                         
-                                        <h5><a href="http://intranet.advanzer.com:3000/evaluacion/perfil" target="_blank">Haz clic Aquí para ingresar a tu Portal Personal</a> y conocer cuáles son tus competencias esperadas acorde a tu posición.</h5>
+                                        <h5><a href="http://intranet.advanzer.com:3000/#/evaluaciones/perfil_evaluacion" target="_blank">Haz clic Aquí para ingresar a tu Portal Personal</a> y conocer cuáles son tus competencias esperadas acorde a tu posición.</h5>
                                         
                                     </li>
                                     <li>
@@ -151,13 +151,13 @@
                                         <ul type="circle">
                                             <li>
                                                 <h5><b>Comprobación de Gastos de Viaje</b></h5>
-                                                <p>Cada colaborador debe presentar sus gastos de viaje acorde a la política establecida, a más tardar 7 días hábiles, a partir de la fecha de regreso Consulta el procedimiento para reportar tus gastos de viaje en la Política correspondiente <a href="http://intranet.advanzer.com:5000/politicas/viaticos_y_gastos_de_viaje" target="_blank">Accede aquí</a>.</p>
+                                                <p>Cada colaborador debe presentar sus gastos de viaje acorde a la política establecida, a más tardar 7 días hábiles, a partir de la fecha de regreso Consulta el procedimiento para reportar tus gastos de viaje en la Política correspondiente <a href="http://intranet.advanzer.com/politicas/viaticos_y_gastos_de_viaje" target="_blank">Accede aquí</a>.</p>
                                             </li>
                                             <li>
                                                 <h5><b>Captura de Asignaciones en Harvest</b></h5>
                                                 <p>Todo el personal asignado a proyecto debe capturar cada lunes, sus horas asignadas durante la semana, con un máximo de tres semanas de desfase acumulado al año.</p>
                                                 <p>Consulta el procedimiento para captura de horas:</p>
-                                                <p><a href="https://drive.google.com/a/advanzer.com/file/d/0B20xPQDaUxigczZrUDZyNi04Sk0/view?usp=sharing">¿Cuál es el proceso?</a></p>
+                                                <p><a href="https://drive.google.com/a/advanzer.com/file/d/0B20xPQDaUxigczZrUDZyNi04Sk0/view?usp=sharing" target="_blank">¿Cuál es el proceso?</a></p>
                                                 <p><a href="https://drive.google.com/a/advanzer.com/file/d/0B20xPQDaUxigb2ROcHVheUhGZ2M/view?usp=sharing" target="_blank">¿Cómo capturo mis asignaciones?</a></p>
                                                 <p><a href="https://drive.google.com/a/advanzer.com/file/d/0B20xPQDaUxigZXdEdVNVQWpGZXc/view?usp=sharing" target="_blank">¿Cómo apruebo las asignaciones?</a></p>
 

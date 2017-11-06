@@ -55,7 +55,7 @@
 
 	                    </p>
 	                    <div class="call-to-action-button">
-	                        <a target="_blank" class="big-link-3" href="http://intranet.advanzer.com:3000/solicitar_carta">Ir Ahora</a>
+	                        <a target="_blank" class="big-link-3" href="http://intranet.advanzer.com:3000/#/sevicios/cartas_y_constancias_laborales">Ir Ahora</a>
 	                    </div>
 	                </div>
 	            </div>

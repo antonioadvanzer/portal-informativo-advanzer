@@ -200,7 +200,7 @@
                             Conoce el detalle de la Política y el Formulario de Solicitud en tu <span class="violet">Portal Personal</span>
 	                    </p>
 	                    <div class="call-to-action-button">
-	                        <a target="_blank" class="big-link-3" href="http://intranet.advanzer.com:3000/vacaciones">Ir Ahora</a>
+	                        <a target="_blank" class="big-link-3" href="http://intranet.advanzer.com:3000/#/sevicios/vacaciones">Ir Ahora</a>
 	                    </div>
 	                </div>
 	            </div>

@@ -224,7 +224,7 @@
 	                    	Conoce el detalle de la Política y el Formulario de Solicitud en tu Portal Personal
 	                    </p>
 	                    <div class="call-to-action-button">
-	                        <a target="_blank" class="big-link-3" href="http://intranet.advanzer.com:3000/permiso">Ir Ahora</a>
+	                        <a target="_blank" class="big-link-3" href="http://intranet.advanzer.com:3000/#/sevicios/permisos_de_ausencia">Ir Ahora</a>
 	                    </div>
 	                </div>
 	            </div>
