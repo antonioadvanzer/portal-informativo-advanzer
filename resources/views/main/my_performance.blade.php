@@ -189,7 +189,7 @@
                                 <p>Consulta la Guía de Tracks y Posiciones, así como la Guía de crecimiento aquí:</p>
                                 
                                 <ul type="circle">
-                                    <li><p><a href="https://drive.google.com/a/advanzer.com/file/d/0B3jORuMxgro7bjRfUUhqd2pod2s/view?usp=sharing" target="_blank">Guía de Crecimiento</a></p></li>
+                                    <li><p><a href="https://drive.google.com/a/advanzer.com/file/d/0B-23tZDCXaRHLUVIZXZvM1hGVWs/view?usp=sharing" target="_blank">Guía de Crecimiento</a></p></li>
                                     <li><p><a href="https://drive.google.com/a/advanzer.com/file/d/0B3jORuMxgro7Qkh4RVVibXBNOE0/view?usp=sharing" target="_blank">Fechas importantes</a></p></li>
                                 </ul>
                             </li>
