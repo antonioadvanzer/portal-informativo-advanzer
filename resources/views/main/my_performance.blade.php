@@ -81,7 +81,7 @@
                         
                         <ul type="disc">
                             <li>
-                                <h5><b><a href="{{ URL::to('documentos/Gestion del Desempeño v1.pdf') }}" target="">Modelo de Gesti&oacute;n de Desempeño</a></b></h5>
+                                <h5><b><a href="{{ URL::to('documentos/Gestion del Desempeno v1.pdf') }}" target="">Modelo de Gesti&oacute;n de Desempeño</a></b></h5>
                                 
                                 <br>
                                 
