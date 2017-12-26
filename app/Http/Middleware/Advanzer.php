@@ -16,7 +16,7 @@ class Advanzer
      */
     public function handle($request, Closure $next)
     {   
-        if(env('USE_GOOGLE_PLUSS')){
+        if(env('USE_GOOGLE_PLUS')){
             if (!Session::has('user'))
             {
                 return redirect()->guest('auth/google');

@@ -58,7 +58,8 @@ class MainController extends Controller
 	
 	// validate if user is advanzer employed
     public function handleGoogleCallback(Request $request)
-    {//var_dump($request->fullUrl());exit;
+    {
+        //var_dump($request->fullUrl());exit;
     	try{
 			$user = Socialite::driver('google')->user();
 			
@@ -75,12 +76,12 @@ class MainController extends Controller
 
 	    		return redirect()->guest('');
 			}else{
-				 return redirect()->guest('https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dopenid%2Bprofile%2Bemail%26response_type%3Dcode%26redirect_uri%3Dhttp://intranet.advanzer.com/auth/google/callback%26state%3Dwclq8ztvxzbUhWfH4ukxe74Woac2ZUdxzFIRWpiz%26client_id%3D607109204233-2dsjtfpqu9v48mdo31ukt5jkhilpi5h2.apps.googleusercontent.com%26from_login%3D1%26as%3D-1e6b8d5797988cf4&oauth=1&sarp=1&scc=1#identifier');
+				 return redirect()->guest(env('REDIRECT_FAIL_ACCOUNT'));
 			}
     	
 		}catch (Exception $e) {//exit;
             //return $e;
-            return redirect()->guest('https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dopenid%2Bprofile%2Bemail%26response_type%3Dcode%26redirect_uri%3Dhttp://intranet.advanzer.com/auth/google/callback%26state%3Dwclq8ztvxzbUhWfH4ukxe74Woac2ZUdxzFIRWpiz%26client_id%3D607109204233-2dsjtfpqu9v48mdo31ukt5jkhilpi5h2.apps.googleusercontent.com%26from_login%3D1%26as%3D-1e6b8d5797988cf4&oauth=1&sarp=1&scc=1#identifier');
+            return redirect()->guest(env('REDIRECT_FAIL_ACCOUNT'));
         }
 	 	 
 		 /*try {
