@@ -81,7 +81,7 @@
                         
                         <ul type="disc">
                             <li>
-                                <h5><b><a href="https://drive.google.com/a/advanzer.com/file/d/0B20xPQDaUxigSkFlLVl1WlBfQWM/view?usp=sharing" target="_blank">Modelo de Gesti&oacute;n de Desempeño</a></b></h5>
+                                <h5><b><a href="{{ URL::to('documentos/Gestion del Desempeño v1.pdf') }}" target="">Modelo de Gesti&oacute;n de Desempeño</a></b></h5>
                                 
                                 <br>
                                 
@@ -190,7 +190,7 @@
                                 
                                 <ul type="circle">
                                     <li><p><a href="https://drive.google.com/a/advanzer.com/file/d/0B-23tZDCXaRHLUVIZXZvM1hGVWs/view?usp=sharing" target="_blank">Guía de Crecimiento</a></p></li>
-                                    <li><p><a href="https://drive.google.com/a/advanzer.com/file/d/0B3jORuMxgro7Qkh4RVVibXBNOE0/view?usp=sharing" target="_blank">Fechas importantes</a></p></li>
+                                    <!--<li><p><a href="https://drive.google.com/a/advanzer.com/file/d/0B3jORuMxgro7Qkh4RVVibXBNOE0/view?usp=sharing" target="_blank">Fechas importantes</a></p></li>-->
                                 </ul>
                             </li>
                             <br>
@@ -200,23 +200,30 @@
                                 <p>Para conocer en qué consiste y cómo se realiza la evaluación, puedes consultar los siguientes tutoriales.
                                 </p>
                                 
-                                <p>Tutoriales:</p>
+                                <!--<p>Tutoriales:</p>-->
                             
-                                <ul type="1">
+                                <!--<ul type="1">
                                     <li><p><a href="https://youtu.be/l2rLGFLhZJA" target="_blank">¿Qu&eacute; me eval&uacute;an?</a></p></li>
                                     <li><p><a href="https://youtu.be/07opVy9yK4M" target="_blank">Autoevaluación</a></p></li>
                                     <li><p><a href="https://youtu.be/JWMJxd0WvvY" target="_blank">¿A qui&eacute;n voy a evaluar?</a></p></li>
                                     <li><p><a href="https://youtu.be/zpHTKQv70l8" target="_blank">Evaluación anual 2016</a></p></li>
                                     <li><p><a href="https://youtu.be/sMgj3LRMmlk" target="_blank">Evaluaci&oacute;n 360°</a></p></li>
                                     <li><p><a href="https://youtu.be/jrwSvXOEVUA" target="_blank">Evaluaci&oacute;n de proyecto</a></p></li>
-                                </ul>
+                                </ul>-->
                                 
+                                <ul type="1">
+                                    <li><p>Cada año en Enero, tiene lugar la Evaluación de Desempeño Anual a todos los niveles de la organización.</p></li>
+                                    <li><p>Son sujetos a evaluación anual todos los colaboradores que hayan ingresado entre el 1 enero y el 30 septiembre del año a evaluar</p></li>
+                                    <li><p>Adicional a la evaluación de responsabilidades funcionales y competencias realizada por el Líder, todos los colaboradores sujetos a evaluación anual, deberán realizar una Autoevaluación.</p></li>
+                                    <li><p>Todos los colaboradores con posición de Gerente, Gerente Sr y Director son sujetos a una evaluación 360º realizada por colaboradores seleccionados al azar pero que tienen contexto para poder realizar la evaluación.</p></li>
+                                </ul>
+
                             </li>
                             <br>
                             <li>
                                 <h5><b>Calendario de Evaluación</b></h5>
                                 <br>
-                                <img class="img-thumbnail" src="{{ URL::to('img/evaluacion/A&E_Calendario_Evaluacion_Desempeno_2016 v4.0.jpg') }}">
+                                <img class="img-thumbnail" src="{{ URL::to('img/evaluacion/Calendario_de_Evaluacion.png') }}">
                             </li>
                         </ul>
                         

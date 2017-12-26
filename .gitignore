@@ -19,8 +19,8 @@ bootstrap/cache/
 .rocketeer/
 
 # data about, database, routes, etc.
-#config/database.php
-#config/session.php
-#app/Http/Middleware/Advanzer.php
-#resources/views/layouts/main.blade.php
+config/database.php
+config/session.php
+app/Http/Middleware/Advanzer.php
+resources/views/layouts/main.blade.php
 

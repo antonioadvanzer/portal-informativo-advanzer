@@ -109,7 +109,7 @@ return [
     |
     */
 
-    'cookie' => 'laravel_session',
+    'cookie' => env('SESSION_COOKIE_NAME', 'laravel_session'),
 
     /*
     |--------------------------------------------------------------------------
@@ -135,8 +135,7 @@ return [
     |
     */
 
-    //'domain' => null,
-    'domain' => 'advanzer.com',
+    'domain' => env('SESSION_DOMAIN', null),
 
     /*
     |--------------------------------------------------------------------------
