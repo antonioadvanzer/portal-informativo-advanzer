@@ -402,26 +402,35 @@ class MainController extends Controller
     {   
         $news = null;
 
-        if($month != null and $year != null){
-            
-            $date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
-            $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
+        $month1=0;
+        $year1=0;
 
-            $news = Circular::where('type', 1)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
+        $month2=0;
+        $year2=0;
 
+        if($month == null and $year == null){
+            $month1 = date("m");
+            $year1 = date("Y");
         }else{
-
-            $month = date("m");
-			$year = date("Y");
-			
-			$date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
-            $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
-
-            //$news = Circular::where('type', 1)->orderBy('created_at', 'DESC')->paginate(9);
-            $news = Circular::where('type', 1)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(9);
+            $month1=$month;
+            $year1=$year;
         }
-        
-        return View::make('news.news', ['news' => $news, 'months' => $this->months, 'years' => $this->years, 'month' => $this->months[$month], 'year' => $year]);
+
+        if($month1==12){
+            $month2=1;
+            $year2=$year+1;
+        }else{
+            $month2=$month+1;
+            $year2=$year;
+        }
+			
+        $date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month1, $year1 ));
+        $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month2, $year2 ));
+
+        //$news = Circular::where('type', 1)->orderBy('created_at', 'DESC')->paginate(9);
+        $news = Circular::where('type', 1)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(9);
+
+        return View::make('news.news', ['news' => $news, 'months' => $this->months, 'years' => $this->years, 'month' => $this->months[$month1], 'year' => $year1]);
     }
 
     /**
@@ -468,32 +477,36 @@ class MainController extends Controller
         
         $birthdays = null;
 
-        if($month != null and $year != null){
-            //dd(strtotime($year."-".$mounth));
-            //dd(date("Y-m-d",strtotime($year."-".$mounth."-01")));
+        $month1=0;
+        $year1=0;
 
-            //echo date("Y-m-d", mktime(0, 0, 0, 1, $mounth, $year ));
-            
-            $date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
-            $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
-            //dd($date1." ".$date2);
-            $birthdays = Circular::where('type', 2)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
+        $month2=0;
+        $year2=0;
 
-            //exit;
+        if($month == null and $year == null){
+            $month1 = date("m");
+            $year1 = date("Y");
         }else{
-
-            $month = date("m");
-			$year = date("Y");
-			
-			$date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
-            $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
-			
-			$birthdays = Circular::where('type', 2)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
-
-            //$birthdays = Circular::where('type', 2)->orderBy('date', 'DESC')->paginate(12);
+            $month1=$month;
+            $year1=$year;
         }
+
+        if($month1==12){
+            $month2=1;
+            $year2=$year+1;
+        }else{
+            $month2=$month+1;
+            $year2=$year;
+        }
+			
+        $date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month1, $year1 ));
+        $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month2, $year2 ));
+        
+        $birthdays = Circular::where('type', 2)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
+
+        //$birthdays = Circular::where('type', 2)->orderBy('date', 'DESC')->paginate(12);
     
-        return View::make('birthdays.birthdays', ['birthdays' => $birthdays, 'months' => $this->months, 'years' => $this->years, 'month' => $this->months[$month], 'year' => $year]);
+        return View::make('birthdays.birthdays', ['birthdays' => $birthdays, 'months' => $this->months, 'years' => $this->years, 'month' => $this->months[$month1], 'year' => $year1]);
     }
 
     /**
@@ -525,25 +538,35 @@ class MainController extends Controller
     {   
         $events = null;
 
-        if($month != null and $year != null){
-            
-            $date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
-            $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
-            
-            $events = Circular::where('type', 3)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
+        $month1=0;
+        $year1=0;
 
+        $month2=0;
+        $year2=0;
+
+        if($month == null and $year == null){
+            $month1 = date("m");
+            $year1 = date("Y");
         }else{
-            $month = date("m");
-			$year = date("Y");
-			
-			$date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month, $year ));
-            $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month+1, $year ));
-            //$events = Circular::where('type', 3)->orderBy('date', 'DESC')->paginate(12);
-            $events = Circular::where('type', 3)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
-            
+            $month1=$month;
+            $year1=$year;
         }
 
-        return View::make('events.events', ['events' => $events, 'months' => $this->months, 'years' => $this->years, 'month' => $this->months[$month], 'year' => $year]);
+        if($month1==12){
+            $month2=1;
+            $year2=$year+1;
+        }else{
+            $month2=$month+1;
+            $year2=$year;
+        }
+			
+        $date1 = date("Y-d-m", mktime(0, 0, 0, 1, $month1, $year1 ));
+        $date2 = date("Y-d-m", mktime(0, 0, 0, 1, $month2, $year2 ));
+            
+        //$events = Circular::where('type', 3)->orderBy('date', 'DESC')->paginate(12);
+        $events = Circular::where('type', 3)->where('date', '>=', $date1)->where('date', '<', $date2)->paginate(12);
+        
+        return View::make('events.events', ['events' => $events, 'months' => $this->months, 'years' => $this->years, 'month' => $this->months[$month1], 'year' => $year1]);
     }
 
     /**
@@ -634,7 +657,8 @@ class MainController extends Controller
     );
 
     private $years = array(
-        "2017" => "2017"
+        "2017" => "2017",
+        "2018" => "2018"
     );
 
     /**
