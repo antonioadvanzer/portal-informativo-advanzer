@@ -86,7 +86,7 @@
                         <ul>
                             <li>El resultado del negocio debe ser mínimo del 85%</li>
 
-                            <li>Las horas facturadas del recurso en proyecto durante el año deben ser mínimo de (1,632 horas) (80%) o proporcional para                     recursos con antigüedad entre 6 meses y 1 año</li>
+                            <li>Las horas facturadas del recurso en proyecto durante el año deben ser mínimo de (1,632 horas) (80%) o proporcional para                     recursos con antigüedad entre 3 meses y 1 año</li>
 
                             <li>El resultado de objetivos deberá ser:
                                 <ul>
