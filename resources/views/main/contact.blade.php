@@ -298,11 +298,24 @@
                     
 	                </div>
                     
-                    <div class="col-sm-6 services-half-width-text wow fadeInUp card">
+                    <!--<div class="col-sm-6 services-half-width-text wow fadeInUp card">
                         
                         <img src="{{ URL::to('img/contacto/zama 1.jpg') }}" class="img-fluid img-thumbnail image-card">
                         
                         <h4>Juan Carlos Zamarr&oacute;n</h4>
+                        <h3>Arquitectura de Soluciones</h3>
+                        <h5>Ext. 1015</h5>
+                        <!--<p>juancarlos.zamarron@advanzer.com</p>
+                        
+                        <a id="m14" class="fa fa-envelope-o btn send-mail" href="#openModal"></a>
+                    
+                    </div>-->
+
+                    <div class="col-sm-6 services-half-width-text wow fadeInUp card">
+                        
+                        <img src="{{ URL::to('img/contacto/erick.jpg') }}" class="img-fluid img-thumbnail image-card">
+                        
+                        <h4>Erick Rodríguez</h4>
                         <h3>Arquitectura de Soluciones</h3>
                         <h5>Ext. 1015</h5>
                         <!--<p>juancarlos.zamarron@advanzer.com</p>-->
