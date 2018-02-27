@@ -24,3 +24,8 @@ config/session.php
 app/Http/Middleware/Advanzer.php
 resources/views/layouts/main.blade.php
 
+# Albumes
+
+public/img/historial de cumpleanos/
+public/img/historial de eventos/
+public/img/noticias/

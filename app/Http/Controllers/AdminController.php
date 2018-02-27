@@ -497,7 +497,7 @@ class AdminController extends Controller
             $event = Circular::create([
                             'title' => $request->get('title'),
                             'summary' => $request->get('summary'),
-                            'content' => ($request->get('content')),
+                            'content' => $request->get('content'),
                             'date' => date('Y-m-d',strtotime($request->get('date'))),
                             'type' => 3
                         ]);

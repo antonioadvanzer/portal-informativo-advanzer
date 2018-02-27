@@ -35,7 +35,8 @@
 	                    
                         <h3>¿Cómo funciona?</h3>
 
-                        <p>A través de tu tarjeta OneCard, recibirás la Segunda Quincena de cada mes, una recarga de saldo de acuerdo a la siguiente tabla:</p>
+                        <!--<p>A través de tu tarjeta OneCard, recibirás la Segunda Quincena de cada mes, una recarga de saldo de acuerdo a la siguiente tabla:</p>-->
+                        <p>A través de tu tarjeta OneCard, recibirás a partir del 1 de marzo de 2018 en la segunda quincena de cada mes, una recarga de saldo de acuerdo a la siguiente tabla:</p>
                         
                         
                         <table class="responstable" style="width:50%;">
@@ -48,7 +49,7 @@
                                             Chofer/Intendencia
                                         </td>
                                         <td>
-                                            $576.00
+                                            $636.00
                                         </td>
                                     </tr>
                                     <tr>
@@ -56,7 +57,7 @@
                                             Analista/Entrenamiento/Asistente
                                         </td>
                                         <td>
-                                            $720.00
+                                            $795.00
                                         </td>
                                     </tr>
                                     <tr>
@@ -64,7 +65,7 @@
                                             Consultor/Especialista/Ing. Telecom
                                         </td>
                                         <td>
-                                            $864.00
+                                            $954.00
                                         </td>
                                     </tr>
                                     <tr>
@@ -72,7 +73,7 @@
                                             Consultor Sr./Especialista Sr./Ing. Telecom Sr.
                                         </td>
                                         <td>
-                                            $1,009.00
+                                            $1,113.00
                                         </td>
                                     </tr>
                                     <tr>
@@ -80,7 +81,7 @@
                                             Gerente/SAP Master
                                         </td>
                                         <td>
-                                            $1,153.00
+                                            $1,272.00
                                         </td>
                                     </tr>
                                     <tr>
@@ -88,7 +89,7 @@
                                             Gerente Sr./SAP Expert
                                         </td>
                                         <td>
-                                            $1,297.00
+                                            $1,431.00
                                         </td>
                                     </tr>
                                     <tr>
